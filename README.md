@@ -4,7 +4,7 @@
  <img width=150px height=150px src="https://www.hackyourfuture.dk/static/logo-dark.svg" alt="Project logo"></a>
 </p>
 
-<h3 align="center">Boilerplate for Final projects
+<h3 align="center">Final project for Class12 - Treasure Hunt Game
 </h3>
 
 
@@ -14,8 +14,6 @@
 ## 📝 Table of Contents
 
 - [About](#about)   
-        - [Setting up the boilerplate](/setting-up-instructions.md)   
-        - [Plan the project](/planning.md)
 - [Project's Calendar](#-projects-calendar)   
 - [Class Daily Agenda](#-class-daily-agenda-)   
 - [The Customer](#-the-customer)   
@@ -42,15 +40,8 @@
 
 ## 🧐 About <a name = "about"></a>
 
-This repository is a boilerplate and set-up instructions for the Final Project.
+This repository is for Class12 Final Project -  Treasure Hunt Game
 
-To setup the boilerplate for a New Final project you MUST read this first [HERE](/setting-up-instructions.md)
-
-After the previous steps, you have new repository ready but you need plan the project, 
-check [HERE](/planning.md) before you go more down.
-
-🚨Delete the About Topic from you new repository README.MD file     
-🚨Delete the instructions files:    
 - [Setting up Instructions](/setting-up-instructions.md)     
 - [Planning](/planning.md)    
 
@@ -70,10 +61,21 @@ check [HERE](/planning.md) before you go more down.
 
 ## 📅 Project's Calendar
 
-*Add the dates for the project and study groups*
-*Class Dates*   
-*Study groups dates*    
+*Class Dates*  
 
+- Week 0 —> 17/05 - Intro week - Career and Intro to the FP
+- Week 1 —> 24/05 - Storybook and React Components
+- Week 2 —> 31/05 - Swagger, Endpoints, Knex & DB
+- Week 3 —> 07/06 - Create Pages
+- Week 4 —> 14/06 - Wire up Pages
+- Week 5 —> 21/06 - Fix Bugs
+- Week 6 —> 28/06 - Fix Bugs
+- Week 7 —> 05/07 - Presentations
+
+Graduation 08/07
+
+*Study groups dates*    
+Until further notice, please attend the remote study groups with Elastic and Zendesk
 
 ## 🕛 Class Daily Agenda 🕓
 
@@ -86,7 +88,7 @@ check [HERE](/planning.md) before you go more down.
 
 ## 👩🏻‍💼💡👨🏽‍💼 The Customer 
 
-*Add here information about the customer/partner*
+Allan from CodeArt will mock the Customer for this project
 
 #### 💼 Business Glossary
 
