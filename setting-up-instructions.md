@@ -38,6 +38,8 @@ You should now be able to pull changes from the boilerplate master branch by run
 
 Develop branch ➡️ this boilerplate doesn't have a develop branch ➡️ [check here](https://github.com/HackYourFuture-CPH/boilerplate-for-fp/branches)
 
+Make sure to set the develop branch to default.
+
 ### 🛡️ Protect
 
 In the new repository set the branch protection settings so that merging to the master or develop branch requires PR reviews. Set the branch protection rules so it requires review from at least 1 codeowner and 1 regular member (i.e. student).
