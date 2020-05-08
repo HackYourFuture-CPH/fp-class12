@@ -6,6 +6,33 @@ It's not actually possible to create multiple forks of the same repository withi
 
 [Github community thread on forking within the same account](https://github.community/t5/Support-Protips/Alternatives-to-forking-into-the-same-account/ba-p/7428)
 
+Steps:
+
+- Create a new repository on Github
+  - Choose the Boilerplate repository as template
+  - Make sure "Include all branches" is unchecked, we only want to carry over the Master branch
+  - Repository name should follow this convention: `fp-class[class-number]`. For example `fp-class12`.
+  - You may want to keep the repo private, but remember to set it public when project begins.
+  - Add a suitable description and create the repository
+- Add Boilerplate as remote to the new repository
+
+  - Clone the newly created repository locally.
+  - Run the following command:
+
+    git remote add boilerplate git@github.com:HackYourFuture-CPH/boilerplate-for-fp.git
+
+  - Verify the new remote by running:
+
+    git remote -v
+
+  - Push the changes:
+
+    git push origin
+
+You should now be able to pull changes from the boilerplate master branch by running this command in your newly created repository:
+
+    git pull origin boilerplate
+
 ### 💥Create
 
 Develop branch ➡️ this boilerplate doesn't have a develop branch ➡️ [check here](https://github.com/HackYourFuture-CPH/boilerplate-for-fp/branches)
