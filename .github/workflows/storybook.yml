@@ -1,4 +1,4 @@
-name: Build
+name: Storybook
 
 on:
   push:
@@ -19,9 +19,5 @@ jobs:
       - run: npm install
         env:
           CI: true
-      - run: |
-          cp .env.example .env
-      - name: Build client
-        run: npm run build
-      - name: Run tests
-        run: npm run test
+      - name: Run Storybook
+        run: npm run storybook -- --ci --smoke-test --quiet
