@@ -19,6 +19,8 @@ jobs:
       - run: npm install
         env:
           CI: true
+      - run: |
+          cp .env.example .env
       - name: Build client
         run: npm run build
       - name: Run tests
