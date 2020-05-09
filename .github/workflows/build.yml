@@ -1,4 +1,4 @@
-name: Migrations
+name: Build
 
 on:
   push:
