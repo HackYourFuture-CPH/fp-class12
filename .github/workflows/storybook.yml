@@ -11,14 +11,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
-      - name: Verify DB connection
-        env:
-          PORT: 33306
-        run: |
-          while ! mysqladmin ping -h"127.0.0.1" -P"$PORT" --silent; do
-            sleep 1
-          done
       - name: Use Node.js 12.x
         uses: actions/setup-node@v1
         with:
@@ -26,7 +18,5 @@ jobs:
       - run: npm install
         env:
           CI: true
-      - name: Build client
-        run: npm run build
-      - name: Run tests
-        run: npm run test
+      - name: Run Storybook
+        run: npm run storybook -- --ci --smoke-test --quiet
