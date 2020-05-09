@@ -210,8 +210,8 @@ Please refer to [this article](https://reactjs.org/docs/thinking-in-react.html) 
 #### Coding guidelines for components
 
 1. When relevant pre-fix your component with the domain it is addressing. For example if it is a list showing motorcycles, call it `MotorcycleList`, not `ListMotorcycle`. This way components will be grouped by domain when sorted alphabetically in a folder. If it is a generic list component that can contain many things, omit the domain and call it `List`.
-2. Put Presentational components in a folder inside `/components` and postfix their name with `.component`.
-3. Put container components in a folder inside `/containers` and postfix their name with `.container`.
+2. Put Presentational components in a folder inside `/Components` and postfix their name with `.component`.
+3. Put container components in a folder inside `/Containers` and postfix their name with `.container`.
 4. All assets (styles, test, stories) associated with a component lives in the component folder.
 5. Postfix filenames with type of the file to make it easier to search for a given file in VSCode. Examples:
    - `/motorcycle-list/motorcycle-list.container.js`
@@ -219,7 +219,7 @@ Please refer to [this article](https://reactjs.org/docs/thinking-in-react.html) 
    - `/motorcycle-card/motorcycle-card.styles.css`
    - `/motorcycle-card/motorcycle-card.stories.js`
    - `/motorcycle-card/motorcycle-card.test.js`
-6. File names should be lowercase and composite words `kebab-case` to avoid problems across filesystems.
+6. File names should be `PascalCased`.
 7. Component names (i.e. the name of the function in JS) should be `PascalCased` by general React conventions. Don't include `.component` or `.container` in the JS name.
 
 ### 🎨 Theming and global styling
