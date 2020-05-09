@@ -1,4 +1,4 @@
-name: ESLint & Migrations Check
+name: Integraton test
 
 on:
   push:
@@ -9,7 +9,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     services:
       mysql:
         image: mysql:8
@@ -53,6 +52,8 @@ jobs:
           DB_NAME: 'test'
           DB_USER: 'root'
           DB_PASSWORD: 'password'
+      - name: Run Tests
+        run: npm run test
       - name: Run Storybook
         run: npm run storybook -- --ci --smoke-test --quiet
       - name: Build
