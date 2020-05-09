@@ -29,12 +29,6 @@ git remote add boilerplate git@github.com:HackYourFuture-CPH/boilerplate-for-fp.
 git remote -v
 ```
 
-- Push the changes:
-
-```
-git push origin
-```
-
 You should now be able to pull changes from the boilerplate master branch by running this command in your newly created repository:
 
     git pull origin boilerplate master
