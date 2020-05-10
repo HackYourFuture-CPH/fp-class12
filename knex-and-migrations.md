@@ -1,10 +1,9 @@
-[✈️ Working with migrations](#️-working-with-migrations)   
-[Up 🛫 and down 🛬 migrations](#up--and-down--migrations)    
-[KnexJS - Working with Knex.js](#working-with-knexjs)     
-[🔌Database connection](#-database-connection)     
-[🌱Seed files in Knex.js](#️-migration-files-in-knexjs)      
-[⌨️ Knex CLI](#️-knex-cli)       
-
+[✈️ Working with migrations](#️-working-with-migrations)  
+[Up 🛫 and down 🛬 migrations](#up--and-down--migrations)  
+[KnexJS - Working with Knex.js](#working-with-knexjs)  
+[🔌Database connection](#-database-connection)  
+[🌱Seed files in Knex.js](#️-migration-files-in-knexjs)  
+[⌨️ Knex CLI](#️-knex-cli)
 
 ## ✈️ Working with migrations
 
@@ -130,31 +129,33 @@ the application with realistic content for testing purposes.
 Make sure to always refer to
 [the official Knex documentation for latest updates](http://knexjs.org/).
 
-The project comes with the knex npm package pre-installed, but to use the api
-smoothly it is recommended to install knex globally with:
+You have three options when running Knex CLI commands:
 
-```
-npm install -g knex
-```
+1. Use npx, which will look for a local installed instance of knex in package.json and simply install it if no instance is found.
+2. Use the knex command provided with the project as a NPM script (recommended).
+3. Install knex globally (this is no longer recommended)
 
-(you might have to prefix the command with sudo if you get a write access error)
+If you choose option 1 or 3 you _must always_ make sure that you are in the `./src/server/` directory when executing knex commands. Otherwise Knex will not be able to find its configuration files and will fail to run.
 
-Note: When running knex commands you must always do so from the `/src/server/`
-directory since knex will look for your knexfile in the directory you are
-currently in.
+Option 2 is the recommended one, but note that you will have to pass arguments slightly different to what you will see in the Knex documentation, due to it being a NPM script custom to the project. _When using the script you must always precede arguments to the knex script with `--` to ensure that the arguments are passed to knex and not to the custom NPM script itself._
+
+As an example, this means you would have to run `knex -- migrate:latest` instead of `knex migrate:latest` and `knex -- migrate make test_migration` rather than `knex migrate make test_migration`.
 
 Here is a list of some important Knex commands to know:
 
-| Command                            | Note                                                                                          |
-| ---------------------------------- | --------------------------------------------------------------------------------------------- |
-| `knex migrate:latest`              | Run "latest" migrations (i.e. migrations that have not previously been run on your database). |
-| `knex migrate:rollback`            | "Roll back" the latest migration.                                                             |
-| `knex migrate:make migration_name` | Create a new migration file in the `/migrations` folder.                                      |
-| `knex seed:run`                    | Run the seed files from the seeds folder.                                                     |
+| Command                               | Note                                                                                          |
+| ------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `knex -- migrate:latest`              | Run "latest" migrations (i.e. migrations that have not previously been run on your database). |
+| `knex -- migrate:rollback`            | "Roll back" the latest migration.                                                             |
+| `knex -- migrate:up`                  | Apply one migration forward from the current state.                                           |
+| `knex -- migrate:down`                | Apply one migration backwards from the current state.                                         |
+| `knex -- migrate:make migration_name` | Create a new migration file in the `/migrations` folder.                                      |
+| `knex -- seed:make seed_name`         | Create a new seed file.                                                                       |
+| `knex -- seed:run`                    | Run the seed files from the seeds folder.                                                     |
 
 In addition to the commands above, we have a npm script called
 `npm run db:setup` which is shorthand for running `knex migrate:latest` followed
-by `knex seed:run`.
+by `knex seed:run` and there is `npm run db:clean` which will run `knex migrate:rollback`.
 
 ### Building queries in Knex.js
 

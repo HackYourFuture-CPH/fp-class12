@@ -1,5 +1,9 @@
+/* TODO: This is an example controller to illustrate a server side controller.
+Can be deleted as soon as the first real controller is added. */
+
 const knex = require('../../config/db');
 const Error = require('../lib/utils/http-error');
+const moment = require('moment-timezone');
 
 const getModules = async () => {
   try {
@@ -28,9 +32,10 @@ const editModule = async (moduleId, updatedModule) => {
     .where({ id: moduleId })
     .update({
       title: updatedModule.title,
-      startdate: updatedModule.start_date,
-      enddate: updatedModule.end_date,
-      classid: updatedModule.class_id,
+      startDate: moment(updatedModule.startDate).format(),
+      endDate: moment(updatedModule.endDate).format(),
+      classId: updatedModule.classId,
+      updatedAt: moment().format(),
     });
 };
 
@@ -43,9 +48,9 @@ const deleteModule = async (modulesId) => {
 const createModule = async (body) => {
   await knex('modules').insert({
     title: body.title,
-    startdate: body.start_date,
-    enddate: body.end_date,
-    classid: body.class_id,
+    startDate: moment(body.startDate).format(),
+    endDate: moment(body.endDate).format(),
+    classId: body.classId,
   });
 
   return {

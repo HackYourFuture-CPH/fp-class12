@@ -17,6 +17,7 @@ jobs:
         with:
           node-version: 12.x
       - run: npm install
-      - run: npm run code:check
+      - run: npm run code:lint
+      - run: npm run code:format -- --check,
         env:
           CI: true
