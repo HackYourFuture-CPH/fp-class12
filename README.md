@@ -214,11 +214,11 @@ Please refer to [this article](https://reactjs.org/docs/thinking-in-react.html) 
 3. Put container components in a folder inside `/Containers` and postfix their name with `.container`.
 4. All assets (styles, test, stories) associated with a component lives in the component folder.
 5. Postfix filenames with type of the file to make it easier to search for a given file in VSCode. Examples:
-   - `/motorcycle-list/motorcycle-list.container.js`
-   - `/motorcycle-card/motorcycle-card.component.js`
-   - `/motorcycle-card/motorcycle-card.styles.css`
-   - `/motorcycle-card/motorcycle-card.stories.js`
-   - `/motorcycle-card/motorcycle-card.test.js`
+   - `/MotorcycleList/MotorcycleList.container.js`
+   - `/MotorcycleCard/MotorcycleCard.component.js`
+   - `/MotorcycleCard/MotorcycleCard.styles.css`
+   - `/MotorcycleCard/MotorcycleCard.stories.js`
+   - `/MotorcycleCard/MotorcycleCard.test.js`
 6. File names should be `PascalCased`.
 7. Component names (i.e. the name of the function in JS) should be `PascalCased` by general React conventions. Don't include `.component` or `.container` in the JS name.
 
