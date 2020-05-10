@@ -10,15 +10,15 @@ exports.seed = function(knex) {
         {
           id: 1,
           title: 'Javascript 2',
-          startdate: '2020-05-10 00:00:00',
-          enddate: '2020-05-10 00:00:00',
+          startDate: '2020-05-10 00:00:00',
+          endDate: '2020-05-10 00:00:00',
           classid: 'class01',
         },
         {
           id: 2,
           title: 'Javascript 1',
-          startdate: '2020-05-07 00:00:00',
-          enddate: '2020-05-08 00:00:00',
+          startDate: '2020-05-07 00:00:00',
+          endDate: '2020-05-08 00:00:00',
           classid: 'class01',
         },
       ]);

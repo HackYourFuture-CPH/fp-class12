@@ -4,18 +4,18 @@ exports.up = function(knex) {
   return knex.schema.createTable('modules', (table) => {
     table.increments();
     table.string('title').notNullable();
-    table.datetime('startdate').notNullable();
-    table.datetime('enddate').notNullable();
-    table.string('classid').notNullable();
+    table.datetime('startDate').notNullable();
+    table.datetime('endDate').notNullable();
+    table.string('classId').notNullable();
     table
-      .datetime('created_at')
+      .datetime('createdAt')
       .defaultTo(knex.fn.now())
       .notNullable();
     table
-      .datetime('updated_at')
+      .datetime('updatedAt')
       .defaultTo(knex.fn.now())
       .notNullable();
-    table.datetime('deleted_at');
+    table.datetime('deletedAt');
   });
 };
 
