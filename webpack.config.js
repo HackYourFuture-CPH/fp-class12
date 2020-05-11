@@ -1,7 +1,10 @@
 require('dotenv').config();
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const outputDirectory = 'dist';
 
@@ -51,6 +54,10 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './public/index.html',
       favicon: './public/favicon.ico',
+    }),
+    new CaseSensitivePathsPlugin(),
+    new Dotenv({
+      safe: true,
     }),
   ],
 };

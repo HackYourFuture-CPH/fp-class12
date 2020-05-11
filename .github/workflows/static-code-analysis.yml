@@ -1,4 +1,4 @@
-name: Build
+name: Static code analysis
 
 on:
   push:
@@ -17,11 +17,7 @@ jobs:
         with:
           node-version: 12.x
       - run: npm install
+      - run: npm run code:lint
+      - run: npm run code:format -- --check,
         env:
           CI: true
-      - run: |
-          cp .env.example .env
-      - name: Build client
-        run: npm run build
-      - name: Run tests
-        run: npm run test
