@@ -19,7 +19,7 @@ const getModuleById = async (id) => {
       .select('modules.id as id', 'title')
       .where({ id });
     if (modules.length === 0) {
-      throw new Error(`incorrect entry with the id of ${id}`, 404);
+      throw new Error(`incorrect Entry with the id of ${id}`, 404);
     }
     return modules;
   } catch (error) {
