@@ -3,16 +3,3 @@
   --black: #000;
   --white: #fff;
 }
-
-@font-face {
-  font-family: PurplePurse;
-  src: url('./assets/fonts/Purple_Purse/PurplePurse-Regular.ttf');
-}
-@font-face {
-  font-family: RammettoOne;
-  src: url('./assets/fonts/Rammetto_One/RammettoOne-Regular.ttf');
-}
-@font-face {
-  font-family: SpicyRice;
-  src: url('./assets/fonts/Spicy_Rice/SpicyRice-Regular.ttf');
-}
