@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Rammetto+One&family=Roboto&display=swap');
+
+html {
+  background-color: #fba85c;
+  background-image: url('../../../assets/images/background.png');
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+}
+
+.form-input {
+  position: absolute;
+  background: #ffffff;
+  position: relative;
+  margin-top: 37px;
+  width: 335px;
+  height: 58px;
+  border: none;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #c4c4c4;
+}
+
+.form-label {
+  position: absolute;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+  color: #ffffff;
+}
