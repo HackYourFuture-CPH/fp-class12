@@ -1,0 +1,8 @@
+.left_arrow_component {
+  color: var(--black);
+  font-family: SpicyRice;
+}
+
+svg {
+  color: #795548;
+}
