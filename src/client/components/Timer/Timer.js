@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import './Timer.styles.css';
 
-// prepends `0` to single digit number.
+// prepends `0` to single digit number
 const getTimeWithDoubleDigits = (numberString) =>
   `${numberString}`.padStart(2, '0');
 
@@ -18,7 +18,7 @@ function formatTime(timeLeftInSecond) {
 
   return `${formattedMinutes}:${formattedSeconds}`;
 }
-//  Countdown Timer
+
 const Timer = ({ countdown }) => {
   const [counter, setCounter] = useState(countdown);
 

@@ -3,7 +3,7 @@
   src: local('Post_no_bills'),
     url(../../assets/fonts/Post_no_bills/postnobillscolombo-extrabold.ttf)
       format('truetype');
-}
+} 
 
 .timer-content {
   font-family: 'Post_no_bills', sans-serif;
