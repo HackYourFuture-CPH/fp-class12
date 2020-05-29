@@ -3,8 +3,10 @@ import TeamTitle from './TeamTitle';
 import TeamAvatar from './TeamAvatar';
 import AmountOfTime from './AmountOfTime';
 import './LeaderBoard.styles.css';
+import PropTypes from 'prop-types';
 
 export default function LeaderBoardItem({ id, avatar, title, timeSpent }) {
+  if (!id) return null;
   return (
     <li className="leader-board-item" key={id}>
       <div className="leader-board-avatar">
@@ -17,3 +19,10 @@ export default function LeaderBoardItem({ id, avatar, title, timeSpent }) {
     </li>
   );
 }
+
+LeaderBoardItem.propTypes = {
+  id: PropTypes.number.isRequired,
+  avatar: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  timeSpent: PropTypes.number.isRequired,
+};

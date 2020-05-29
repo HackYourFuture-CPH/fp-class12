@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export default function TeamTitle({ title }) {
   if (!title) {
@@ -15,3 +16,7 @@ export default function TeamTitle({ title }) {
     </div>
   );
 }
+
+TeamTitle.propTypes = {
+  title: PropTypes.string.isRequired,
+};

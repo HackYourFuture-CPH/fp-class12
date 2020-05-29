@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export default function TeamAvatar({ avatar }) {
   if (!avatar) {
@@ -15,3 +16,7 @@ export default function TeamAvatar({ avatar }) {
     </div>
   );
 }
+
+TeamAvatar.propTypes = {
+  avatar: PropTypes.string.isRequired,
+};

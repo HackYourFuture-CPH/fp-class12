@@ -1,7 +1,7 @@
 import React from 'react';
 import { withKnobs, text, number } from '@storybook/addon-knobs';
-import image from '../../assets/images/avatar1-ce.png';
 import LeaderBoardItem from './LeaderBoardItem';
+import { users } from './users';
 
 export default {
   title: 'Test LeaderBoard Component',
@@ -11,12 +11,15 @@ export default {
 export const TestLeaderBoardComp = () => {
   return (
     <ul>
-      <LeaderBoardItem
-        id={number('id', 1)}
-        avatar={text('src', image)}
-        title={text('title', 'first')}
-        timeSpent={number('spent', 1)}
-      />
+      {users.map((user) => (
+        <LeaderBoardItem
+          key={user.id}
+          id={number(`id ${user.id}`, user.id)}
+          avatar={text(`avatar ${user.id}`, user.avatar)}
+          title={text(`title ${user.id}`, user.title)}
+          timeSpent={number(`spent ${user.id}`, user.timeSpent)}
+        />
+      ))}
     </ul>
   );
 };

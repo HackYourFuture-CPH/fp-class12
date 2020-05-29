@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export default function AmountOfTime({ timeSpent }) {
   const hours = Math.floor(timeSpent / 3600);
@@ -16,8 +17,12 @@ export default function AmountOfTime({ timeSpent }) {
   return (
     <div className="timer-div">
       <p className="timer">
-        {hours} hour {minutes} min {seconds} sec
+        {hours} hour {minutes} min {seconds} sec.
       </p>
     </div>
   );
 }
+
+AmountOfTime.propTypes = {
+  timeSpent: PropTypes.number.isRequired,
+};
