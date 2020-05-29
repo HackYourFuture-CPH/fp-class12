@@ -2,15 +2,23 @@ import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import './Timer.styles.css';
 
-const formatTime = (timeLeftInSecond) => {
-  let minute = Math.floor(timeLeftInSecond / 60);
-  if (minute < 10) minute = `0${minute}`;
+// prepends `0` to single digit number
+const getTimeWithDoubleDigits = (numberString) =>
+  `${numberString}`.padStart(2, '0');
 
-  let second = timeLeftInSecond - 60 * minute;
-  if (second < 10) second = `0${second}`;
+function formatTime(timeLeftInSecond) {
+  const secondsPrMinute = 160;
+  // Deriving minutes from total seconds and rounding it
+  const minutes = Math.floor(timeLeftInSecond / secondsPrMinute);
+  const formattedMinutes = getTimeWithDoubleDigits(minutes);
 
-  return `${minute}:${second}`;
-};
+  //  Deriving remaining seconds from total seconds
+  const seconds = timeLeftInSecond - secondsPrMinute * minutes;
+  const formattedSeconds = getTimeWithDoubleDigits(seconds);
+
+  return `${formattedMinutes}:${formattedSeconds}`;
+}
+
 const Timer = ({ countdown }) => {
   const [counter, setCounter] = useState(countdown);
 
