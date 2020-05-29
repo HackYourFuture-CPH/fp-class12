@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rammetto+One&display=swap');
+
+.container {
+  width: 90%;
+  border-radius: 15px;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background-color: rgb(255, 255, 255);
+  padding: 15px;
+}
+
+.titleLocation {
+  display: flex;
+  justify-content: space-between;
+}
+.button-component {
+  color: white;
+  font-family: 'Rammetto One', cursive;
+  background: #f26114;
+  border-radius: 5px;
+  border: none;
+  width: 150px;
+  height: 100px;
+  font-size: 30px;
+  line-height: 42px;
+  margin-top: 15px;
+}
+
+.button-component:focus {
+  background-color: rgb(251, 168, 92);
+}
+.card {
+  height: 550px;
+  width: 70%;
+  position: relative;
+  background-color: rgb(251, 168, 92);
+  background-image: url('../../assets/images/background.png');
+  margin: 0 auto;
+}
