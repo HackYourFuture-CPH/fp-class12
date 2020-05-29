@@ -1,6 +1,6 @@
 import React from 'react';
 import { withKnobs, text, number } from '@storybook/addon-knobs';
-import LeaderBoardItem from './LeaderBoardItem';
+import LeaderBoardItem from './LeaderBoardItemComponent';
 import { users } from './users';
 
 export default {
