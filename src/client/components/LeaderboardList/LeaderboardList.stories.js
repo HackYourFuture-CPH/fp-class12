@@ -2,6 +2,7 @@ import React from 'react';
 import { withKnobs, text, number } from '@storybook/addon-knobs';
 import LeaderBoardItem from './LeaderBoardItemComponent';
 import { users } from './users';
+// i made array of users as source to test LeaderBoard component on storybook
 
 export default {
   title: 'Test LeaderBoard Component',
