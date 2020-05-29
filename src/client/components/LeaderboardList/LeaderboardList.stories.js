@@ -1,19 +1,19 @@
 import React from 'react';
 import { withKnobs, text, number } from '@storybook/addon-knobs';
-import ima from '../../assets/images/avatar1-ce.png';
-import LeaderboardItem from './LeaderboardItem';
+import image from '../../assets/images/avatar1-ce.png';
+import LeaderBoardItem from './LeaderBoardItem';
 
 export default {
-  title: 'Test Leaderborad Component',
+  title: 'Test LeaderBoard Component',
   decorators: [withKnobs],
 };
 
-export const TestLeaderboradComp = () => {
+export const TestLeaderBoardComp = () => {
   return (
     <ul>
-      <LeaderboardItem
+      <LeaderBoardItem
         id={number('id', 1)}
-        avatar={text('src', ima)}
+        avatar={text('src', image)}
         title={text('title', 'first')}
         timeSpent={number('spent', 1)}
       />

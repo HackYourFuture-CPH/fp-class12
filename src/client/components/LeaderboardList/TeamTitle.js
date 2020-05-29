@@ -4,7 +4,7 @@ export default function TeamTitle({ title }) {
   if (!title) {
     return (
       <div className="title-div">
-        <div>title is requierd</div>
+        <div>title is missing</div>
       </div>
     );
   }

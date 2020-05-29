@@ -4,7 +4,7 @@ export default function TeamAvatar({ avatar }) {
   if (!avatar) {
     return (
       <div className="avatar-div">
-        <div>avatar URL requierd</div>
+        <div>avatar URL missing</div>
       </div>
     );
   }

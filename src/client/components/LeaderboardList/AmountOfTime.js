@@ -8,7 +8,7 @@ export default function AmountOfTime({ timeSpent }) {
   if (!timeSpent) {
     return (
       <div className="timer-div">
-        <div>timer is requierd</div>
+        <div>timer is missing</div>
       </div>
     );
   }

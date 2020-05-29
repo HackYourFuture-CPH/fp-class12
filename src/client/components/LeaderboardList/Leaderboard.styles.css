@@ -14,14 +14,14 @@
   font-family: 'Rammetto_One', 'PurplePurse-Regular', 'Spicy_Rice', sans-serif;
 }
 
-.leaderboard-item {
+.leader-board-item {
   display: flex;
   border-bottom: 2px solid rgb(199, 198, 198);
   justify-content: space-around;
   color: rgb(138, 136, 136);
 }
 
-.leaderboard-content {
+.leader-board-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
