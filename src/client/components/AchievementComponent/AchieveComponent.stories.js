@@ -14,3 +14,4 @@ export const Component = () => (
     timeSpent={timeSpentPerSecond}
   />
 );
+
