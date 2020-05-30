@@ -84,7 +84,7 @@ _Add here information about the Business Glossary_
 
 #### 🗄️ Database Model Diagram
 
-_Add here the DB Model Diagram_ - Use https://dbdiagram.io/
+Check the DB Model Digram here https://dbdiagram.io/d/5ed2310c39d18f5553fffc54 
 
 - [How to make changes on the diagram](/diagram.md)
 
