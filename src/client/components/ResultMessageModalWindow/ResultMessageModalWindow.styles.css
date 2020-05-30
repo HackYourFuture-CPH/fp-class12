@@ -44,12 +44,15 @@
   width: 30%;
 }
 
-.result-component h1 {
+.success_task h1 {
   color: rgb(242, 97, 20, 1);
   font-family: 'SpicyRice';
-
 }
 
+.failed_task h1 {
+  color: rgb(242, 97, 20, 1);
+  font-family: 'SpicyRice';
+}
 .team_name-component h1 {
   color: rgb(121, 113, 109);
   font-family: 'SpicyRice';
