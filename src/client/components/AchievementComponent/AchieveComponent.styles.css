@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Rammetto+One&family=Roboto&display=swap');
+
+.AchieveBox1 {
+  width: 155px;
+  height: 124px;
+  margin-top: 50px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: px;
+  background: #fba85c;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.09);
+  border-radius: 5px;
+  text-align: center;
+}
+
+img {
+  margin-top: -25px;
+  width: 55px;
+  border-radius: 50%;
+  background-color: rgb(252, 252, 252);
+}
+
+.mainDiv {
+  display: grid;
+  grid-template-columns: repeat(2, 0fr);
+  grid-template-rows: repeat(2, 13vw);
+  grid-gap: 40px;
+}
+
+.font {
+  font-family: 'Rammetto One', cursive;
+  font-style: normal;
+  font-weight: 100;
+  font-size: 25px;
+  line-height: 42px;
+  color: #ffffff;
+}
