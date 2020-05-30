@@ -6,8 +6,8 @@ export default function TeamTitle({ title }) {
     // i'm not sure if the *(if statement) should be like this,
     // but i write it in case there's bug in the prop
     return (
-      <div className="title-div">
-        <div>title is missing</div>
+      <div className="title-failed-div">
+        <p>title is missing</p>
       </div>
     );
   }

@@ -12,8 +12,8 @@ export default function AmountOfTime({ timeSpent }) {
   // but i write it in case there's bug in the prop
   if (!timeSpent) {
     return (
-      <div className="timer-div">
-        <div>timer is missing</div>
+      <div className="timer-failed-div">
+        <p>timer is missing</p>
       </div>
     );
   }
