@@ -1,11 +1,11 @@
 import React from 'react';
-import Image from '../../assets/images/avatar3-ce.png';
+import avatar from '../../assets/images/avatars/guy-avatar-circle.png';
 import './ResultMessageModalWindow.styles.css';
 
 export default function TeamAvatar() {
   return (
     <div className="teamAvatar-component">
-      <img src={Image} alt="avatar3-ce" />
+      <img src={avatar} alt="guy-avatar-circle.png" />
     </div>
   );
 }

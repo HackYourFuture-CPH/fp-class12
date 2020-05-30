@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 import TeamAvatar from './TeamAvatar.component';
 import TeamName from './TeamName.component';
 import CelebrationImage from './CelebrationImage.component';
-import Result from './Result.component';
-import TextMessage from './TextMessage.component';
+import ResultTask from './ResultTask.component';
+import FinalMessage from './FinalMessage.component';
 
 export default function ResultMessageModalWindow(props) {
   const { title, correctAnswer, checkpoints } = props;
@@ -17,8 +17,8 @@ export default function ResultMessageModalWindow(props) {
       <div className="container-div">
         <TeamName title={title} />
         <CelebrationImage correctAnswer={correctAnswer} />
-        <Result correctAnswer={correctAnswer} />
-        <TextMessage correctAnswer={correctAnswer} checkpoints={checkpoints} />
+        <ResultTask correctAnswer={correctAnswer} />
+        <FinalMessage correctAnswer={correctAnswer} checkpoints={checkpoints} />
       </div>
     </div>
   );

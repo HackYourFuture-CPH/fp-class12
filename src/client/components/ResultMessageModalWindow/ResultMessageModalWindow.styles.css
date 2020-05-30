@@ -5,7 +5,7 @@
 }
 
 .ResultMessageModalWindow-component {
-  background-image: url(../../assets/images/background.png);
+  background-image: url(../../assets/images/background/background-treasure-map.png);
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -38,14 +38,16 @@
   z-index: 1;
 }
 
-.celebration_image-component {
+.celebration_image-component img {
   color: var(--black);
   font-family: SpicyRice;
+  width: 30%;
 }
 
 .result-component h1 {
   color: rgb(242, 97, 20, 1);
   font-family: 'SpicyRice';
+
 }
 
 .team_name-component h1 {
@@ -53,7 +55,7 @@
   font-family: 'SpicyRice';
 }
 
-.text_message-component p {
+.final_message-component p {
   color: var(--black);
   font-family: PurplePurse-Regular;
 }

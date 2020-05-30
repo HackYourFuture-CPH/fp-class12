@@ -1,6 +1,6 @@
 import React from 'react';
-import Image1 from '../../assets/images/confetti-ball.png';
-import Image2 from '../../assets/images/dizzy-face.png';
+import emojiConfettiBall from '../../assets/images/SVG/emoji-confetti-ball.svg';
+import dizzyFace from '../../assets/images/SVG/emoji-dizzy-face.svg';
 import './ResultMessageModalWindow.styles.css';
 import PropTypes from 'prop-types';
 
@@ -8,13 +8,13 @@ export default function CelebrationImage({ correctAnswer }) {
   if (correctAnswer > 3) {
     return (
       <div className="celebration_image-component">
-        <img src={Image1} alt="avatar3-ce" />
+        <img src={emojiConfettiBall} alt="emoji-confetti-ball.svg" />
       </div>
     );
   }
   return (
     <div className="celebration_image-component">
-      <img src={Image2} alt="avatar3-ce" />
+      <img src={dizzyFace} alt="dizzy-face.png" />
     </div>
   );
 }
