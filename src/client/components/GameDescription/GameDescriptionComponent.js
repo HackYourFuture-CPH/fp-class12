@@ -9,7 +9,7 @@ const GameDescription = () => {
   return (
     <div className="card">
       <div className="container">
-        <Mymap />
+        <Mymap latitude="55.661869" longitude="12.540742" />
         <div className="titleLocation">
           <div>
             <Title title="Title Game" />
