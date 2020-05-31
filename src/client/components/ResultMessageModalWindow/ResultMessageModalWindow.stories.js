@@ -6,13 +6,11 @@ export default {
   title: 'Result Message Modal Window',
   decorators: [withKnobs],
 };
-const title = text('Team Name', 'Pirates Hat');
-const correctAnswer = number('correct answer', '4');
-const checkpoints = number('check points', '4');
+
 export const Component = () => (
   <ResultMessageModalWindow
-    title={title}
-    correctAnswer={correctAnswer}
-    checkpoints={checkpoints}
+    title={text('Team Name', 'Pirates Hat')}
+    correctAnswer={number('correct answer', '4')}
+    checkpoints={number('check points', '4')}
   />
 );
