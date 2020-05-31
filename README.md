@@ -13,20 +13,20 @@
 - [About](#about)
 - [Project's Calendar](#-projects-calendar)
 - [Class Daily Agenda](#-class-daily-agenda-)
-- [The Customer](#-the-customer)  
-   - [Business Glossary](/BusinessGlossary.md)  
-   - [Database Model Diagram](#️-database-model-diagram)
-- [Process](#-process-)  
-   - [Working with code](#-working-with-code)  
-   - [Code best practices](#-code-best-practices)  
-   - [Working with GIT](/working-with-git.md)  
-   - [Working with Heroku and Deployment](/deployment.md)  
-   - [Working Knex and migrations](/knex-and-migrations.md)  
-   - [Working with API Documentation - Swagger](#working-with-api-documentation---swagger)  
-   - [Working with Storybook](#working-with-storybook)  
-   - [Working with AWS - Amazon Services](#working-with-aws---amazon-services) - [Testing](#testing)
-- [Getting Started](#getting-started)  
-   - [Installations](/installations.md) - [Code linting](#code-linting)
+- [The Customer](#-the-customer)
+  - [Business Glossary](/BusinessGlossary.md)
+  - [Database Model Diagram](#️-database-model-diagram)
+- [Process](#-process-)
+  - [Working with code](#-working-with-code)
+  - [Code best practices](#-code-best-practices)
+  - [Working with GIT](/working-with-git.md)
+  - [Working with Heroku and Deployment](/deployment.md)
+  - [Working Knex and migrations](/knex-and-migrations.md)
+  - [Working with API Documentation - Swagger](#working-with-api-documentation---swagger)
+  - [Working with Storybook](#working-with-storybook)
+  - [Working with AWS - Amazon Services](#working-with-aws---amazon-services) - [Testing](#testing)
+- [Getting Started](#getting-started)
+  - [Installations](/installations.md) - [Code linting](#code-linting)
 - [Getting the certificate](/certificate.md)
 - [Authors](#authors)
 - [License](#license)
@@ -84,7 +84,10 @@ _Add here information about the Business Glossary_
 
 #### 🗄️ Database Model Diagram
 
-_Add here the DB Model Diagram_ - Use https://dbdiagram.io/
+Check the DB Model Digram here https://dbdiagram.io/d/5ed2310c39d18f5553fffc54 
+
+ <img width=500px height=318px src="/dbdiagram_v1.png" alt="DB Diagram model"></a>
+
 
 - [How to make changes on the diagram](/diagram.md)
 
@@ -96,6 +99,158 @@ _Add here the DB Model Diagram_ - Use https://dbdiagram.io/
 - No committing `console.log`
 - No committing merge conflicts!
 - Work in separate files! When you make a new feature, the first thing you do is create a new file for that (of course if it makes sense). Especially for components.
+
+### 🧱 Guidelines for building components
+
+Generally there are 2 types of components: _presentational_ and _container_ components. Please review the differences below:
+
+|                       | Presentational components                           | Container components                                                                                                                                                      |
+| --------------------- | --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Also known as         | "dumb" components, functional stateless components  | "smart" components, stateful components                                                                                                                                   |
+| Lives in this folder  | `/components`                                       | `/containers`                                                                                                                                                             |
+| Purpose               | Determines what a component looks like              | Determines how the applications works                                                                                                                                     |
+| Communication         | Can only communicate by receiving and passing props | Can communicate via props, can call APIs, can manipulate the DOM with REFs, etc.                                                                                          |
+| Markup                | Contains most of the markup for the application     | Should generally have as little markup as possible. A container `<div>` or an `<ul>` tag is ok, but if you need more, consider making a separate presentational component |
+| Storybook             | Can easily be mocked in Storybook                   | Cannot easily be mocked in Storybook, would require mocking API calls, etc.                                                                                               |
+| Can have side effects | No                                                  | Yes                                                                                                                                                                       |  |
+
+#### A note about React Hooks
+
+These are general distinctions. In the past you could only make container components as class components as functions could not have state, but with React Hooks functional components can now have state. And with the addition of Context API components can easily communicate with their siblings and jump multiple steps in the hierarchy outside of how props are used to communicate between components. This is very powerful and can be convenient, but can easily make the application overly complex, so the advice is to stick to the separation between Presentational and Container components as closely as possible and only apply for example Context API where there is a justified need.
+
+#### Proptypes
+
+It is highly recommended, but not a requirement, to add proptypes to your components. Proptypes does two things:
+
+- Give you an understandable error in the browser console when you try to use a component with wrong props specified.
+- Provide a way for others to quickly reason about how to use your component when they read your code.
+
+To add proptypes, simply import the proptypes package and specify exactly what data you expect your props to contain on the propTypes property of your component:
+
+    ...
+
+    import PropTypes from 'prop-types;
+
+    ...
+    [your component code]
+    ....
+
+    YourComponent.propTypes = {
+      firstProp: PropTypes.string.isRequired,
+      secondProp: PropTypes.number.isRequired
+    }
+
+Note the capitalization in the example above. It's easy to get wrong. Refer to the [proptypes npm package for further documentation](https://www.npmjs.com/package/prop-types).
+
+#### Using Storybook
+
+Storybook provides a _sandbox environment_ where it is easy to mock components in a visual way. When you create a _presentational component_ you should always add a story so it shows up in storybook. Benefits of using Storybook is:
+
+- Clear overview of which components are implemented and which are not.
+- Ability to experiment with applying different props to components to learn whether a given component could be used in another use-case.
+- Makes it easier to perform a visual review of components (does it look like the original design?), as the reviewee would not have to put the application in a certain state to view the component (might otherwise involve performing SQL queries to populate the database and cleanup would also be required after).
+
+Storybook runs as a separate web application parallel to the main application. Run storybook with the following command
+
+    npm run storybook
+
+The storybook application will become available on [http://localhost:3007](http://localhost:3007). From here you can browse and review the available components.
+
+Some components may have "knobs" which are UI controls that allows you to interactively play with the props of a given component. It is up to the author of the component to set up knobs.
+
+#### How to create a new story
+
+The most basic way to create a story for your component is to put this code in your the stories file for your component (my-component.stories.js):
+
+    import React from 'react';
+    import MyComponent from './my-component.component';
+
+    export default { title: 'Some title' };
+
+    export const basicStory = () => <MyComponent firstProp={1} secondProp={2} />;
+
+If you open Storybook, you should see your component under the headline "Some title".
+
+You can have multiple Stories (i.e. multiple mutations of the same component) in your stories file. Just add another export. The story will take its name from the exported variable name:
+
+    ...
+
+    export const basicStory = () => <MyComponent firstProp={1} secondProp={2} />;
+    export const advancedStory = () => <MyComponent firstProp={() => callMagicFunction()} secondProp={{ ...mysteriousObject }} />;
+
+This will result in two stories under the headline "Some title".
+
+You can also add folders to add hierarchical organization to your stories:
+
+    ...
+
+    export default { title: 'Secret Folder/Some title' };
+
+    ...
+
+##### Adding knobs (optional)
+
+You can add "knobs", i.e. form elements that will allow you to interact with your component by manipulating props in real time, by importing `withKnobs` from the `@storybook/addon-knobs` package and using it as a decorator.
+
+    import React from 'react';
+    import MyComponent from './my-component.component';
+    import { withKnobs, boolean, number } from "@storybook/addon-knobs";
+
+    export default { title: 'CardLayouts/Status Card', decorators: [withKnobs] };
+
+    export const WithKnobs = () => <MyComponent isTrue={boolean('Toggle is true', true)} theNumber={number('Change the number', 42)} />;
+
+Boolean and number which are also imported are widgets to manipulate the props. Boolean will provide a simple true/false checkbox and number will provide a number input. But you can add [many different knobs](https://www.npmjs.com/package/@storybook/addon-knobs), including dropdown selects and color pickers.
+
+#### Breaking down components
+
+Always think about how you can break your UI into meaningful reuseable components. On one hand you want to be able to re-use your code as much as possible and on the other you want to avoid premature abstraction into components, meaning that you don't want to create a lot of components that are never actually re-used.
+
+Please refer to [this article](https://reactjs.org/docs/thinking-in-react.html) for the basics about breaking UI elements into components.
+
+#### Coding guidelines for components
+
+1. When relevant pre-fix your component with the domain it is addressing. For example if it is a list showing motorcycles, call it `MotorcycleList`, not `ListMotorcycle`. This way components will be grouped by domain when sorted alphabetically in a folder. If it is a generic list component that can contain many things, omit the domain and call it `List`.
+2. Put Presentational components in a folder inside `/Components` and postfix their name with `.component`.
+3. Put container components in a folder inside `/Containers` and postfix their name with `.container`.
+4. All assets (styles, test, stories) associated with a component lives in the component folder.
+5. Postfix filenames with type of the file to make it easier to search for a given file in VSCode. Examples:
+   - `/MotorcycleList/MotorcycleList.container.js`
+   - `/MotorcycleCard/MotorcycleCard.component.js`
+   - `/MotorcycleCard/MotorcycleCard.styles.css`
+   - `/MotorcycleCard/MotorcycleCard.stories.js`
+   - `/MotorcycleCard/MotorcycleCard.test.js`
+6. File names should be `PascalCased`.
+7. Component names (i.e. the name of the function in JS) should be `PascalCased` by general React conventions. Don't include `.component` or `.container` in the JS name.
+
+### 🎨 Theming and global styling
+
+For global styles (i.e. styles that shall affect all components) use `src/client/index.css`. Global styles should be very rare and should typically be reserved for things like CSS resets, importing fonts and utilities.
+
+For theming, use the file `src/client/theme.css`. Theming covers everything related to the visual presentation of the site that needs to be re-used often. That means colors, borders, paddings, shadows, etc.
+
+### 🧱 Component styling
+
+Components should always have a unique CSS class to make it easy to apply styles and styles. For example the "label" component should have a class "label". To easily concatenate different classes or apply classes conditionally, use the `classnames` npm package. Example of a label component that has a class "label" and will receive additional classes as props:
+
+    ...
+    import classNames from 'classnames';
+
+    export default function Label({ title, className }) {
+      return <span className={classNames('label', className)}>{title}</span>;
+    }
+    ...
+
+Only put styling that is relevant to the individual component in the component CSS file. If it covers multiple components, put it in `theme.css` or `index.css`.
+
+### 📤 📥 Inline CSS vs Stylesheets
+
+Generally components should be styled using a dedicated stylesheet per component (see naming conventions in the section above). Exceptions can be made for values that are dynamically updated - i.e. a width that can any arbitrary value. If you need to change between two colors, apply css classes to the element in question style those classes and use react to switch out the css classes. For example:
+
+    .label-primary {
+      background-color: var(--primary-color);
+      color: var(--white);
+    }
 
 ### 👍🏽 Code best practices
 
