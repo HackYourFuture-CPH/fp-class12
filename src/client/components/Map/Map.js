@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import PropTypes from 'prop-types';
 import '.../../../node_modules/leaflet/dist/leaflet.css';
 import L from 'leaflet';
 
@@ -21,5 +22,10 @@ function Mymap({ latitude, longitude }) {
 
   return <div id="map" />;
 }
+
+Mymap.propTypes = {
+  latitude: PropTypes.string.isRequired,
+  longitude: PropTypes.string.isRequired,
+};
 
 export default Mymap;
