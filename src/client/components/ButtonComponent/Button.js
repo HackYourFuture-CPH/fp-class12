@@ -1,6 +1,8 @@
 import React from 'react';
 
-function ButtonComponent({ buttonTitle }) {
+import PropTypes from 'prop-types';
+
+export default function ButtonComponent({ buttonTitle }) {
   return (
     <div>
       <button className="button-component" type="submit">
@@ -9,5 +11,6 @@ function ButtonComponent({ buttonTitle }) {
     </div>
   );
 }
-
-export default ButtonComponent;
+ButtonComponent.propTypes = {
+  buttonTitle: PropTypes.string.isRequired,
+};
