@@ -11,8 +11,6 @@ export default function ResultMessageModalWindow(props) {
   const { title, correctAnswer, checkpoints } = props;
   return (
     <div className="ResultMessageModalWindow-component">
-      <div className="avatar-div">
-      </div>
       <div className="container-div">
         <TeamAvatar />
         <TeamName title={title} />
