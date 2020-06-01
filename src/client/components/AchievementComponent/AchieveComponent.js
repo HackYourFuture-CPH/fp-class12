@@ -9,14 +9,13 @@ import cupImage from '../../assets/images/SVG/kup-icon.svg';
 export default function Achievement({ achieveTask, Ranking, timeSpent }) {
   const minutes = Math.floor(timeSpent / 60);
 
-  
   return (
     <div className="achieveMain">
+
       <div className="AchieveBox">
         <div className="AchieveCircle">
           <img src={keyImage} alt="keyImage" />
         </div>
-
         <div>
           <p className="wireframes">{achieveTask}</p>
         </div>
