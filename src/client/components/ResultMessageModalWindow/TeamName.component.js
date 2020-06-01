@@ -13,3 +13,4 @@ export default function TeamName({ title }) {
 TeamName.propTypes = {
   title: PropTypes.string.isRequired,
 };
+

@@ -12,9 +12,9 @@ export default function ResultMessageModalWindow(props) {
   return (
     <div className="ResultMessageModalWindow-component">
       <div className="avatar-div">
-        <TeamAvatar />
       </div>
       <div className="container-div">
+        <TeamAvatar />
         <TeamName title={title} />
         <CelebrationImage correctAnswer={correctAnswer} />
         <ResultTask correctAnswer={correctAnswer} />
