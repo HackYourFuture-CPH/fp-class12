@@ -7,7 +7,7 @@ export default function HeaderTitle({ title }) {
   const content = (
     <h2>
       <img src={icon} alt="App Icon" />
-      {title}
+      <span>{title}</span>
     </h2>
   );
   return <div className="header-heading">{content}</div>;
