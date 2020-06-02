@@ -1,8 +1,6 @@
 import React from 'react';
-import './App.css';
-import Home from './containers/Home/Home';
-
-import { Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Home } from './containers/Home/Home';
 
 function App() {
   return (
@@ -15,5 +13,4 @@ function App() {
     </Router>
   );
 }
-
 export default App;
