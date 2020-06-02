@@ -1,13 +1,19 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './SlideshowImageComponent.styles.css';
-import ArrayOfImages from '../../../assets/data/ArrayOfImages';
+import avatarImages from '../../../assets/data/ArrayOfImages';
 
-export default function SlideshowImageComponent() {
-    return (
-      <div ClassName="image_component">
-        {ArrayOfImages.map((avatar) => (
-          <img className= "avatar_image" alt="Different avatars" src={avatar.image} />
-        ))}
-      </div>
-    );
+export default function SlideshowImageComponent(props) {
+  return (
+      <img
+        className="avatar_image"
+        alt="Different avatars"
+        src={avatarImages[props.currentImageIndex].image}
+        key={avatarImages[props.currentImageIndex].imageId}
+      />
+  );
 }
+
+SlideshowImageComponent.propTypes = {
+  props: PropTypes.number.isRequired,
+};
