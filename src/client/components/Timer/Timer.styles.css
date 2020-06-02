@@ -1,0 +1,10 @@
+@font-face {
+  font-family: 'Post_no_bills';
+  src: url(../../assets/fonts/Post_No_Bills/PostNoBillsColombo-Extrabold.ttf);
+}
+
+.timer-content {
+  font-family: 'Post_No_Bills';
+  font-size: 35px;
+  color: rgba(251, 168, 92, 1);
+}
