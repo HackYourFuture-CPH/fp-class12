@@ -5,9 +5,5 @@ import { withKnobs, number } from '@storybook/addon-knobs';
 export default { title: 'Dot Component', decorators: [withKnobs] };
 
 export const Component = () => {
-  return (
-    <SliderDotsComponent
-      noOfDots={number('dotsSlider', 4)}
-    />
-  );
+  return <SliderDotsComponent noOfDots={number('dotsSlider', 4)} />;
 };

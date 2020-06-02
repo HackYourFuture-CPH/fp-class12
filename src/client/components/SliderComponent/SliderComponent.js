@@ -1,9 +1,9 @@
 import React from 'react';
 import LeftArrowComponent from '../LeftArrowComponent/LeftArrowComponent';
 import RightArrowComponent from '../RightArrowComponent/RightArrowComponent';
-import SlideshowImageComponent from '../SlideshowImageComponent/SlideshowImageComponent';
+import SlideshowImageComponent from '../SampleComponent/SlideshowImageComponent/SlideshowImageComponent';
 import SliderDotsComponent from '../SliderDotsComponent/SliderDotsComponent';
-import avatarImages from '../../../assets/data/ArrayOfImages';
+import avatarImages from '../../assets/data/ArrayOfImages';
 import './SliderComponent.styles.css';
 
 class Slider extends React.Component {
@@ -45,7 +45,7 @@ class Slider extends React.Component {
   handleDotsClick = (e, index) => {
     this.setState({
       currentImageIndex: index,
-      isActive: true
+      isActive: true,
     });
   };
 

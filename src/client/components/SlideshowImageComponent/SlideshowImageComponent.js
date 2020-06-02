@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './SlideshowImageComponent.styles.css';
-import avatarImages from '../../../assets/data/ArrayOfImages';
+import avatarImages from '../../assets/data/ArrayOfImages';
 
 export default function SlideshowImageComponent(props) {
   return (

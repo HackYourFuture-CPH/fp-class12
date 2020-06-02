@@ -15,7 +15,11 @@ export default function SliderDotsComponent(props) {
           fill="currentColor"
           xmlns="http://www.w3.org/2000/svg"
         >
-          {props.ChangeDotColour ? <circle cx="4" cy="4" r="4" fill="red"/> : <circle cx="4" cy="4" r="4" fill="gray"/>}
+          {props.ChangeDotColour ? (
+            <circle cx="4" cy="4" r="4" fill="red" />
+          ) : (
+            <circle cx="4" cy="4" r="4" fill="gray" />
+          )}
         </svg>
       ))}
     </div>
@@ -25,5 +29,5 @@ export default function SliderDotsComponent(props) {
 SliderDotsComponent.propTypes = {
   noOfDots: PropTypes.number.isRequired,
   clickDots: PropTypes.func.isRequired,
-  ChangeDotColour: PropTypes.bool.isRequired
+  ChangeDotColour: PropTypes.bool.isRequired,
 };
