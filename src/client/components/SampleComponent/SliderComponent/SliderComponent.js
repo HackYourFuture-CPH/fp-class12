@@ -4,15 +4,14 @@ import RightArrowComponent from '../RightArrowComponent/RightArrowComponent';
 import SlideshowImageComponent from '../SlideshowImageComponent/SlideshowImageComponent';
 import SliderDotsComponent from '../SliderDotsComponent/SliderDotsComponent';
 import avatarImages from '../../../assets/data/ArrayOfImages';
-import './SliderComponent.styles.css'
+import './SliderComponent.styles.css';
 
 class Slider extends React.Component {
-
-  constructor(props)
-  {
+  constructor(props) {
     super(props);
     this.state = {
       currentImageIndex: 0,
+      isActive: false,
       totalImages: avatarImages.length,
     };
   }
@@ -26,9 +25,9 @@ class Slider extends React.Component {
       index -= 1;
     }
     this.setState({
-      currentImageIndex: index
+      currentImageIndex: index,
     });
-  }
+  };
 
   gotoNextSlide = () => {
     let index = this.state.currentImageIndex;
@@ -39,15 +38,16 @@ class Slider extends React.Component {
       index += 1;
     }
     this.setState({
-      currentImageIndex: index
+      currentImageIndex: index,
     });
-  }
+  };
 
   handleDotsClick = (e, index) => {
     this.setState({
-       currentImageIndex: index
-     })
-  }
+      currentImageIndex: index,
+      isActive: true
+    });
+  };
 
   render() {
     return (
@@ -56,10 +56,16 @@ class Slider extends React.Component {
           <LeftArrowComponent clickLeftArrow={this.gotoPreviousSlide} />
         </div>
         <div className="avatarImages_component">
-          <SlideshowImageComponent currentImageIndex={this.state.currentImageIndex} />
+          <SlideshowImageComponent
+            currentImageIndex={this.state.currentImageIndex}
+          />
         </div>
         <div className="magicdots_component">
-          <SliderDotsComponent clickDots={this.handleDotsClick} noOfDots={this.state.totalImages} />
+          <SliderDotsComponent
+            clickDots={this.handleDotsClick}
+            noOfDots={this.state.totalImages}
+            ChangeDotColour={this.state.isActive}
+          />
         </div>
         <div className="arrow_component right">
           <RightArrowComponent clickRightArrow={this.gotoNextSlide} />

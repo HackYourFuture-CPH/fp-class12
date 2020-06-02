@@ -5,15 +5,15 @@ import avatarImages from '../../../assets/data/ArrayOfImages';
 
 export default function SlideshowImageComponent(props) {
   return (
-      <img
-        className="avatar_image"
-        alt="Different avatars"
-        src={avatarImages[props.currentImageIndex].image}
-        key={avatarImages[props.currentImageIndex].imageId}
-      />
+    <img
+      className="avatar_image"
+      alt="Different avatars"
+      src={avatarImages[props.currentImageIndex].image}
+      key={avatarImages[props.currentImageIndex].imageId}
+    />
   );
 }
 
 SlideshowImageComponent.propTypes = {
-  props: PropTypes.number.isRequired,
+  currentImageIndex: PropTypes.number.isRequired,
 };

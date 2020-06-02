@@ -1,7 +1,13 @@
 import React from 'react';
 import SliderDotsComponent from './SliderDotsComponent';
+import { withKnobs, number } from '@storybook/addon-knobs';
 
-export default { title: 'Dot Component' };
+export default { title: 'Dot Component', decorators: [withKnobs] };
 
-export const Component = () => <SliderDotsComponent />;
-
+export const Component = () => {
+  return (
+    <SliderDotsComponent
+      noOfDots={number('dotsSlider', 4)}
+    />
+  );
+};

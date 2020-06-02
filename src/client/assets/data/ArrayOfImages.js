@@ -20,6 +20,6 @@ const avatarImages = [
     imageId: 4,
     image: avatar4,
   },
-]
+];
 
 export default avatarImages;
