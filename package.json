@@ -90,7 +90,7 @@
     "nodemon": "^1.12.1",
     "poetic": "^1.2.6",
     "sequelize-cli": "^5.4.0",
-    "webpack-dev-server": "3.7.2"
+    "webpack-dev-server": "3.7.2 "
   },
   "jest": {
     "moduleNameMapper": {
