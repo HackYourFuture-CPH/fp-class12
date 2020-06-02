@@ -1,0 +1,36 @@
+@font-face {
+  font-family: 'PurplePurse-Regular';
+  src: url('../../assets/fonts/Purple_Purse/PurplePurse-Regular.ttf');
+  font-family: 'Rammetto_One';
+  src: url('../../assets/fonts/Rammetto_One/RammettoOne-Regular.ttf');
+  font-family: 'Spicy_Rice';
+  src: url('../../assets/fonts/Spicy_Rice/SpicyRice-Regular.ttf');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Rammetto_One', 'PurplePurse-Regular', 'Spicy_Rice', sans-serif;
+}
+
+.leader-board-item {
+  display: flex;
+  border-bottom: 2px solid rgb(199, 198, 198);
+  justify-content: space-around;
+  color: rgb(138, 136, 136);
+}
+
+.leader-board-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.avatar {
+  max-width: 100px;
+}
+
+ul {
+  background-image: url(../../assets/images/background.png);
+}
