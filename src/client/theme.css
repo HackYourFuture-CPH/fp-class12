@@ -16,3 +16,7 @@
   font-family: SpicyRice;
   src: url('./assets/fonts/Spicy_Rice/SpicyRice-Regular.ttf');
 }
+@font-face {
+  font-family: PostNoBills;
+  src: url('./assets/fonts/Post_No_Bills/PostNoBillsColombo-Extrabold.ttf');
+}
