@@ -1,7 +1,7 @@
 .footer-component {
     background: #FFFFFF;
-    width: 375px;
-    height: 66px;
+    width: 23.4375em;
+    height: 4.125em;
     box-shadow: 0px -5px 15px rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: space-between;
