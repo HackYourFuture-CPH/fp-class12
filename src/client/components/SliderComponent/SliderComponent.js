@@ -11,7 +11,6 @@ class Slider extends React.Component {
     super(props);
     this.state = {
       currentImageIndex: 0,
-      isActive: false,
       totalImages: avatarImages.length,
     };
   }
@@ -45,7 +44,6 @@ class Slider extends React.Component {
   handleDotsClick = (e, index) => {
     this.setState({
       currentImageIndex: index,
-      isActive: true,
     });
   };
 
@@ -64,7 +62,7 @@ class Slider extends React.Component {
           <SliderDotsComponent
             clickDots={this.handleDotsClick}
             noOfDots={this.state.totalImages}
-            ChangeDotColour={this.state.isActive}
+            activeImageIndex={this.state.currentImageIndex}
           />
         </div>
         <div className="arrow_component right">
