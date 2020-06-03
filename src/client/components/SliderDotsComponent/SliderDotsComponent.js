@@ -5,7 +5,7 @@ import './SliderDotsComponent.styles.css';
 export default function SliderDotsComponent(props) {
   return (
     <div className="dots_component">
-      {[...Array(props.noOfDots)].map((x, i) => (
+      {[...Array(props.noOfDots)].map((image, i) => (
         <svg
           onClick={(e) => props.clickDots(e, i)}
           className="circle bi-circle-fill"
@@ -15,8 +15,8 @@ export default function SliderDotsComponent(props) {
           fill="currentColor"
           xmlns="http://www.w3.org/2000/svg"
         >
-          {props.ChangeDotColour ? (
-            <circle cx="4" cy="4" r="4" fill="red" />
+          {props.activeImageIndex === i ? (
+            <circle cx="4" cy="4" r="4" fill="#795548" />
           ) : (
             <circle cx="4" cy="4" r="4" fill="gray" />
           )}
@@ -29,5 +29,5 @@ export default function SliderDotsComponent(props) {
 SliderDotsComponent.propTypes = {
   noOfDots: PropTypes.number.isRequired,
   clickDots: PropTypes.func.isRequired,
-  ChangeDotColour: PropTypes.bool.isRequired,
+  activeImageIndex: PropTypes.number.isRequired,
 };
