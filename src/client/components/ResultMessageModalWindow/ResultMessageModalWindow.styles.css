@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+    background-image: url(../../assets/images/background/background-treasure-map.png);
+}
+.ResultMessageModalWindow-component {
+  margin-top: 20%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  border: 1px solid black;
+}
+
+.container-div {
+  position: absolute;
+  width: 100%;
+  padding-top: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgb(202, 15, 15);
+  background-color: white;
+}
+
+.teamAvatar-component img {
+  width: 30%;
+  border-radius: 50%;
+}
+
+.celebration_image-component,
+.teamAvatar-component {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.teamAvatar-component {
+  margin-top: -10%;
+}
+
+.celebration_image-component img {
+  width: 70%;
+  display: flex;
+}
+
+.team_name-component h1 {
+  color: rgb(121, 113, 109);
+  font-family: 'SpicyRice';
+  font-size: 3vw;
+}
+
+.failed_task h1,
+.success_task h1 {
+  color: rgb(121, 113, 109);
+  font-family: 'SpicyRice';
+  font-size: 3vw;
+}
+
+.final_message-component p {
+  color: var(--black);
+  font-family: PurplePurse-Regular;
+  font-size: 2vw;
+  text-align: center;
+}
