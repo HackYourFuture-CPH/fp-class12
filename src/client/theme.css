@@ -5,14 +5,16 @@
 }
 
 @font-face {
-  font-family: PurplePurse;
-  src: url('./assets/fonts/Purple_Purse/PurplePurse-Regular.ttf');
-}
-@font-face {
   font-family: RammettoOne;
   src: url('./assets/fonts/Rammetto_One/RammettoOne-Regular.ttf');
 }
 @font-face {
-  font-family: SpicyRice;
-  src: url('./assets/fonts/Spicy_Rice/SpicyRice-Regular.ttf');
+  font-family: PostNoBills;
+  src: url('./assets/fonts/Post_No_Bills/PostNoBillsColombo-Extrabold.ttf');
+}
+@font-face {
+  font-family: Roboto;
+  src: url('./assets/fonts/Roboto/Roboto-Regular.ttf'),
+    url('./assets/fonts/Roboto/Roboto-Medium.ttf'),
+    url('./assets/fonts/Roboto/Roboto-Bold.ttf');
 }
