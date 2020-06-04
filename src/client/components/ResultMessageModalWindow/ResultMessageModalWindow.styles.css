@@ -57,7 +57,7 @@ body{
 
 .failed_task h1,
 .success_task h1 {
-  color: rgb(121, 113, 109);
+  color: #F26114;
   font-family: 'SpicyRice';
   font-size: 3vw;
 }
