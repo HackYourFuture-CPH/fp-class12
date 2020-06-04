@@ -4,12 +4,7 @@
 .container {
   width: 90%;
   border-radius: 15px;
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  margin: auto;
   background-color: rgb(255, 255, 255);
   padding: 15px;
 }
@@ -34,11 +29,11 @@
 .button-component:focus {
   background-color: rgb(251, 168, 92);
 }
+
 .card {
-  height: 550px;
+  padding: 20px 0;
   width: 70%;
-  position: relative;
+  margin: auto;
   background-color: rgb(251, 168, 92);
   background-image: url('../../assets/images/background/background-treasure-map.png');
-  margin: 0 auto;
 }

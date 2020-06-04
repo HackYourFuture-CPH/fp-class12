@@ -1,15 +1,15 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import '.../../../node_modules/leaflet/dist/leaflet.css';
-import L from 'leaflet';
+import map from 'leaflet';
 
 function Mymap({ latitude, longitude }) {
   useEffect(() => {
-    L.map('map', {
+    map.map('map', {
       center: [latitude, longitude],
       zoom: 13,
       layers: [
-        L.tileLayer(
+        map.tileLayer(
           'https://dev.{s}.tile.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png',
           {
             attribution:
