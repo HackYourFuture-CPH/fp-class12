@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 import image1 from '../../assets/images/avatars/man-avatar-circle.png';
 import image2 from '../../assets/images/avatars/girl-avatar-circle.png';
 import image3 from '../../assets/images/avatars/guy-avatar-circle.png';
 import image4 from '../../assets/images/avatars/black-avatar-circle.png';
+=======
+import image1 from '../../assets/images/avatars/black-avatar-circle.png';
+import image2 from '../../assets/images/avatars/girl-avatar-circle.png';
+import image3 from '../../assets/images/avatars/guy-avatar-circle.png';
+import image4 from '../../assets/images/avatars/man-avatar-circle.png';
+>>>>>>> ef3070f1374de8ec0cc53ae28c7a3462fe47cf3a
 
 export const users = [
   {

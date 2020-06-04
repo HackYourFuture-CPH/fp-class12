@@ -1,36 +1,47 @@
-@font-face {
-  font-family: 'PurplePurse-Regular';
-  src: url('../../assets/fonts/Purple_Purse/PurplePurse-Regular.ttf');
-  font-family: 'Rammetto_One';
-  src: url('../../assets/fonts/Rammetto_One/RammettoOne-Regular.ttf');
-  font-family: 'Spicy_Rice';
-  src: url('../../assets/fonts/Spicy_Rice/SpicyRice-Regular.ttf');
-}
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Rammetto_One', 'PurplePurse-Regular', 'Spicy_Rice', sans-serif;
 }
 
 .leader-board-item {
   display: flex;
   border-bottom: 2px solid rgb(199, 198, 198);
-  justify-content: space-around;
-  color: rgb(138, 136, 136);
+  justify-content: space-between;
+  padding: 0 20px;
+  margin: 0 20px;
+  color: #828282;
+}
+
+h1 {
+  line-height: 34px;
+  font-family: RammettoOne;
 }
 
 .leader-board-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: flex-start;
+  width: 60%;
+}
+
+.timer {
+  margin-top: 10px;
+  font-family: RammettoOne;
 }
 
 .avatar {
-  max-width: 100px;
+  max-width: 110px;
 }
 
 ul {
   background-image: url(../../assets/images/background/background-treasure-map.png);
+}
+
+.test {
+  background-image: url(../../assets/images/background/background-treasure-map.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
