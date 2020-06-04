@@ -1,0 +1,24 @@
+.header-heading img {
+  height: 29px;
+  margin-left: 20px;
+}
+.bodycontainer {
+  background-color: rgba(251, 168, 92, 1);
+}
+
+.header-heading h2 {
+  color: rgba(128, 83, 51, 1);
+  font-weight: bold;
+  font-size: 22px;
+  background-color: #fff;
+  text-align: center;
+  display: flex;
+  box-shadow: 0px 3px 5px #00000024;
+  padding: 15px 0px;
+  min-height: 56px;
+}
+
+span {
+  width: 80%;
+  font-family: 'Roboto', sans-serif;
+}
