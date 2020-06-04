@@ -6,7 +6,6 @@
   grid-template-rows: repeat(2, 13vw);
   grid-gap: 10px;
 }
-
 .AchieveBox {
   display: flex;
   align-items: center;
@@ -19,7 +18,6 @@
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.09);
   border-radius: 5px;
 }
-
 .AchieveCircle {
   display: flex;
   justify-content: center;
@@ -32,11 +30,9 @@
   border-width: 1px;
   border-color: darkgrey;
 }
-
 img {
   width: 30px;
 }
-
 .wireframes {
   font-family: 'Rammetto One', cursive;
   font-size: 20px;

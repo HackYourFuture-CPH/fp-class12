@@ -3,7 +3,6 @@ import AchieveComponent from './AchieveComponent';
 import { withKnobs, number } from '@storybook/addon-knobs';
 
 export default { title: 'Achievement Component', decorators: [withKnobs] };
-
 export const Component = () => (
   <AchieveComponent
     achieveTask={number('achieve task', 1)}

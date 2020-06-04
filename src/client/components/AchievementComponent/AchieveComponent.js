@@ -28,7 +28,6 @@ export default function Achievement({ achieveTask, Ranking, timeSpent }) {
           <p className="wireframes">{5 - achieveTask}</p>
         </div>
       </div>
-
       <div className="AchieveBox">
         <div className="AchieveCircle">
           <img src={timerImage} alt="timerImage" />
@@ -37,7 +36,6 @@ export default function Achievement({ achieveTask, Ranking, timeSpent }) {
           <p className="wireframes">{`${minutes}`} min</p>
         </div>
       </div>
-
       <div className="AchieveBox">
         <div className="AchieveCircle">
           <img src={cupImage} alt="cupImage" />
@@ -49,7 +47,6 @@ export default function Achievement({ achieveTask, Ranking, timeSpent }) {
     </div>
   );
 }
-
 Achievement.propTypes = {
   achieveTask: PropTypes.number.isRequired,
   Ranking: PropTypes.number.isRequired,
