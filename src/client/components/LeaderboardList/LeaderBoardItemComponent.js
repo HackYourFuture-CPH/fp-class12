@@ -7,7 +7,6 @@ import './LeaderBoard.styles.css';
 
 export default function LeaderBoardItem({ id, avatar, title, timeSpent }) {
   if (!id) return null;
-  // working on improve this (if statement) line 9
   // i got this err on the consul when test id with empty field on storybook
   // Warning: Failed prop type: The prop `id` is marked as required in `LeaderBoardItem`,
   // but its value is `null`.
