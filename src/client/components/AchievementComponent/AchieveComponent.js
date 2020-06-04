@@ -11,7 +11,6 @@ export default function Achievement({ achieveTask, Ranking, timeSpent }) {
 
   return (
     <div className="achieveMain">
-
       <div className="AchieveBox">
         <div className="AchieveCircle">
           <img src={keyImage} alt="keyImage" />
