@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './Title.styles.css';
-import icon from '../../assets/images/logo.png';
+// import icon from '../../assets/images/logo.png';
+import icon from '../../assets/images/logo/logo-treasure-hunt-brown.svg';
 
 export default function HeaderTitle({ title }) {
   const content = (
