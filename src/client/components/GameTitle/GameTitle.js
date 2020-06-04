@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './Title.css';
+import './GameTitle.css';
 
 const Title = ({ title }) => {
   return <div className="title">{title}</div>;

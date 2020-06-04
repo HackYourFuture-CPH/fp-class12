@@ -1,6 +1,6 @@
 import React from 'react';
 import Mymap from '../Map/Map';
-import Title from '../Title/Title';
+import Title from '../GameTitle/GameTitle';
 import LocationComponent from '../LocationComponent/LocationComponent';
 import Button from '../ButtonComponent/Button';
 import './GameDescriptionStyle.css';
