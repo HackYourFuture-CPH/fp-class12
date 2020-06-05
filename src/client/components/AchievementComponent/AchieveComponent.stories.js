@@ -7,6 +7,6 @@ export const Component = () => (
   <AchieveComponent
     achieveTask={number('achieve task', 1)}
     Ranking={number('Ranking', 3)}
-    timeSpent={number('spent time', 3000)}
+    timeSpent={number('spent time', 10)}
   />
 );

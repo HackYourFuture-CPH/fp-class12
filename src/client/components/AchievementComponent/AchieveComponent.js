@@ -7,7 +7,7 @@ import timerImage from '../../assets/images/icons/timer-icon.svg';
 import cupImage from '../../assets/images/icons/kup-icon.svg';
 
 export default function Achievement({ achieveTask, Ranking, timeSpent }) {
-  const minutes = Math.floor(timeSpent / 60);
+  const minutes = Math.floor(timeSpent / 1);
 
   return (
     <div className="achieveMain">
