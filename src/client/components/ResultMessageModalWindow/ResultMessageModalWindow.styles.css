@@ -4,9 +4,6 @@
   box-sizing: border-box;
 }
 
-body{
-    background-image: url(../../assets/images/background/background-treasure-map.png);
-}
 .ResultMessageModalWindow-component {
   margin-top: 20%;
   display: flex;
