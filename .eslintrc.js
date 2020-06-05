@@ -24,11 +24,5 @@ module.exports = {
     'react/destructuring-assignment': 'off',
     'react/state-in-constructor': 'off',
     'react/no-access-state-in-setstate': 'off',
-    'import/no-extraneous-dependencies': [
-      'error',
-      {
-        devDependencies: ['**/*.stories.js'],
-      },
-    ],
   },
 };

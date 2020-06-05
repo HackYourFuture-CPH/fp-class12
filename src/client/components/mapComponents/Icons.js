@@ -1,12 +1,14 @@
 import { Icon } from 'leaflet';
+import DefaultMapMarker from '../../assets/images/icons/pin-icon.svg';
+import TreasureMapMarker from '../../assets/images/icons/pin-icon-map.svg';
 
 export default {
   TreasureIcon: new Icon({
-    iconUrl: '/src/client/assets/images/treasure.png',
+    iconUrl: TreasureMapMarker,
     iconSize: [71, 71],
   }),
-  DeafultMapMarker: new Icon({
-    iconUrl: 'https://img.icons8.com/metro/52/000000/marker.png',
+  DefaultMapMarker: new Icon({
+    iconUrl: DefaultMapMarker,
     iconSize: [71, 71],
   }),
 };

@@ -7,7 +7,7 @@ export default {
   decorators: [withKnobs],
 };
 
-const style = {
+const exampleStyle = {
   height: '600px',
   width: '400px',
 };
@@ -20,6 +20,10 @@ export const MapComponent = () => {
   const currentLong = number('CurrentLongitude', 12.535842);
   const currentPosition = [currentLat, currentLong];
   return (
-    <Mymap center={center} currentPosition={currentPosition} style={style} />
+    <Mymap
+      center={center}
+      currentPosition={currentPosition}
+      style={exampleStyle}
+    />
   );
 };

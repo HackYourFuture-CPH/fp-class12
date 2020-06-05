@@ -9,14 +9,16 @@ const Map = ({ center, markers, currentPosition, style }) => {
     throw Error('Center position for map is not defined');
   }
 
-  let markersToRender = markers || [];
-  if (currentPosition) {
-    markersToRender = markersToRender.concat({
-      id: null,
-      position: currentPosition,
-      icon: Icons.DeafultMapMarker,
-    });
-  }
+  const markersToRender = currentPosition
+    ? [
+        ...markers,
+        {
+          id: null,
+          position: currentPosition,
+          icon: Icons.DefaultMapMarker,
+        },
+      ]
+    : markers;
   return (
     <MapBase center={center} style={style}>
       {markersToRender.map((marker) => (
@@ -33,9 +35,10 @@ const Map = ({ center, markers, currentPosition, style }) => {
 export default Map;
 
 Map.defaultProps = {
+  markers: [],
   currentPosition: undefined,
-  markers: undefined,
 };
+
 Map.propTypes = {
   center: PropTypes.arrayOf(PropTypes.number).isRequired,
   currentPosition: PropTypes.arrayOf(PropTypes.number),
