@@ -1,6 +1,6 @@
 import React from 'react';
-import emojiConfettiBall from '../../assets/images/SVG/emoji-confetti-ball.svg';
-import dizzyFace from '../../assets/images/SVG/emoji-dizzy-face.svg';
+import emojiConfettiBall from '../../assets/images/icons/emoji-confetti-ball.svg';
+import dizzyFace from '../../assets/images/icons/emoji-dizzy-face.svg';
 import './ResultMessageModalWindow.styles.css';
 import PropTypes from 'prop-types';
 

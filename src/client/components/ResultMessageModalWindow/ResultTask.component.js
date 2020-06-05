@@ -6,13 +6,13 @@ export default function ResultTask({ correctAnswer }) {
   if (correctAnswer > 3) {
     return (
       <div className="success_task">
-        <h1>Congratulations!</h1>
+        <h3>Congratulations!</h3>
       </div>
     );
   }
   return (
     <div className="failed_task">
-      <h1>Incorrect Answered!</h1>
+      <h3>Incorrect Answered!</h3>
     </div>
   );
 }
