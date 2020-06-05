@@ -10,7 +10,7 @@ export default function FinalTaskMessage({ correctAnswer, checkpoints }) {
           You have now answered correct on {correctAnswer} out of 5 questions
           right.
           <br />
-          You&#39;re a smart pirate.
+          You&#39;re a smart pirate &#9760;
         </p>
         <p>You have now {checkpoints} checkpoints left to find the treasure</p>
       </div>
