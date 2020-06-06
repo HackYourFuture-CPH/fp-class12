@@ -1,6 +1,5 @@
 import React from 'react';
-import LeftArrowComponent from '../LeftArrowComponent/LeftArrowComponent';
-import RightArrowComponent from '../RightArrowComponent/RightArrowComponent';
+import ArrowsComponent from '../ArrowsComponent/ArrowsComponent';
 import SlideshowImageComponent from '../SlideshowImageComponent/SlideshowImageComponent';
 import SliderDotsComponent from '../SliderDotsComponent/SliderDotsComponent';
 import avatarImages from '../../assets/data/ArrayOfImages';
@@ -51,7 +50,7 @@ class Slider extends React.Component {
     return (
       <div className="slideshow_container">
         <div className="arrow_component">
-          <LeftArrowComponent clickLeftArrow={this.gotoPreviousSlide} />
+          <ArrowsComponent clickLeftArrow={this.gotoPreviousSlide} clickRightArrow={this.gotoNextSlide} />
         </div>
         <div className="avatarImages_component">
           <SlideshowImageComponent
@@ -64,9 +63,6 @@ class Slider extends React.Component {
             noOfDots={this.state.totalImages}
             activeImageIndex={this.state.currentImageIndex}
           />
-        </div>
-        <div className="arrow_component right">
-          <RightArrowComponent clickRightArrow={this.gotoNextSlide} />
         </div>
       </div>
     );

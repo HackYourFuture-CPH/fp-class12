@@ -35,7 +35,10 @@ h1 {
   max-width: 110px;
 }
 
-/* background should come from the parent component (menu) UL */
+ul {
+  background-image: url(../../assets/images/background/background-treasure-map.png);
+}
+
 .test {
   background-image: url(../../assets/images/background/background-treasure-map.png);
   background-repeat: no-repeat;

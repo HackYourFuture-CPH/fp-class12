@@ -4,6 +4,8 @@
 .arrow_component {
   position: absolute;
   top: 42%;
+  display: flex;
+  width: 100%;
 }
 
 .avatarImages_component {
