@@ -50,7 +50,10 @@ class Slider extends React.Component {
     return (
       <div className="slideshow_container">
         <div className="arrow_component">
-          <ArrowsComponent clickLeftArrow={this.gotoPreviousSlide} clickRightArrow={this.gotoNextSlide} />
+          <ArrowsComponent
+            clickLeftArrow={this.gotoPreviousSlide}
+            clickRightArrow={this.gotoNextSlide}
+          />
         </div>
         <div className="avatarImages_component">
           <SlideshowImageComponent
