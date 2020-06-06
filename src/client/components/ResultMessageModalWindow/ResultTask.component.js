@@ -4,17 +4,9 @@ import PropTypes from 'prop-types';
 
 export default function ResultTask({ correctAnswer }) {
   if (correctAnswer > 3) {
-    return (
-      <div className="success_task">
-        <h1>Congratulations!</h1>
-      </div>
-    );
+    return <h3 className="success_task" >Congratulations!</h3>
   }
-  return (
-    <div className="failed_task">
-      <h1>Incorrect Answered!</h1>
-    </div>
-  );
+    return <h3 className="failed_task">Incorrect Answered!</h3>
 }
 
 ResultTask.propTypes = {
