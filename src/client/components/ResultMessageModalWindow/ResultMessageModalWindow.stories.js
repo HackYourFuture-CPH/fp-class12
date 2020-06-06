@@ -7,10 +7,15 @@ export default {
   decorators: [withKnobs],
 };
 
-export const Component = () => (
+export const Component = () => {
+const title=text('Team Name', 'Pirates Hat')
+const correctAnswer=number('correct answer', '4')
+const checkpoints=number('check points', '4')
+return (
   <ResultMessageModalWindow
-    title={text('Team Name', 'Pirates Hat')}
-    correctAnswer={number('correct answer', '4')}
-    checkpoints={number('check points', '4')}
+  title={title}
+  correctAnswer={correctAnswer}
+  checkpoints={checkpoints}
   />
-);
+  )
+}
