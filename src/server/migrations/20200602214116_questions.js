@@ -3,7 +3,8 @@ exports.up = function (knex) {
     table.increments('id');
     table.integer('fk_game_id');
     table.string('questions').notNullable();
-    table.string('coordinates').notNullable();
+    table.float('latitude').notNullable();
+    table.float('longitude').notNullable();
     table.integer('points');
     table.timestamp('created_at').notNullable();
     table.timestamp('updated_at').notNullable();
