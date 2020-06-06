@@ -1,6 +1,5 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-
 import { Home } from './containers/Home/Home';
 
 function App() {
@@ -14,5 +13,4 @@ function App() {
     </Router>
   );
 }
-
 export default App;

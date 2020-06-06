@@ -1,0 +1,28 @@
+.single-answer-component h2 {
+  font-family: RammettoOne;
+  color: rgb(94, 36, 18);
+  text-align: center;
+}
+
+label.answer-container {
+  border-radius: 5px;
+  width: fit-content;
+  padding: 10px;
+  padding: 10px 30px 10px 30px;
+  margin: 0.5em;
+  display: block;
+  position: relative;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  user-select: none;
+  border: 1px solid black;
+  margin: 0.5em auto;
+}
+
+.single-answer-component input {
+  width: 30px;
+  height: 30px;
+  margin-left: 25px;
+  flex: 0 0 200px;
+}
