@@ -11,15 +11,15 @@ export default function ResultMessageModalWindow(props) {
   const { title, correctAnswer, checkpoints } = props;
   return (
     <div className="ResultMessageModalWindow-component">
-         <div className="teamAvatar-component">
-          <TeamAvatar />
-         </div>
-         <div className="container-div">
-          <TeamName title={title} />
-          <CelebrationImage correctAnswer={correctAnswer} />
-          <ResultTask correctAnswer={correctAnswer} />
-          <FinalMessage correctAnswer={correctAnswer} checkpoints={checkpoints} />
-        </div>
+      <div className="teamAvatar-component">
+        <TeamAvatar />
+      </div>
+      <div className="container-div">
+        <TeamName title={title} />
+        <CelebrationImage correctAnswer={correctAnswer} />
+        <ResultTask correctAnswer={correctAnswer} />
+        <FinalMessage correctAnswer={correctAnswer} checkpoints={checkpoints} />
+      </div>
     </div>
   );
 }
