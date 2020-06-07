@@ -8,14 +8,14 @@ export default {
 };
 
 export const Component = () => {
-const title=text('Team Name', 'Pirates Hat')
-const correctAnswer=number('correct answer', '4')
-const checkpoints=number('check points', '4')
-return (
-  <ResultMessageModalWindow
-  title={title}
-  correctAnswer={correctAnswer}
-  checkpoints={checkpoints}
-  />
-  )
-}
+  const title = text('Team Name', 'Pirates Hat');
+  const correctAnswer = number('correct answer', '4');
+  const checkpoints = number('check points', '4');
+  return (
+    <ResultMessageModalWindow
+      title={title}
+      correctAnswer={correctAnswer}
+      checkpoints={checkpoints}
+    />
+  );
+};
