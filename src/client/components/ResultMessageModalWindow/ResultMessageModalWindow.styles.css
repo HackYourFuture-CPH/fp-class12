@@ -1,0 +1,53 @@
+.ResultMessageModalWindow-component {
+  position: relative;
+  margin: 20px;
+  text-align: center;
+}
+
+.teamAvatar-component {
+position: relative;
+height: 100px;
+margin: 0px auto;
+z-index: 1;
+width: 100px;
+}
+
+.celebration_img, .failed_img  {
+margin: 0px auto;
+width: 100px;
+}
+
+.teamAvatar-component img {
+height: 100%;
+}
+
+.container-div  {
+position: absolute;
+width: 100%;
+margin-top: 50px;
+top:0px;
+padding-top: 20px;
+border: solid 1px gray;
+background-color: white;
+}
+
+.team_name-component {
+  padding-top: 30px;
+  color: rgb(121, 113, 109);
+  font-family: RammettoOne;
+  font-size: 36px;
+}
+
+.failed_task, .success_task {
+  color: #F26114;
+  font-family: RammettoOne;
+  font-size: 32px;
+}
+
+.good_chance p, .wrong_chance {
+  color: #000000;
+  font-family: Roboto;
+ font-weight: bold;
+  font-size: 26px;
+  padding-bottom: 10px;
+}
