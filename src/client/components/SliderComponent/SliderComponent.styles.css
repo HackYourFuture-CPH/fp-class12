@@ -3,18 +3,12 @@
 }
 .arrow_component {
   position: absolute;
-  top: 42%;
-  display: flex;
-  width: 100%;
+  top: 33%;
 }
 
 .avatarImages_component {
-  padding-left: 35px;
-  padding-right: 35px;
-}
-
-.right {
-  right: 0px;
+  padding-left: 3%;
+  padding-right: 3%;
 }
 
 .magicdots_component {

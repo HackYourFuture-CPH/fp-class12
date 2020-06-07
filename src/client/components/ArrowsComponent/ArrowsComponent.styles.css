@@ -1,14 +1,13 @@
 button.arrow {
     color: #795548;
-    height: 25px;
-    width: 25px;
+    height: 27px;
+    width: 26px;
     border: 2px solid #795548;
     border-radius: 50%;
-    font-size: 19px;
+    font-size: 13px;
     background-color: transparent;
 }
 
 .arrowRight {
-  margin-left: auto;
+    margin-left: 170px;
 }
-
