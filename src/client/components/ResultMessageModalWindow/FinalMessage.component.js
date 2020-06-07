@@ -14,7 +14,7 @@ export default function FinalTaskMessage({ correctAnswer, checkpoints }) {
       </div>
     );
   }
-  return <p className='wrong_chance'> But you still have a chance.</p>;
+  return <p className="wrong_chance"> But you still have a chance.</p>;
 }
 
 FinalTaskMessage.propTypes = {

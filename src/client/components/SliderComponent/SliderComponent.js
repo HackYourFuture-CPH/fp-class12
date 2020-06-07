@@ -48,26 +48,26 @@ class Slider extends React.Component {
 
   render() {
     return (
-      <div className="slideshow_container">
-        <div className="arrow_component">
+      <main className="slideshow_container">
+        <section className="arrow_component">
           <ArrowsComponent
             clickLeftArrow={this.gotoPreviousSlide}
             clickRightArrow={this.gotoNextSlide}
           />
-        </div>
-        <div className="avatarImages_component">
+        </section>
+        <section className="avatarImages_component">
           <SlideshowImageComponent
             currentImageIndex={this.state.currentImageIndex}
           />
-        </div>
-        <div className="magicdots_component">
+        </section>
+        <section className="magicdots_component">
           <SliderDotsComponent
             clickDots={this.handleDotsClick}
             noOfDots={this.state.totalImages}
             activeImageIndex={this.state.currentImageIndex}
           />
-        </div>
-      </div>
+        </section>
+      </main>
     );
   }
 }
