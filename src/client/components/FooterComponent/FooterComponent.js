@@ -5,7 +5,7 @@ import NavigationalButton from '../NavigationalButtonComponent/NavigationalButto
 
 import homeIcon from '../../assets/images/home-icon.png';
 import profileIcon from '../../assets/images/profile-icon.png';
-import cupIcon from '../../assets/images/icons/kup-icon.svg';
+import cupIcon from '../../assets/images/cup-icon.png';
 
 export default function FooterComponent() {
   return (
