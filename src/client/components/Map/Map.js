@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
-import '.../../../node_modules/leaflet/dist/leaflet.css';
+import '../node_modules/leaflet/dist/leaflet.css';
 import map from 'leaflet';
 
 function Mymap({ latitude, longitude }) {
