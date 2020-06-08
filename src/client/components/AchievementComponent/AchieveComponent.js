@@ -5,48 +5,42 @@ import keyImage from '../../assets/images/icons/kye-icon.svg';
 import xImage from '../../assets/images/icons/cross-icon.svg';
 import timerImage from '../../assets/images/icons/timer-icon.svg';
 import cupImage from '../../assets/images/icons/kup-icon.svg';
+import AchievementBox from './AchievementBox';
 
 export default function Achievement({ achieveTask, Ranking, timeSpent }) {
-  const minutes = Math.floor(timeSpent / 1);
+  const minutes = Math.floor(timeSpent);
 
   return (
     <div className="achieveMain">
-      <div className="AchieveBox">
-        <div className="AchieveCircle">
-          <img src={keyImage} alt="keyImage" />
-        </div>
-        <div>
-          <p className="wireframes">{achieveTask}</p>
-        </div>
+      <div className="achieveRow">
+        <AchievementBox
+          achieveTask={achieveTask}
+          image={keyImage}
+          altImage="keyImage"
+        />
+        <AchievementBox
+          achieveTask={`${minutes} min`}
+          image={timerImage}
+          altImage="timerImage"
+        />
       </div>
 
-      <div className="AchieveBox">
-        <div className="AchieveCircle">
-          <img src={xImage} alt="xImage" />
-        </div>
-        <div>
-          <p className="wireframes">{5 - achieveTask}</p>
-        </div>
-      </div>
-      <div className="AchieveBox">
-        <div className="AchieveCircle">
-          <img src={timerImage} alt="timerImage" />
-        </div>
-        <div>
-          <p className="wireframes">{`${minutes}`} min</p>
-        </div>
-      </div>
-      <div className="AchieveBox">
-        <div className="AchieveCircle">
-          <img src={cupImage} alt="cupImage" />
-        </div>
-        <div>
-          <p className="wireframes">{Ranking}</p>
-        </div>
+      <div className="achieveRow">
+        <AchievementBox
+          achieveTask={5 - achieveTask}
+          image={xImage}
+          altImage="xImage"
+        />
+        <AchievementBox
+          achieveTask={Ranking}
+          image={cupImage}
+          altImage="cupImage"
+        />
       </div>
     </div>
   );
 }
+
 Achievement.propTypes = {
   achieveTask: PropTypes.number.isRequired,
   Ranking: PropTypes.number.isRequired,
