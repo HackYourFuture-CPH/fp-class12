@@ -1,0 +1,16 @@
+.button-component {
+  color: white;
+  font-family: 'Rammetto One', cursive;
+  background: #f26114;
+  border-radius: 5px;
+  border: none;
+  width: 150px;
+  height: 100px;
+  font-size: 30px;
+  line-height: 42px;
+  margin-top: 15px;
+}
+
+.button-component:focus {
+  background-color: rgb(251, 168, 92);
+}
