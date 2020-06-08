@@ -3,9 +3,9 @@ import './FooterComponent.styles.css';
 
 import NavigationalButton from '../NavigationalButtonComponent/NavigationalButtonComponent';
 
-import homeIcon from '../../assets/images/home-icon.png';
-import profileIcon from '../../assets/images/profile-icon.png';
-import cupIcon from '../../assets/images/cup-icon.png';
+import homeIcon from '../../assets/images/home-icon-footer.svg';
+import profileIcon from '../../assets/images/profile-icon-footer.svg';
+import cupIcon from '../../assets/images/cup-icon-footer.svg';
 
 export default function FooterComponent() {
   return (
