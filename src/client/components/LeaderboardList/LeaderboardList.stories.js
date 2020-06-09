@@ -11,7 +11,7 @@ export default {
 
 export const TestLeaderBoardComp = () => {
   return (
-    <ul>
+    <ul className="test">
       {users.map((user) => (
         <LeaderBoardItem
           key={user.id}
