@@ -1,0 +1,22 @@
+.navigational-button-component {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 15px;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+};
+
+.icon {
+  width: 20px;
+  height: 20px;
+};
+
+.label {
+  margin-top: 5px;
+  margin-bottom: 5px;
+};

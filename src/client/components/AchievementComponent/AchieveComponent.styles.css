@@ -1,0 +1,42 @@
+.achieveMain {
+  display: grid;
+  grid-template-columns: repeat(2, 0fr);
+  grid-template-rows: repeat(2, 13vw);
+  grid-gap: 15px;
+  margin: 35px;
+  margin-top: 10px;
+}
+
+.achieveRow {
+  margin-top: 32px;
+}
+
+.AchieveBox {
+  display: flex;
+  margin-top: 32px;
+  align-items: center;
+  flex-direction: column;
+  width: 155px;
+  height: 124px;
+  background: #fba85c;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.09);
+  border-radius: 5px;
+}
+
+.AchieveCircle {
+  display: flex;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  margin-top: -20px;
+  background: #e3e3e9;
+  border-radius: 50%;
+  border: 1px solid #b1b1b1;
+  padding: 10px;
+}
+
+.wireframes {
+  font-family: PostNoBills;
+  font-size: 35px;
+  color: #ffffff;
+}
