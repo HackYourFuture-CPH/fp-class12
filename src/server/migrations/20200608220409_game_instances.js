@@ -8,9 +8,9 @@ exports.up = function (knex) {
     table.foreign('fk_user_id').references('id').inTable('users');
     table.integer('fk_game_id').unsigned();
     table.foreign('fk_game_id').references('id').inTable('game_factory');
-    table.timestamp('created_at').defaultTo(knex.fn.now()).notNullable();
-    table.timestamp('updated_at').defaultTo(knex.fn.now()).notNullable();
-    table.timestamp('deleted_at').defaultTo(knex.fn.now());
+    table.datetime('created_at').defaultTo(knex.fn.now()).notNullable();
+    table.datetime('updated_at').defaultTo(knex.fn.now()).notNullable();
+    table.datetime('deleted_at');
   });
 };
 
