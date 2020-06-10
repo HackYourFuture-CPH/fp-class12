@@ -13,7 +13,13 @@
   display: flex;
   justify-content: space-between;
 }
+.titleLocationwrapper {
+  padding-left: 2%;
+}
 
+.titleLocationwrapper p {
+  margin: 0px 0px 5px 0px;
+}
 .card {
   padding: 20px 0;
   width: 70%;
@@ -23,4 +29,10 @@
 }
 .choosebox {
   margin-top: 15px;
+}
+
+@media only screen and (max-width: 660px) {
+  .titleLocation {
+    display: block;
+  }
 }

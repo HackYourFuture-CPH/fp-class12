@@ -1,10 +1,10 @@
 import React from 'react';
-import Button from './SubmitButton';
+import SubmitButton from './SubmitButton';
 import { withKnobs, text } from '@storybook/addon-knobs';
 
 export default { title: 'Submit Button Component', decorators: [withKnobs] };
 
-export const SubmitButton = () => {
+export const Submitbutton = () => {
   const ButtonTitle = text('title', 'Trial button');
-  return <Button ButtonTitle={ButtonTitle} />;
+  return <SubmitButton ButtonTitle={ButtonTitle} />;
 };
