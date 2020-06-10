@@ -1,10 +1,7 @@
 import React from 'react';
 import './Modal.styles.css';
 import PropTypes from 'prop-types';
-
-const onCloseModal = () => {
-  document.getElementById('modalbox').className = 'modalbox';
-};
+import Popup from './ModalPopup';
 
 const toggleModal = () => {
   document.querySelector('.modalbox').classList.toggle('showmodal');
@@ -12,9 +9,9 @@ const toggleModal = () => {
 
 export default function ModalResponsive({
   modalTitle,
+  buttonTitle,
   optionA,
   optionB,
-  buttonTitle,
   radiobox,
   onchangeradiobox,
   radiobox2,
@@ -25,40 +22,17 @@ export default function ModalResponsive({
       <button type="button" onClick={toggleModal}>
         Open modal
       </button>
-      <div className="modalbox" id="modalbox" onClose={onCloseModal}>
-        <div className="modal">
-          <div className="modaltextarea">
-            <h3>{modalTitle}</h3>
-            <ul>
-              <li>
-                <input
-                  type="radio"
-                  name="timer"
-                  onChange={onchangeradiobox}
-                  checked={radiobox}
-                />
-                {optionA}
-              </li>
-              <li>
-                <input
-                  type="radio"
-                  name="timer"
-                  onChange={onchangeradiobox2}
-                  checked={radiobox2}
-                />
-                {optionB}
-              </li>
-            </ul>
-          </div>
-          <button
-            type="button"
-            onClick={onCloseModal}
-            className="button-component"
-          >
-            {buttonTitle}
-          </button>
-        </div>
-      </div>
+
+      <Popup
+        modalTitle={modalTitle}
+        optionA={optionA}
+        optionB={optionB}
+        buttonTitle={buttonTitle}
+        onchangeradiobox={onchangeradiobox}
+        radiobox={radiobox}
+        radiobox2={radiobox2}
+        onchangeradiobox2={onchangeradiobox2}
+      />
     </div>
   );
 }

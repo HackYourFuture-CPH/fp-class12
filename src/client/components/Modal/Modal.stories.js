@@ -2,6 +2,7 @@ import React from 'react';
 import Modal from './Modal';
 import { withKnobs, text } from '@storybook/addon-knobs';
 import { boolean, changeBoolean } from '@storybook/addon-knobs/react';
+import Popup from './ModalPopup';
 
 export default { title: 'Modal', decorators: [withKnobs] };
 
@@ -26,6 +27,8 @@ export const ResponsiveModal = () => {
       radiobox={radiobox}
       radiobox2={radiobox2}
       onchangeradiobox2={onchangeradiobox2}
-    />
+    >
+      <Popup />
+    </Modal>
   );
 };
