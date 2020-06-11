@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import QRCode from 'react-qr-code';
+import QRCode from 'qrcode.react';
 
 const propTypes = {
   bgColor: PropTypes.string,
