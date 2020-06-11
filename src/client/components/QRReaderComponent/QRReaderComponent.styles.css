@@ -1,0 +1,52 @@
+.qr-reader-background {
+  width: 21.0625em;
+  height: 19.75em;
+  background: #ffffff;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.qr-frame {
+  width: 16.424375em;
+  height: 16.38125em;
+  left: 54.19px;
+  top: 195px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.top,
+.bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.qr-frame-corner {
+  width: 5.065em;
+  height: 4.83125em;
+  border: 5px solid;
+  border-radius: 5% 0;
+}
+
+.bottom-right {
+  border-color: transparent black black transparent;
+  border-radius: 5% 0;
+}
+
+.top-right {
+  border-color: black black transparent transparent;
+  border-radius: 0 5%;
+}
+
+.bottom-left {
+  border-color: transparent transparent black black;
+  border-radius: 0 5%;
+}
+
+.top-left {
+  border-color: black transparent transparent black;
+  border-radius: 5% 0;
+}
