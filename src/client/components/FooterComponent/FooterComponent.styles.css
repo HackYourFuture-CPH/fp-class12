@@ -1,0 +1,12 @@
+.footer-component {
+    background: #FFFFFF;
+    width: 100%;
+    box-shadow: 0px -5px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 29px;
+    padding-left: 32px;
+    padding-top: 20px;
+    padding-bottom: 11px;
+};
