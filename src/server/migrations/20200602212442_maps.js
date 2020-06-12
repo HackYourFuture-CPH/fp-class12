@@ -9,8 +9,8 @@ exports.up = function (knex) {
     table.float('long_bottom_left');
     table.float('lat_bottom_right');
     table.float('long_bottom_right');
-    table.timestamp('created_at').notNullable();
-    table.timestamp('updated_at').notNullable();
+    table.timestamp('created_at').defaultTo(knex.fn.now()).notNullable();
+    table.timestamp('updated_at').defaultTo(knex.fn.now()).notNullable();
     table.timestamp('deleted_at');
   });
 };

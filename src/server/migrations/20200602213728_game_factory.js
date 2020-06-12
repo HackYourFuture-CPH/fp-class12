@@ -6,7 +6,7 @@ exports.up = function (knex) {
     table.integer('fk_theme_id').unsigned();
     table.foreign('fk_theme_id').references('id').inTable('themes');
     table.integer('max_players');
-    table.timestamp('created_at').notNullable();
+    table.timestamp('created_at').defaultTo(knex.fn.now()).notNullable();
     table.timestamp('updated_at').notNullable();
     table.timestamp('deleted_at');
   });
