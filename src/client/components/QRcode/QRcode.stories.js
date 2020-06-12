@@ -3,7 +3,7 @@ import QRcode from './QRcode';
 
 import { withKnobs, text, color, number, select } from '@storybook/addon-knobs';
 
-export default { title: 'QR-Code', decorators: [withKnobs] };
+export default { title: 'QRCode', decorators: [withKnobs] };
 
 export const QRCode = () => (
   <div>

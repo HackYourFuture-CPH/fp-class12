@@ -1,14 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import QRCode from 'qrcode.react';
 
-const propTypes = {
-  bgColor: PropTypes.string,
-  fgColor: PropTypes.string,
-  level: PropTypes.oneOf(['L', 'M', 'Q', 'H']),
-  size: PropTypes.number,
-  value: PropTypes.string.isRequired,
-};
+import QRCode from 'qrcode.react';
 
 const QRcode = ({ value, size, fgColor, bgColor, level }) => {
   return (
@@ -24,6 +17,12 @@ const QRcode = ({ value, size, fgColor, bgColor, level }) => {
   );
 };
 
-QRCode.propTypes = propTypes;
+QRcode.propTypes = {
+  bgColor: PropTypes.string.isRequired,
+  fgColor: PropTypes.string.isRequired,
+  level: PropTypes.oneOf(['L', 'M', 'Q', 'H']).isRequired,
+  size: PropTypes.number.isRequired,
+  value: PropTypes.string.isRequired,
+};
 
 export default QRcode;
