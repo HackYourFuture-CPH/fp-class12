@@ -10,7 +10,7 @@ const getUsers = async () => {
     return error.message;
   }
 };
-// mod
+
 module.exports = {
   getUsers,
 };

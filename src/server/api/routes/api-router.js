@@ -2,7 +2,7 @@ const express = require('express');
 
 const router = express.Router();
 
-// Router imports
+// Router import
 const allUsresRouter = require('./allUsers.router');
 
 const swaggerJsDoc = require('swagger-jsdoc');
