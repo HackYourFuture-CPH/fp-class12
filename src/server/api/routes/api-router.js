@@ -3,7 +3,7 @@ const express = require('express');
 const router = express.Router();
 
 // Router imports
-const modulesRouter = require('./modules.router');
+const allUsresRouter = require('./allUsers.router');
 
 const swaggerJsDoc = require('swagger-jsdoc');
 const swaggerUi = require('swagger-ui-express');
@@ -25,10 +25,10 @@ const swaggerOptions = {
 
 const swaggerDocument = swaggerJsDoc(swaggerOptions);
 
-// Route for Swagger API Documen
+// Route for Swagger API Documentation
 router.use('/documentation', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
-// Application routes
-router.use('/modules', modulesRouter);
+// Application router
+router.use('/allUsers', allUsresRouter);
 
 module.exports = router;
