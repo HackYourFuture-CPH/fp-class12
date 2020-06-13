@@ -7,8 +7,8 @@ exports.up = function (knex) {
     table.float('latitude').notNullable();
     table.float('longitude').notNullable();
     table.integer('points');
-    table.timestamp('created_at').notNullable();
-    table.timestamp('updated_at').notNullable();
+    table.timestamp('created_at').defaultTo(knex.fn.now()).notNullable();
+    table.timestamp('updated_at').defaultTo(knex.fn.now()).notNullable();
     table.timestamp('deleted_at');
   });
 };
