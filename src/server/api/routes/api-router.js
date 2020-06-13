@@ -2,8 +2,8 @@ const express = require('express');
 
 const router = express.Router();
 
-// Router imports
-const modulesRouter = require('./modules.router');
+// Router import
+const allUsresRouter = require('./allUsers.router');
 
 const swaggerJsDoc = require('swagger-jsdoc');
 const swaggerUi = require('swagger-ui-express');
@@ -12,7 +12,7 @@ const swaggerOptions = {
   swaggerDefinition: {
     info: {
       version: '1.0',
-      title: 'Final project',
+      title: 'Final project-class 12',
       description: 'API documentation for the final project',
       contact: {},
     },
@@ -28,7 +28,7 @@ const swaggerDocument = swaggerJsDoc(swaggerOptions);
 // Route for Swagger API Documentation
 router.use('/documentation', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
-// Application routes
-router.use('/modules', modulesRouter);
+// Application router
+router.use('/allUsers', allUsresRouter);
 
 module.exports = router;
