@@ -12,7 +12,7 @@ const swaggerOptions = {
   swaggerDefinition: {
     info: {
       version: '1.0',
-      title: 'Final project',
+      title: 'Final project-class 12',
       description: 'API documentation for the final project',
       contact: {},
     },
@@ -25,7 +25,7 @@ const swaggerOptions = {
 
 const swaggerDocument = swaggerJsDoc(swaggerOptions);
 
-// Route for Swagger API Documentation
+// Route for Swagger API Documen
 router.use('/documentation', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 // Application routes

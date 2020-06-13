@@ -1,25 +1,23 @@
-// TODO: This is a sample seed file for demonstration. Remove before adding real ones.
-
 exports.seed = function (knex) {
-  // Deletes ALL existing entries
-  return knex('modules')
+  // Deletes ALL existing entr
+  return knex('users')
     .del()
     .then(function () {
-      // Inserts seed entries
-      return knex('modules').insert([
+      // Inserts seed entri
+      return knex('users').insert([
         {
           id: 1,
-          title: 'Javascript 2',
-          startDate: '2020-05-10 00:00:00',
-          endDate: '2020-05-10 00:00:00',
-          classid: 'class01',
+          score: 2,
+          createdAt: '2020-05-10 00:00:00',
+          updatedAt: '2020-05-15 00:00:00',
+          deletedAt: '2020-05-20 00:00:00',
         },
         {
           id: 2,
-          title: 'Javascript 1',
-          startDate: '2020-05-07 00:00:00',
-          endDate: '2020-05-08 00:00:00',
-          classid: 'class01',
+          score: 5,
+          createdAt: '2020-05-07 00:00:00',
+          updatedAt: '2020-05-08 00:00:00',
+          deletedAt: '2020-05-22 00:00:00',
         },
       ]);
     });
