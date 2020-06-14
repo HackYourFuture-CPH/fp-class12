@@ -20,7 +20,7 @@ const createUser = async (body) => {
       await knex('user_roles').insert({
         id: body.id,
         fk_role_id: body.fk_role_id,
-        fk_user_id: body.fk_user_id,
+        fk_user_id: id,
         created_at: moment(body.created_at).format(),
         updated_at: moment(body.updated_at).format(),
         deleted_at: moment(body.deleted_at).format(),
