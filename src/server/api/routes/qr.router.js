@@ -7,7 +7,7 @@ const qrController = require('../controllers/qr.controller');
 /**
  * @swagger
  * /qr:
- *  get:
+ *  post:
  *    summary: insert a game instance and recieve its qr code
  *    description:
  *      Will return the qr code for game instance.
@@ -28,7 +28,7 @@ router.post('/', (req, res, next) => {
 /**
  * @swagger
  * /qr/{USER}/{GAME}:
- *  get:
+ *  post:
  *    summary: insert a game instance for a user and a game and recieve its qr code
  *    description:
  *      Will return the qr code for game instance.
