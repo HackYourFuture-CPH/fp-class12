@@ -19,15 +19,12 @@ const createUserProfilesController = require('../controllers/create-user-profile
  *        schema:
  *          type: object
  *          required:
- *            - id
+ *            - fk_avatar_id
  *            - uid
  *            - name
  *            - email
- *            - created_at
- *            - updated_at
- *            - deleted_at
  *          properties:
- *            id:
+ *            fk_avatar_id:
  *              type: integer
  *            uid:
  *              type: string
@@ -35,15 +32,6 @@ const createUserProfilesController = require('../controllers/create-user-profile
  *              type: string
  *            email:
  *              type: string
- *            created_at:
- *              type: string
- *              format: date-time
- *            updated_at:
- *              type: string
- *              format: date-time
- *            deleted_at:
- *              type: string
- *              format: date-time
  *    responses:
  *      201:
  *        description: User created
