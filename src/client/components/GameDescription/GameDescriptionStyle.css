@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rammetto+One&display=swap');
 
-.container {
+.cardcontainer {
   width: 90%;
   border-radius: 15px;
   margin: auto;
@@ -13,27 +13,26 @@
   display: flex;
   justify-content: space-between;
 }
-.button-component {
-  color: white;
-  font-family: 'Rammetto One', cursive;
-  background: #f26114;
-  border-radius: 5px;
-  border: none;
-  width: 150px;
-  height: 100px;
-  font-size: 30px;
-  line-height: 42px;
-  margin-top: 15px;
+.titleLocationwrapper {
+  padding-left: 2%;
 }
 
-.button-component:focus {
-  background-color: rgb(251, 168, 92);
+.titleLocationwrapper p {
+  margin: 0px 0px 5px 0px;
 }
-
 .card {
   padding: 20px 0;
   width: 70%;
   margin: auto;
   background-color: rgb(251, 168, 92);
   background-image: url('../../assets/images/background/background-treasure-map.png');
+}
+.choosebox {
+  margin-top: 15px;
+}
+
+@media only screen and (max-width: 660px) {
+  .titleLocation {
+    display: block;
+  }
 }
