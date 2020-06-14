@@ -1,0 +1,17 @@
+.slideshow_container {
+  position: relative;
+}
+.arrow_component {
+  position: absolute;
+  top: 33%;
+}
+
+.avatarImages_component {
+  padding-left: 3%;
+  padding-right: 3%;
+}
+
+.magicdots_component {
+  text-align: center;
+  padding-top: 10%;
+}
