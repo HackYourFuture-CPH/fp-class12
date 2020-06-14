@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import QRCode from 'qrcode.react';
 
-const QRcode = ({ value, size, fgColor, bgColor, level }) => {
+const QRcode = ({ value, size, fgColor, bgColor, level, includeMargin }) => {
   return (
     <div>
       <QRCode
@@ -12,6 +12,7 @@ const QRcode = ({ value, size, fgColor, bgColor, level }) => {
         fgColor={fgColor}
         size={size}
         level={level}
+        includeMargin={includeMargin}
       />
     </div>
   );
@@ -23,6 +24,7 @@ QRcode.propTypes = {
   level: PropTypes.oneOf(['L', 'M', 'Q', 'H']).isRequired,
   size: PropTypes.number.isRequired,
   value: PropTypes.string.isRequired,
+  includeMargin: PropTypes.bool.isRequired,
 };
 
 export default QRcode;
