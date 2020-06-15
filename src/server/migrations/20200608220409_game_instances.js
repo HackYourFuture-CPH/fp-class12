@@ -6,7 +6,7 @@ exports.up = function (knex) {
     table.integer('fk_game_scores_id');
     table.foreign('fk_game_scores_id').references('id').inTable('game_scores');
     table.integer('fk_user_id');
-    table.foreign('fk_user_id').references('id').inTable('user');
+    table.foreign('fk_user_id').references('id').inTable('users');
     table.integer('fk_game_id');
     table.foreign('fk_game_id').references('id').inTable('game_factory');
     table.datetime('created_at').defaultTo(knex.fn.now()).notNullable();
