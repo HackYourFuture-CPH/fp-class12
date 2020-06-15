@@ -1,14 +1,13 @@
 const knex = require('../../config/db');
 const moment = require('moment-timezone');
 
-const get = async (user, game) => {
+const get = async (game) => {
   try {
     const now = moment().format();
     const instance = await knex('game_instances').insert({
       score: 0,
       created_at: now,
       updated_at: now,
-      fk_user_id: user,
       fk_game_id: game,
     });
 
