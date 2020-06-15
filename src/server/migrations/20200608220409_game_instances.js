@@ -4,7 +4,7 @@ exports.up = function (knex) {
   return knex.schema.createTable('game_instances', (table) => {
     table.increments('id');
     table.integer('fk_game_scores_id');
-    table.foreign('fk_game_scores_id').references('id').inTable('game_score');
+    table.foreign('fk_game_scores_id').references('id').inTable('game_scores');
     table.integer('fk_user_id');
     table.foreign('fk_user_id').references('id').inTable('user');
     table.integer('fk_game_id');
