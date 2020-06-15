@@ -9,6 +9,7 @@ exports.up = function (knex) {
     table.datetime('created_at').defaultTo(knex.fn.now()).notNullable();
     table.datetime('updated_at').defaultTo(knex.fn.now()).notNullable();
     table.datetime('deleted_at');
+
   });
 };
 
