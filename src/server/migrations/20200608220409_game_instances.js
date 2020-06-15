@@ -3,7 +3,9 @@
 exports.up = function (knex) {
   return knex.schema.createTable('game_instances', (table) => {
     table.increments('id');
-    table.integer('score');
+    table.increments('fk_game_scores_id');
+    table.increments('fk_user_id');
+    table.increments('fk_game_id');
     table.datetime('created_at').defaultTo(knex.fn.now()).notNullable();
     table.datetime('updated_at').defaultTo(knex.fn.now()).notNullable();
     table.datetime('deleted_at');
