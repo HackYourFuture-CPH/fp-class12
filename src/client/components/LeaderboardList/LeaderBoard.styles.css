@@ -1,21 +1,14 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 .leader-board-item {
   display: flex;
   border-bottom: 2px solid rgb(199, 198, 198);
   justify-content: space-between;
-  padding: 0 20px;
   margin: 0 20px;
   color: #828282;
 }
 
-h1 {
+.title-div h3 {
   line-height: 34px;
-  font-family: RammettoOne;
+  color: #828282;
 }
 
 .leader-board-content {
@@ -26,22 +19,33 @@ h1 {
   width: 60%;
 }
 
-.timer {
+p.timer {
   margin-top: 10px;
-  font-family: RammettoOne;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
 }
 
 .avatar {
   max-width: 110px;
 }
 
-ul {
-  background-image: url(../../assets/images/background/background-treasure-map.png);
+.leaderboardlist {
+  background-color: #fff;
 }
-
-.test {
+.leaderboardlist::before {
+  content: '';
+  width: 95%;
+  height: 100%;
   background-image: url(../../assets/images/background/background-treasure-map.png);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: top;
+  background-color: #fff;
+  opacity: 0.1;
+  display: block;
+  position: absolute;
+}
+
+.avatar-div {
+  margin: 15px 15px 15px 0px;
 }
