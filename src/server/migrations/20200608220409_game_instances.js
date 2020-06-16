@@ -1,5 +1,3 @@
-// TODO: This is a sample migration for demonstration. Remove before adding real ones.
-
 exports.up = function (knex) {
   return knex.schema.createTable('game_instances', (table) => {
     table.increments('id');
