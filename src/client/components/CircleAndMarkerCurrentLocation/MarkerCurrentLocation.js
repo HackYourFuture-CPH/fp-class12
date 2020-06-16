@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Marker, Popup } from 'react-leaflet';
+import { Marker, Popup, CircleMarker } from 'react-leaflet';
 import { markerIcon } from './Icons';
+import MapBase from '../mapComponents/MapBase';
 
 const MarkerCurrentLocation = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -30,12 +31,21 @@ const MarkerCurrentLocation = () => {
   };
 
   return (
-    !isLoading &&
-    !error && (
+    <MapBase zoom={13} center={[lat, lng]}>
       <Marker position={[lat, lng]} icon={markerIcon}>
         <Popup>Marker current location</Popup>
       </Marker>
-    )
+      {!isLoading && !error && (
+        <CircleMarker
+          center={[lat, lng]}
+          fillColor="red"
+          radius={40}
+          fillOpacity={0.5}
+        >
+          <Popup>circle marker current location</Popup>
+        </CircleMarker>
+      )}
+    </MapBase>
   );
 };
 
