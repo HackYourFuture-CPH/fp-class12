@@ -20,14 +20,12 @@ const gameInstanceController = require('../controllers/game_Instance.controller'
  *        schema:
  *          type: object
  *          required:
- *            - id
- *            - max_players
+ *            -fk_game_id
  *
  *          properties:
- *            id:
+ *            fk_game_id:
  *              type: integer
- *            max_players:
- *              type: integer
+
  *
  *    responses:
  *      201:
