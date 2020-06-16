@@ -42,9 +42,7 @@ router.post('/', (req, res) => {
   createUserProfilesController
     .createModule(req.body)
     .then((result) => res.json(result))
-    .catch((error) => {
-      console.log(error);
-
+    .catch(() => {
       res.status(400).send('Bad request').end();
     });
 });
