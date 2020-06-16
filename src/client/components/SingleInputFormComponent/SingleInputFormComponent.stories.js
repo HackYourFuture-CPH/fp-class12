@@ -7,7 +7,7 @@ export default { title: 'Form Component', decorators: [withKnobs] };
 export const Component = () => (
   <SingleInputFormComponent
     inputLabel={text('Title', 'Team name')}
-    value="Enter name"
-    title={text('Button Label', 'Trial button')}
+    value={text('Value', 'Enter name')}
+    ButtonTitle={text('Button Label', 'Trial button')}
   />
 );
