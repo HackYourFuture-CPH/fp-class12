@@ -3,6 +3,7 @@ exports.up = function (knex) {
     table.increments('id');
     table.integer('score');
     table.integer('fk_user_id');
+    table.foreign('fk_user_id').references('id').inTable('users');
     table.datetime('created_at').defaultTo(knex.fn.now()).notNullable();
     table.datetime('updated_at').defaultTo(knex.fn.now()).notNullable();
     table.datetime('deleted_at');
