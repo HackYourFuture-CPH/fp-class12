@@ -22,21 +22,12 @@ const gameInstanceController = require('../controllers/game_Instance.controller'
  *          required:
  *            - id
  *            - max_players
- *            - created_at
- *            - updated_at
  *
  *          properties:
  *            id:
  *              type: integer
  *            max_players:
  *              type: integer
- *            created_at:
- *              type: string
- *              format: date-time
- *            updated_at:
- *              type: string
- *              format: date-time
- * 
  *
  *    responses:
  *      201:
