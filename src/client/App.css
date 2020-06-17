@@ -1,8 +1,72 @@
-* {
-  box-sizing: border-box;
+/* Global css */
+
+body,
+html,
+input,
+textarea,
+h1,
+h2,
+h3,
+h4,
+h5,
+ul,
+li,
+p {
+  padding: 0px;
+  margin: 0px;
+  font-family: Roboto;
+  font-size: 16px;
 }
+
+img {
+  width: 100%;
+}
+
+/* Homepage css */
+
 .bodycontainer {
-  background-color: #fba85c;
-  text-align: center;
+  width: 21%;
+  margin: 0px auto;
   position: relative;
+  background-color: #f9a55a;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+
+  /* Fallback */
+  background-image: url('assets/images/background/background-treasure-map.png');
+
+  /* CSS gradients */
+  background-image: url('assets/images/background/background-treasure-map.png'),
+    -moz-linear-gradient(top, #f9a55a 0%, #eb7f44 100%);
+  background-image: url('assets/images/background/background-treasure-map.png'),
+    -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f9a55a), color-stop(100%, #eb7f44));
+  background-image: url('assets/images/background/background-treasure-map.png'),
+    linear-gradient(to bottom, #f9a55a, #eb7f44);
+
+  /* IE */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F9A55A', endColorstr='#eb7f44', GradientType=0);
+  background-position: center top;
+  background-size: cover;
+}
+
+.bodywrapper {
+  position: relative;
+  padding: 5%;
+}
+.homelogocontainer {
+  width: 100%;
+  padding: 30% 10% 40% 10%;
+}
+.homelogo {
+  width: 50%;
+  margin: 0px auto;
+}
+
+.homelogocontainer h1 {
+  font-family: 'Rammetto One', cursive;
+  color: #ffffff;
+  text-align: center;
+}
+.bodywrapper .button-component {
+  margin-bottom: 4%;
 }
