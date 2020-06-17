@@ -21,11 +21,13 @@ const gameInstanceController = require('../controllers/game_Instance.controller'
  *          type: object
  *          required:
  *            -fk_game_id
+ *            -timer_mode
  *
  *          properties:
  *            fk_game_id:
  *              type: integer
-
+ *            timer_mode:
+ *              type: string
  *
  *    responses:
  *      201:
