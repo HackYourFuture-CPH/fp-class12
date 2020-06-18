@@ -4,7 +4,7 @@ import Marker from './Marker';
 import Icons from './Icons';
 import PropTypes from 'prop-types';
 
-const Map = ({ center, markers, currentPosition, style }) => {
+const Map = ({ center, markers, currentPosition }) => {
   if (!center) {
     throw Error('Center position for map is not defined');
   }
@@ -20,7 +20,7 @@ const Map = ({ center, markers, currentPosition, style }) => {
       ]
     : markers;
   return (
-    <MapBase center={center} style={style}>
+    <MapBase center={center}>
       {markersToRender.map((marker) => (
         <Marker
           key={marker.id}

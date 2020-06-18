@@ -5,8 +5,8 @@ exports.up = function (knex) {
     table.integer('fk_question_id').unsigned();
     table.foreign('fk_question_id').references('id').inTable('questions');
     table.boolean('answer_correct');
-    table.timestamp('created_at').notNullable();
-    table.timestamp('updated_at').notNullable();
+    table.timestamp('created_at').defaultTo(knex.fn.now()).notNullable();
+    table.timestamp('updated_at').defaultTo(knex.fn.now()).notNullable();
     table.timestamp('deleted_at');
   });
 };
