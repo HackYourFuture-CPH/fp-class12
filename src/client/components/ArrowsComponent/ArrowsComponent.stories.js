@@ -3,4 +3,6 @@ import ArrowsComponent from './ArrowsComponent';
 
 export default { title: 'Arrows Component' };
 
-export const Arrows = () => <ArrowsComponent />;
+export const Arrows = () => (
+  <ArrowsComponent clickLeftArrow={() => ({})} clickRightArrow={() => ({})} />
+);
