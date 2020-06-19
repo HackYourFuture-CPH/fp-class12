@@ -7,27 +7,6 @@ const possibleanswerController = require('../controllers/possibleanswer.controll
 
 /**
  * @swagger
- * /answer_choices:
- *  get:
- *    summary: Get all answer_choices
- *    description:
- *      Will return all answer_choices.
- *    produces: application/json
- *    responses:
- *      200:
- *        description: Successful request
- *      5XX:
- *        description: Unexpected error.
- */
-router.get('/', (req, res, next) => {
-  possibleanswerController
-    .getPossibleanswer()
-    .then((result) => res.json(result))
-    .catch(next);
-});
-
-/**
- * @swagger
  * /answer_choices/{ID}:
  *  get:
  *    summary: Get answer_choices by ID
