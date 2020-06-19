@@ -35,19 +35,8 @@ module.exports = {
     {
       files: ['**/*.controller.js'],
       rules: {
-        '@typescript-eslint/camelcase': [
-          'warn',
-          {
-            allow: [
-              'fk_.*',
-              '.*_at',
-              'lat_.*',
-              'long_.*',
-              'answer_.*',
-              'max_players',
-            ],
-          },
-        ],
+        '@typescript-eslint/camelcase': ['off'],
+        camelcase: ['off'],
       },
     },
   ],
