@@ -4,6 +4,7 @@ exports.seed = function (knex) {
     .then(function () {
       return knex('users').insert([
         {
+          fk_avatar_id: 1,
           uid: 'nothing_for_now',
           name: 'Test',
           email: 'test@test.com',
