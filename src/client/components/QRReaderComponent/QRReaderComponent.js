@@ -8,7 +8,7 @@ export default function QRReaderComponent() {
   const [error, setErr] = useState();
 
   return (
-    <div className="qr-reader-background">
+    <section className="qr-reader-background">
       <div className="qr-reader-frame">
         {error ? (
           <p>{error.message}</p>
@@ -22,6 +22,6 @@ export default function QRReaderComponent() {
           />
         )}
       </div>
-    </div>
+    </section>
   );
 }
