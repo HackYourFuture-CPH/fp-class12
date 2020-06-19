@@ -1,13 +1,14 @@
 import React from 'react';
 import Mymap from './Map';
 import { withKnobs, number } from '@storybook/addon-knobs';
+import DimensionsContext from './dimentionsContext';
 
 export default {
   title: 'Map Sample Component',
   decorators: [withKnobs],
 };
 
-const exampleStyle = {
+const exampleDimensions = {
   height: '600px',
   width: '400px',
 };
@@ -20,10 +21,8 @@ export const MapComponent = () => {
   const currentLong = number('CurrentLongitude', 12.535842);
   const currentPosition = [currentLat, currentLong];
   return (
-    <Mymap
-      center={center}
-      currentPosition={currentPosition}
-      style={exampleStyle}
-    />
+    <DimensionsContext.Provider value={exampleDimensions}>
+      <Mymap center={center} currentPosition={currentPosition} />
+    </DimensionsContext.Provider>
   );
 };
