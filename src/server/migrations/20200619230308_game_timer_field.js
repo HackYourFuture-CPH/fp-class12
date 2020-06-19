@@ -6,5 +6,6 @@ exports.up = function (knex) {
   };
   
   exports.down = function (knex) {
-    return knex.schema.dropTable('game_scores');
+    return knex.schema.table('game_scores', (table) => {
+    table.dropColumn('game_timer');
   };
