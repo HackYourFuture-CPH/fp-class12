@@ -25,7 +25,6 @@ img {
 /* Homepage css */
 
 .bodycontainer {
-  width: 21%;
   margin: 0px auto;
   position: relative;
   background-color: #f9a55a;
@@ -55,18 +54,47 @@ img {
 }
 .homelogocontainer {
   width: 100%;
-  padding: 30% 10% 40% 10%;
+  padding: 39% 10% 26% 10%;
 }
 .homelogo {
-  width: 50%;
-  margin: 0px auto;
+  width: 65.5%;
+  margin: 0px auto 4% auto;
 }
 
 .homelogocontainer h1 {
   font-family: 'Rammetto One', cursive;
   color: #ffffff;
   text-align: center;
+  font-size: 29px;
 }
 .bodywrapper .button-component {
-  margin-bottom: 4%;
+  margin-bottom: 7%;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .bodycontainer {
+    width: 100%;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .bodycontainer {
+    width: 50%;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .bodycontainer {
+    width: 40%;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .bodycontainer {
+    width: 375px;
+  }
 }
