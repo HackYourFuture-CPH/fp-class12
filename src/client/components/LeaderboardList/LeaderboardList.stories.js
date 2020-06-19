@@ -5,13 +5,13 @@ import { users } from './users';
 // i made array of users as source to test LeaderBoard component on storybook
 
 export default {
-  title: 'Test LeaderBoard Component',
+  title: 'LeaderBoard Component',
   decorators: [withKnobs],
 };
 
 export const TestLeaderBoardComp = () => {
   return (
-    <ul className="test">
+    <ul className="leaderboardlist">
       {users.map((user) => (
         <LeaderBoardItem
           key={user.id}
