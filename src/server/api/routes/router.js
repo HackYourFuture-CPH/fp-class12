@@ -9,5 +9,6 @@ router.use('/modules', modulesRouter);
 router.use('/answer_choices', possibleanswerRouter);
 
 const questionsRouter = require('./questions.router');
+router.use('/questions', questionsRouter);
 
 module.exports = router;
