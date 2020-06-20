@@ -38,7 +38,6 @@ const newGameInstanceController = require('../controllers/newGameInstance.contro
  *        description: Unexpected error.
  */
 router.post('/', (req, res) => {
-  
   newGameInstanceController
     .createNewGameInstance(req.body)
     .then((result) => res.json(result))
