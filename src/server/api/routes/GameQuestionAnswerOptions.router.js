@@ -3,13 +3,13 @@ const express = require('express');
 const router = express.Router({ mergeParams: true });
 
 // controllers
-const possibleanswerController = require('../controllers/possibleanswer.controller');
+const possibleanswerController = require('../controllers/GameQuestionAnswerOptions.controller');
 
 /**
  * @swagger
  * /answer_choices/{ID}:
  *  get:
- *    summary: Get answer_choices by ID
+ *    summary: Get answer choices for given question by ID
  *    description:
  *      Will return single answer_text with a matching ID.
  *    produces: application/json

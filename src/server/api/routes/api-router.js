@@ -4,7 +4,7 @@ const router = express.Router();
 
 // Router imports
 const modulesRouter = require('./modules.router');
-const possibleanswerRouter = require('./possibleanswer.router');
+const possibleanswerRouter = require('./GameQuestionAnswerOptions.router');
 const questionsRouter = require('./questions.router');
 
 const swaggerJsDoc = require('swagger-jsdoc');

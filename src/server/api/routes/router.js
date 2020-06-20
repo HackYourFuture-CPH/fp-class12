@@ -3,7 +3,7 @@ const express = require('express');
 const router = express.Router();
 
 const modulesRouter = require('./modules.router');
-const possibleanswerRouter = require('./possibleanswer.router');
+const possibleanswerRouter = require('./GameQuestionAnswerOptions.router');
 
 router.use('/modules', modulesRouter);
 router.use('/answer_choices', possibleanswerRouter);
