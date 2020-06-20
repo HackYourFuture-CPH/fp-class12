@@ -1,9 +1,7 @@
-// TODO: This is a sample migration for demonstration. Remove before adding real ones.
-
 exports.up = function (knex) {
-  return knex.schema.createTable('game_instances', (table) => {
+  return knex.schema.createTable('avatars', (table) => {
     table.increments('id');
-    table.integer('score');
+    table.string('image_url');
     table.timestamp('created_at').defaultTo(knex.fn.now()).notNullable();
     table.timestamp('updated_at').defaultTo(knex.fn.now()).notNullable();
     table.timestamp('deleted_at');
@@ -11,5 +9,5 @@ exports.up = function (knex) {
 };
 
 exports.down = function (knex) {
-  return knex.schema.dropTable('game_instances');
+  return knex.schema.dropTable('avatars');
 };
