@@ -26,10 +26,8 @@ const newGameInstanceController = require('../controllers/newGameInstance.contro
  *          properties:
  *            fk_user_id:
  *              type: integer
- *              format: int64 * 
  *            game_timer:
  *              type: integer
- *              format: int64
  *           
  *    responses:
  *      201:
@@ -37,15 +35,11 @@ const newGameInstanceController = require('../controllers/newGameInstance.contro
  *      5XX:
  *        description: Unexpected error.
  */
-router.post('/', (req, res) => {
+router.post('/', (req, res, next) => {
   newGameInstanceController
     .createNewGameInstance(req.body)
     .then((result) => res.json(result))
-    .catch((error) => {
-      console.log(error);
-
-      res.status(400).send('Bad request').end();
-    });
+    .catch(next);
 });
 
 module.exports = router;
