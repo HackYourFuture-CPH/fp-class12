@@ -1,7 +1,6 @@
 exports.up = function (knex) {
     return knex.schema.table('game_scores', (table) => {
-      table.time('game_timer');
-      
+      table.time('game_timer');      
     });
   };
   
