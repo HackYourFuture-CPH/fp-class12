@@ -26,8 +26,7 @@ const newGameInstanceController = require('../controllers/newGameInstance.contro
  *          properties:
  *            fk_user_id:
  *              type: integer
- *              format: int64
- * 
+ *              format: int64 * 
  *            game_timer:
  *              type: integer
  *              format: int64

@@ -31,7 +31,6 @@ router.use('/documentation', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 // Application routes
 router.use('/modules', modulesRouter);
-
 router.use('/newGame', newGameRouter);
 
 module.exports = router;
