@@ -8,4 +8,6 @@ const possibleanswerRouter = require('./possibleanswer.router');
 router.use('/modules', modulesRouter);
 router.use('/answer_choices', possibleanswerRouter);
 
+const questionsRouter = require('./questions.router');
+
 module.exports = router;
