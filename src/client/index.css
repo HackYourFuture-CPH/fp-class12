@@ -7,12 +7,6 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background: #e5e5e5;
 }
 body,
 h1,
@@ -24,14 +18,23 @@ h6 {
   padding: 0;
   margin: 0;
 }
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
 
-.radiobuttons {
-  padding: 10px;
-  text-align: center;
-  font-size: 22px;
-  font-weight: 400;
+#root:before {
+  content: '';
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('./assets/images/background/background-treasure-map.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 2200px;
+  background-position: 10% 15%;
+  opacity: 10%;
+  z-index: -1;
+}
+@media (max-width: 576px) {
+  #root:before {
+    background-size: 1300px;
+    background-position: 90% 30%;
+  }
 }
