@@ -4,7 +4,11 @@ const router = express.Router();
 
 // Router imports
 const modulesRouter = require('./modules.router');
+<<<<<<< HEAD
 const newGameRouter = require('./newGame.router');
+=======
+const questionsRouter = require('./questions.router');
+>>>>>>> develop
 
 const swaggerJsDoc = require('swagger-jsdoc');
 const swaggerUi = require('swagger-ui-express');
