@@ -1,6 +1,6 @@
 exports.up = function (knex) {
     return knex.schema.table('game_scores', (table) => {
-      table.integer('game_timer');
+      table.time('game_timer');
       
     });
   };
@@ -10,4 +10,3 @@ exports.up = function (knex) {
     table.dropColumn('game_timer');
   });
   };
-  
