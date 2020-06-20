@@ -31,7 +31,7 @@ router.use('/documentation', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 // Application routes
 router.use('/modules', modulesRouter);
-router.use('/createUserProfiles', createUserProfilesRouter);
-router.use('/createUserRoles', createUserRolesRouter);
+router.use('/users', createUserProfilesRouter);
+router.use('/user_roles', createUserRolesRouter);
 
 module.exports = router;
