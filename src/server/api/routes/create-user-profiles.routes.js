@@ -38,11 +38,13 @@ const createUserProfilesController = require('../controllers/create-user-profile
  *      5XX:
  *        description: Unexpected error.
  */
-router.post('/', (req, res) => {
+router.post('/', (req, res, next) => {
   createUserProfilesController
-    .createModule(req.body)
+    .createUser(req.body)
     .then((result) => res.json(result))
-    .catch(() => {
+    .catch(next)
+    .catch((error) => {
+      console.log(error);
       res.status(400).send('Bad request').end();
     });
 });

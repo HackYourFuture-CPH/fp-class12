@@ -32,11 +32,13 @@ const createUserRolesController = require('../controllers/create-user-roles.cont
  *      5XX:
  *        description: Unexpected error.
  */
-router.post('/', (req, res) => {
+router.post('/', (req, res, next) => {
   createUserRolesController
-    .createModule(req.body)
+    .createUserRoles(req.body)
     .then((result) => res.json(result))
-    .catch(() => {
+    .catch(next)
+    .catch((error) => {
+      console.log(error);
       res.status(400).send('Bad request').end();
     });
 });
