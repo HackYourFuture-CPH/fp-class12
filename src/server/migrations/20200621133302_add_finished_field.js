@@ -5,7 +5,7 @@ exports.up = function (knex) {
 };
 
 exports.down = function (knex) {
-  return knex.schema.table('game_scores', function (table) {
+  return knex.schema.table('game_instances', function (table) {
     table.dropColumn('Finished');
   });
 };
