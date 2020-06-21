@@ -15,5 +15,4 @@ const questionsRouter = require('./questions.router');
 
 router.use('/questions', questionsRouter);
 
-
 module.exports = router;
