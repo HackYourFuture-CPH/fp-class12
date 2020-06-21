@@ -9,6 +9,7 @@ const possibleanswerRouter = require('./GameQuestionAnswerOptions.router');
 const createUserProfilesRouter = require('./create-user-profiles.routes');
 const createUserRolesRouter = require('./create-user-roles.routes');
 const questionsRouter = require('./questions.router');
+const firstQuestionRouter = require('./retrieve-first-question.router');
 
 const swaggerJsDoc = require('swagger-jsdoc');
 const swaggerUi = require('swagger-ui-express');
@@ -40,5 +41,6 @@ router.use('/answer_choices', possibleanswerRouter);
 router.use('/users', createUserProfilesRouter);
 router.use('/user_roles', createUserRolesRouter);
 router.use('/questions', questionsRouter);
+router.use('/firstQuestion', firstQuestionRouter);
 
 module.exports = router;
