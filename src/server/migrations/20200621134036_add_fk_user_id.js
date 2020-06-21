@@ -6,7 +6,7 @@ exports.up = function (knex) {
 };
 
 exports.down = function (knex) {
-  return knex.schema.table('users', function (table) {
+  return knex.schema.table('game_instances', function (table) {
     table.dropForeign('fk_user_id');
     table.dropColumn('fk_user_id');
   });
