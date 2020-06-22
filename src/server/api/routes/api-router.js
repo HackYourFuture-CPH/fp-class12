@@ -41,6 +41,6 @@ router.use('/answer_choices', possibleanswerRouter);
 router.use('/users', createUserProfilesRouter);
 router.use('/user_roles', createUserRolesRouter);
 router.use('/questions', questionsRouter);
-router.use('/firstQuestion', firstQuestionRouter);
+router.use('/getFirstQuestion', firstQuestionRouter);
 
 module.exports = router;

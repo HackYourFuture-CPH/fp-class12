@@ -7,7 +7,7 @@ const firstQuestionController = require('../controllers/retrieve-first-question.
 
 /**
  * @swagger
- * /modules/{ID}:
+ * /getFirstQuestion/{ID}:
  *  get:
  *    summary: Get first question by ID
  *    description:
@@ -29,7 +29,7 @@ const firstQuestionController = require('../controllers/retrieve-first-question.
  */
 router.get('/:id', (req, res, next) => {
   firstQuestionController
-    .getFirstQuestion(req.params.id)
+    .getFirstQuestionById(req.params.id)
     .then((result) => res.json(result))
     .catch(next);
 });
