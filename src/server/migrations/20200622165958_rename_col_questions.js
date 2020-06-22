@@ -6,6 +6,6 @@ exports.up = function (knex) {
 
 exports.down = function (knex) {
   return knex.schema.table('questions', function (table) {
-    table.renameColumn('fk_game_id', 'fk_game_factory_id');
+    table.renameColumn('fk_game_factory_id', 'fk_game_id');
   });
 };
