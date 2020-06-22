@@ -7,7 +7,7 @@ const newGameInstanceController = require('../controllers/newGameInstance.contro
 
 /**
  * @swagger
- * /newGame:
+ * /new_game:
  *   post:
  *    summary: Create a new game Instance
  *    description:
@@ -20,14 +20,21 @@ const newGameInstanceController = require('../controllers/newGameInstance.contro
  *        schema:
  *          type: object
  *          required:
+ *            - code
  *            - fk_user_id
- *            - game_timer
+ *            - fk_game_factory_id
+ *            - fk_game_scores_id
 
  *          properties:
+ *            code:
+ *              type: integer
  *            fk_user_id:
  *              type: integer
- *            game_timer:
+ *            fk_game_factory_id:
  *              type: integer
+ *            fk_game_scores_id:
+ *              type: integer
+
  *           
  *    responses:
  *      201:
