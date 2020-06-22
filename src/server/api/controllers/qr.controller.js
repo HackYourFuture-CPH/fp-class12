@@ -1,18 +1,16 @@
 const knex = require('../../config/db');
-const moment = require('moment-timezone');
 
-const get = async (game) => {
+const get = async (id) => {
   try {
-    const now = moment().format();
-    const instance = await knex('game_instances').insert({
-      score: 0,
-      created_at: now,
-      updated_at: now,
-      fk_game_id: game,
-    });
+    const instances = await knex('game_instances')
+      .select('game_instances.game_code as code')
+      .where({ id });
 
+    if (instances.length === 0) {
+      throw new Error('There is no record');
+    }
     return {
-      qr: `${instance[0]}-${now}`,
+      qr: instances[0].code,
     };
   } catch (error) {
     return error.message;

@@ -7,19 +7,20 @@ const qrController = require('../controllers/qr.controller');
 /**
  * @swagger
  * /qr/{GAME}:
- *  post:
- *    summary: insert a game instance for a user and a game and recieve its qr code
+ *  get:
+ *    summary: Get the qr code accocieted with game instance.
  *    description:
  *      Will return the qr code for game instance.
  *    produces: application/json
  *    parameters:
+ *
  *
  *     - in: path
  *       name: GAME
  *       schema:
  *         type: integer
  *         required: true
- *         description: The ID of the GAME to create a game instance for
+ *         description: The ID of the GAME to select a game instance for
  *
  *    responses:
  *      200:
@@ -33,9 +34,9 @@ const qrController = require('../controllers/qr.controller');
  *      5XX:
  *        description: Unexpected error.
  */
-router.post('/:game', (req, res, next) => {
+router.get('/:id', (req, res, next) => {
   qrController
-    .get(req.params.game)
+    .get(req.params.id)
     .then((result) => res.json(result))
     .catch(next);
 });
