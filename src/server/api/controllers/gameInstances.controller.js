@@ -5,7 +5,7 @@ const getGameInstances = async () => {
     return await knex('game_instances')
       .join('users', 'users.id', 'game_instances.fk_user_id')
       .select('game_instances.id', 'users.name', 'game_instances.score')
-      .where({ 'users.id': 'game_instances.fk_user_id' });
+      .where('finished', '=', false);
   } catch (error) {
     return error.message;
   }
