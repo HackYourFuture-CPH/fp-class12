@@ -6,6 +6,6 @@ const modulesRouter = require('./modules.router');
 const newGameRouter = require('./newGame.router');
 
 router.use('/modules', modulesRouter);
-router.use('/new_game', newGameRouter);
+router.use('/newGame', newGameRouter);
 
 module.exports = router;
