@@ -24,6 +24,12 @@ const qrController = require('../controllers/qr.controller');
  *    responses:
  *      200:
  *        description: Successful request
+ *        schema:
+ *          type: object
+ *          properties:
+ *            qr:
+ *              type: string
+ *              description: The Generated QR code.
  *      5XX:
  *        description: Unexpected error.
  */
