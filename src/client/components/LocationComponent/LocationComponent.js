@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 
-function LocationComponent() {
-  const latitude = 55.661869;
-  const longitude = 12.540742;
+function LocationComponent({ latitude, longitude }) {
   const [location, setLocation] = useState();
 
   fetch(
@@ -16,4 +15,8 @@ function LocationComponent() {
   return <p>{location}</p>;
 }
 
+LocationComponent.propTypes = {
+  latitude: PropTypes.number.isRequired,
+  longitude: PropTypes.number.isRequired,
+};
 export default LocationComponent;

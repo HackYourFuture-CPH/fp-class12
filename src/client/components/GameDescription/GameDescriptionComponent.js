@@ -1,19 +1,27 @@
 import React from 'react';
-import Mymap from '../Map/Map';
+import Map from '../mapComponents/Map';
 import Title from '../GameTitle/GameTitle';
 import LocationComponent from '../LocationComponent/LocationComponent';
 import Button from '../SubmitButton/SubmitButton';
 import './GameDescriptionStyle.css';
+import PropTypes from 'prop-types';
 
-const GameDescription = () => {
+import { markerIcon } from '../../assets/images/icons/pin-icon-map.svg';
+import { Marker } from 'react-leaflet';
+
+const GameDescription = ({ title, latitude, longitude }) => {
   return (
     <div className="card">
       <div className="cardcontainer">
-        <Mymap latitude="55.661869" longitude="12.540742" />
+        <div className="map">
+          <Map center={[latitude, longitude]}>
+            <Marker center={[latitude, longitude]} icon={markerIcon} />
+          </Map>
+        </div>
         <div className="titleLocation">
           <div className="titleLocationwrapper">
-            <Title title="Title Game" />
-            <LocationComponent />
+            <Title title={title} />
+            <LocationComponent latitude={latitude} longitude={longitude} />
           </div>
           <div className="choosebox">
             <Button ButtonTitle="choose" />
@@ -24,4 +32,9 @@ const GameDescription = () => {
   );
 };
 
+GameDescription.propTypes = {
+  title: PropTypes.string.isRequired,
+  longitude: PropTypes.number.isRequired,
+  latitude: PropTypes.number.isRequired,
+};
 export default GameDescription;
