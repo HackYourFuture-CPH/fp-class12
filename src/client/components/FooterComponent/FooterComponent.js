@@ -14,19 +14,19 @@ export default function FooterComponent() {
         content="Home"
         imgSrc={homeIcon}
         alt="icon"
-        href="/home"
+        href="/"
       />
       <NavigationalButton
         content="Winners"
         imgSrc={cupIcon}
         alt="icon"
-        href="/leaderboard"
+        href="#"
       />
       <NavigationalButton
         content="Profile"
         imgSrc={profileIcon}
         alt="icon"
-        href="/profile"
+        href="#"
       />
     </footer>
   );
