@@ -9,7 +9,7 @@ const nextQuestionsController = require('../controllers/nextQuestions.controller
  * @swagger
  * /next_question/{ID}:
  *  get:
- *    summary: Get next question 
+ *    summary: Get next question
  *    description:
  *      Will return next question  if answered correct with parameter for the actual answer ID
  *    produces: application/json
