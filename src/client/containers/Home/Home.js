@@ -26,6 +26,6 @@ export const Home = () => (
         }}
       />
     </div>
-    <Footer title="Test title" />
+    <Footer />
   </section>
 );
