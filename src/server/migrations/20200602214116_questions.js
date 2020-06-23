@@ -1,7 +1,7 @@
 exports.up = function (knex) {
   return knex.schema.createTable('questions', (table) => {
     table.increments('id');
-    table.integer('fk_game_id').unsigned();
+    table.integer('fk_game_id').unsigned().notNullable();
     table.foreign('fk_game_id').references('id').inTable('game_factory');
     table.string('question').notNullable();
     table.float('latitude').notNullable();

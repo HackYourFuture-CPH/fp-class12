@@ -25,10 +25,9 @@ img {
 /* Homepage css */
 
 .bodycontainer {
-  width: 21%;
   margin: 0px auto;
   position: relative;
-  background-color: #f9a55a;
+  background-color: rgba(249, 165, 90, 1);
   background-position: 0 0;
   background-repeat: no-repeat;
 
@@ -36,37 +35,89 @@ img {
   background-image: url('assets/images/background/background-treasure-map.png');
 
   /* CSS gradients */
-  background-image: url('assets/images/background/background-treasure-map.png'),
-    -moz-linear-gradient(top, #f9a55a 0%, #eb7f44 100%);
-  background-image: url('assets/images/background/background-treasure-map.png'),
-    -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f9a55a), color-stop(100%, #eb7f44));
-  background-image: url('assets/images/background/background-treasure-map.png'),
-    linear-gradient(to bottom, #f9a55a, #eb7f44);
-
-  /* IE */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F9A55A', endColorstr='#eb7f44', GradientType=0);
+  background: rgba(249, 165, 90, 1); /* Old browsers */
+  background: -moz-linear-gradient(
+    top,
+    rgba(249, 165, 90, 1) 0%,
+    rgba(235, 127, 68, 1) 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    top,
+    rgba(249, 165, 90, 1) 0%,
+    rgba(235, 127, 68, 1) 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    rgba(249, 165, 90, 1) 0%,
+    rgba(235, 127, 68, 1) 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(249, 165, 90, 1)', endColorstr='rgba(235, 127, 68, 1)',GradientType=0 ); /* IE6-9 */
+  z-index: 1;
+}
+.bodycontainer::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url('./assets/images/background/background-treasure-map.png');
+  background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
+  opacity: 0.2;
+  z-index: 0;
 }
-
 .bodywrapper {
   position: relative;
   padding: 5%;
 }
 .homelogocontainer {
   width: 100%;
-  padding: 30% 10% 40% 10%;
+  padding: 39% 10% 26% 10%;
 }
 .homelogo {
-  width: 50%;
-  margin: 0px auto;
+  width: 65.5%;
+  margin: 0px auto 4% auto;
 }
 
 .homelogocontainer h1 {
   font-family: 'Rammetto One', cursive;
   color: #ffffff;
   text-align: center;
+  font-size: 29px;
 }
 .bodywrapper .button-component {
-  margin-bottom: 4%;
+  margin-bottom: 7%;
+}
+
+.footer-component {
+  z-index: 1;
+  position: relative;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .bodycontainer {
+    width: 100%;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .bodycontainer {
+    width: 50%;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .bodycontainer {
+    width: 40%;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .bodycontainer {
+    width: 375px;
+  }
 }
