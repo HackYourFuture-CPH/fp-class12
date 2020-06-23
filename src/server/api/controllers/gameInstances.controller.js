@@ -7,7 +7,6 @@ const getGameInstances = async () => {
       .select(
         'game_instances.id',
         'users.name',
-        'game_instances.score',
         'game_instances.code',
         'game_instances.created_at',
         'game_instances.updated_at',
