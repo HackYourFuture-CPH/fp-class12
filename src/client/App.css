@@ -67,8 +67,7 @@ img {
   z-index: 0;
 }
 .bodywrapper {
-  position: relative;
-  padding: 5%;
+  position: absolute;
 }
 .homelogocontainer {
   width: 100%;
@@ -90,10 +89,20 @@ img {
 }
 
 .footer-component {
-  z-index: 1;
+  z-index: 10;
   position: relative;
+  position: fixed;
+  bottom: 0;
+}
+.PickGamePage {
+  margin: 80px auto;
 }
 
+.leaflet-container {
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+}
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
   .bodycontainer {
