@@ -13,7 +13,7 @@ const swaggerOptions = {
   swaggerDefinition: {
     info: {
       version: '1.0',
-      title: 'Final project',
+      title: 'Final Project',
       description: 'API documentation for the final project',
       contact: {},
     },
