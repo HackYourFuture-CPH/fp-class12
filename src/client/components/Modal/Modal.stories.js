@@ -6,7 +6,7 @@ import Popup from './ModalPopup';
 
 export default { title: 'Modal', decorators: [withKnobs] };
 
-export const ResponsiveModal = () => {
+export const ListModal = () => {
   const modalTitle = text('Title', 'Chooses the game mode');
   const optionA = text('Option A', 'with Timer');
   const optionB = text('Option B', 'without Timer');

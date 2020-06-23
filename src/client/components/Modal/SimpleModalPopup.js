@@ -2,36 +2,19 @@ import React from 'react';
 import './Modal.styles.css';
 import PropTypes from 'prop-types';
 import ModalHeading from './ModalHeading';
-import ModalContent from './ModalContent';
 
 const onCloseModal = () => {
   document.getElementById('modalbox').className = 'modalbox';
 };
 
 export default function Popup(props) {
-  const {
-    modalTitle,
-    buttonTitle,
-    optionA,
-    optionB,
-    radiobox,
-    onchangeradiobox,
-    radiobox2,
-    onchangeradiobox2,
-  } = props;
+  const { modalTitle, buttonTitle, popupcontent } = props;
   return (
     <div className="modalbox" id="modalbox">
       <div className="modal">
         <div className="modaltextarea">
           <ModalHeading modalTitle={modalTitle} />
-          <ModalContent
-            optionA={optionA}
-            optionB={optionB}
-            radiobox={radiobox}
-            onchangeradiobox={onchangeradiobox}
-            radiobox2={radiobox2}
-            onchangeradiobox2={onchangeradiobox2}
-          />
+          <p>{popupcontent}</p>
         </div>
         <button
           type="button"
@@ -47,11 +30,6 @@ export default function Popup(props) {
 
 Popup.propTypes = {
   modalTitle: PropTypes.string.isRequired,
-  optionA: PropTypes.string.isRequired,
-  optionB: PropTypes.string.isRequired,
+  popupcontent: PropTypes.string.isRequired,
   buttonTitle: PropTypes.string.isRequired,
-  radiobox: PropTypes.string.isRequired,
-  onchangeradiobox: PropTypes.string.isRequired,
-  radiobox2: PropTypes.string.isRequired,
-  onchangeradiobox2: PropTypes.string.isRequired,
 };
