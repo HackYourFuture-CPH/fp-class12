@@ -7,7 +7,7 @@ const firstQuestionController = require('../controllers/retrieve-first-question.
 
 /**
  * @swagger
- * /get_first_question/{ID}:
+ * /getFirstQuestion/{ID}:
  *  get:
  *    summary: Get first question by ID
  *    description:
