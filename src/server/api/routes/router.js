@@ -9,7 +9,10 @@ router.use('/modules', modulesRouter);
 router.use('/coordinates', coordinatesRouter);
 const possibleanswerRouter = require('./GameQuestionAnswerOptions.router');
 
+const gameInstancesRouter = require('./gameInstances.router');
+
 router.use('/modules', modulesRouter);
+router.use('/gameInstances', gameInstancesRouter);
 router.use('/answer_choices', possibleanswerRouter);
 
 const createUserProfilesRouter = require('./create-user-profiles.routes');
