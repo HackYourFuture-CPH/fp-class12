@@ -12,6 +12,7 @@ const questionsRouter = require('./questions.router');
 const qrRouter = require('./qr.router');
 
 const gameInstancesRouter = require('./gameInstances.router');
+const newGameRouter = require('./newGame.router');
 
 const swaggerJsDoc = require('swagger-jsdoc');
 const swaggerUi = require('swagger-ui-express');
@@ -20,7 +21,7 @@ const swaggerOptions = {
   swaggerDefinition: {
     info: {
       version: '1.0',
-      title: 'Final project',
+      title: 'Final Project',
       description: 'API documentation for the final project',
       contact: {},
     },
@@ -46,5 +47,6 @@ router.use('/questions', questionsRouter);
 router.use('/qr', qrRouter);
 
 router.use('/game-instances', gameInstancesRouter);
+router.use('/newGame', newGameRouter);
 
 module.exports = router;
