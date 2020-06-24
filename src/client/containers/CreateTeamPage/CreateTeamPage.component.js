@@ -11,12 +11,22 @@ export const CreateTeamPage = () => (
   <section className="container">
     <HeaderTitle title="This is the Create Team Page" />
     <main>
-      <p>Make sure to fill out your name or the name of the team and avatar you are playing on before we start.</p>
-      <img src={anonAvatarImage} alt="silhouette of a person pointing out user is not yet chosen an avatar yet"/>
+      <p>
+        Make sure to fill out your name or the name of the team and avatar you
+        are playing on before we start.
+      </p>
+      <img
+        src={anonAvatarImage}
+        alt="silhouette of a person pointing out user is not yet chosen an avatar yet"
+      />
       <Link to="/pick-avatar-page">
         <img src={addIcon} alt="button to pick avatar" />
       </Link>
-      <SingleInputFormComponent inputLabel="Team name" value="Enter name" ButtonTitle="Create Team"/>
+      <SingleInputFormComponent
+        inputLabel="Team name"
+        value="Enter name"
+        ButtonTitle="Create Team"
+      />
     </main>
     <Footer />
   </section>
