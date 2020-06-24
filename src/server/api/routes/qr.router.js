@@ -8,7 +8,7 @@ const qrController = require('../controllers/qr.controller');
  * @swagger
  * /qr/{GAME}:
  *  get:
- *    summary: Get the qr code accocieted with game instance.
+ *    summary: Get the qr code associated with game instance.
  *    description:
  *      Will return the qr code for game instance.
  *    produces: application/json
