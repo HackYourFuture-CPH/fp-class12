@@ -20,13 +20,13 @@ const newGameInstanceController = require('../controllers/newGameInstance.contro
  *        schema:
  *          type: object
  *          required:
- *            - code
+ *            - game_code
  *            - fk_user_id
  *            - fk_game_factory_id
  *            - fk_game_scores_id
 
  *          properties:
- *            code:
+ *            game_code:
  *              type: integer
  *            fk_user_id:
  *              type: integer
