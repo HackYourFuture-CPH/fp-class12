@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  mysql-development:
+    image: mysql:8.0.20
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+      MYSQL_DATABASE: ${DB_NAME}
+    ports:
+      - ${DB_PORT}:${DB_PORT}
