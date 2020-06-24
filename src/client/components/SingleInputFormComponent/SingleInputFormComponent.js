@@ -24,7 +24,6 @@ export default function SingleInputFormComponent({
       <ButtonComponent
         ButtonTitle={ButtonTitle}
         onClick={() => {
-          // location.href = '../share-game-page';
           const inputvalue = document.getElementsByName('.form-input').value;
           if (!inputvalue) {
             toggleModal();

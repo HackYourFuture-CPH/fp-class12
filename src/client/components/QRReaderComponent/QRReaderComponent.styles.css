@@ -1,8 +1,4 @@
 .qr-reader-background {
-  /* width: 26.0625em; */
-  /* height: 23.75em; */
-  /* min-height: 300px; */
-  /* background-color: pink; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,12 +8,9 @@
 }
 
 .qr-reader-frame {
-  /* width: 21.0625em; */
-  /* height: 19.75em; */
   width: 100%;
   height: 100%;
   padding: 5%;
-  /* min-height: 280px; */
   min-height: 18em;
   background: #ffffff;
   border-radius: 5px;
@@ -42,9 +35,4 @@
 
 .qr-reader {
   width: 98%;
-}
-
-p {
-  width: 70%;
-  font-size: 25px;
 }
