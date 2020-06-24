@@ -6,6 +6,11 @@ const modulesRouter = require('./modules.router');
 const questionsRouter = require('./questions.router');
 const qrRouter = require('./qr.router');
 const possibleanswerRouter = require('./GameQuestionAnswerOptions.router');
+
+const gameInstancesRouter = require('./gameInstances.router');
+
+router.use('/gameInstances', gameInstancesRouter);
+
 const createUserProfilesRouter = require('./create-user-profiles.routes');
 const createUserRolesRouter = require('./create-user-roles.routes');
 
