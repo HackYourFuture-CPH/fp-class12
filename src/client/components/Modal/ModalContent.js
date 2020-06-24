@@ -2,6 +2,14 @@ import React from 'react';
 import './Modal.styles.css';
 import PropTypes from 'prop-types';
 
+// const onCloseModal = () => {
+//   document.getElementById('modalbox').className = 'modalbox';
+// };
+
+// const toggleModal = () => {
+//   document.querySelector('.modalbox').classList.toggle('showmodal');
+// };
+
 export default function popup({
   optionA,
   optionB,
@@ -35,8 +43,10 @@ export default function popup({
 }
 
 popup.propTypes = {
+  // modalTitle: PropTypes.string.isRequired,
   optionA: PropTypes.string.isRequired,
   optionB: PropTypes.string.isRequired,
+  // buttonTitle: PropTypes.string.isRequired,
   radiobox: PropTypes.string.isRequired,
   onchangeradiobox: PropTypes.string.isRequired,
   radiobox2: PropTypes.string.isRequired,

@@ -3,6 +3,7 @@ import './Modal.styles.css';
 import PropTypes from 'prop-types';
 import ModalHeading from './ModalHeading';
 import ModalContent from './ModalContent';
+// import Button from '../ButtonComponent/Button';
 
 const onCloseModal = () => {
   document.getElementById('modalbox').className = 'modalbox';
@@ -40,6 +41,7 @@ export default function Popup(props) {
         >
           {buttonTitle}
         </button>
+        {/* <Button /> */}
       </div>
     </div>
   );
