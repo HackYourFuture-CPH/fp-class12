@@ -3,7 +3,7 @@ const express = require('express');
 const router = express.Router();
 
 // Router imports
-const modulesRouter = require('./modules.router');
+
 const newGameRouter = require('./newGame.router');
 
 const swaggerJsDoc = require('swagger-jsdoc');
@@ -30,7 +30,7 @@ const swaggerDocument = swaggerJsDoc(swaggerOptions);
 router.use('/documentation', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 // Application routes
-router.use('/modules', modulesRouter);
+
 router.use('/newGame', newGameRouter);
 
 module.exports = router;
