@@ -1,16 +1,18 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import './AddAvatarComponent.styles.css';
 
-export default function AddAvatarComponent({ title }) {
+import avatarIcon from '../../assets/images/avatars/anonimos-avatar.png';
+import addIcon from '../../assets/images/icons/plus-icon.svg';
+
+export default function AddAvatarComponent() {
   return (
-    <div className="add-avatar-component">
-      <h2>{title}</h2>
-      <p>(this is a sample component)</p>
+    <div className="container">
+      <img
+        src={avatarIcon}
+        alt="silhouette of a person"
+        className="avatar-icon"
+      />
+      <img src={addIcon} alt="plus symbol" className="add-icon" />
     </div>
   );
 }
-
-AddAvatarComponent.propTypes = {
-  title: PropTypes.string.isRequired,
-};
