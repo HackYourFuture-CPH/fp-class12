@@ -2,11 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ButtonComponent from '../SubmitButton/SubmitButton';
 import './SingleInputFormComponent.style.css';
-import Popup from '../Modal/SimpleModalPopup';
-
-const toggleModal = () => {
-  document.querySelector('.modalbox').classList.toggle('showmodal');
-};
 
 export default function SingleInputFormComponent({
   inputLabel,
@@ -21,21 +16,7 @@ export default function SingleInputFormComponent({
         type="textbox"
         placeholder={value}
       />
-      <ButtonComponent
-        ButtonTitle={ButtonTitle}
-        onClick={() => {
-          // location.href = '../share-game-page';
-          const inputvalue = document.getElementsByName('.form-input').value;
-          if (!inputvalue) {
-            toggleModal();
-          }
-        }}
-      />
-      <Popup
-        modalTitle="Error"
-        buttonTitle="TryAgain"
-        popupcontent="You need to insert the game code to play"
-      />
+      <ButtonComponent ButtonTitle={ButtonTitle} />
     </form>
   );
 }
