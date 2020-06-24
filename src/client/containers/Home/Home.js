@@ -13,9 +13,19 @@ export const Home = () => (
         </div>
         <h1>Treasure Hunt</h1>
       </div>
-      <SubmitButton ButtonTitle="Join Game" />
-      <SubmitButton ButtonTitle="Start Game" />
+      <SubmitButton
+        ButtonTitle="Join Game"
+        onClick={() => {
+          location.href = '../share-game-page';
+        }}
+      />
+      <SubmitButton
+        ButtonTitle="Start Game"
+        onClick={() => {
+          location.href = '../create-team-page';
+        }}
+      />
     </div>
-    <Footer title="Test title" />
+    <Footer />
   </section>
 );
