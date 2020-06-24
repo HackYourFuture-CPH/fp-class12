@@ -11,6 +11,8 @@ const createUserRolesRouter = require('./create-user-roles.routes');
 const questionsRouter = require('./questions.router');
 const allUsresRouter = require('./allUsers.router');
 
+const gameInstancesRouter = require('./gameInstances.router');
+
 const swaggerJsDoc = require('swagger-jsdoc');
 const swaggerUi = require('swagger-ui-express');
 
@@ -42,5 +44,7 @@ router.use('/users', createUserProfilesRouter);
 router.use('/user_roles', createUserRolesRouter);
 router.use('/questions', questionsRouter);
 router.use('/allUsers', allUsresRouter);
+
+router.use('/game-instances', gameInstancesRouter);
 
 module.exports = router;
