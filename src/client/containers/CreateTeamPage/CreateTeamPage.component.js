@@ -10,9 +10,9 @@ import addIcon from '../../assets/images/icons/plus-icon.svg';
 export const CreateTeamPage = () => (
   <div id="root">
     <section className="home bodycontainer">
-      <HeaderTitle title="This is the Create Team Page" />
+      <HeaderTitle title="Create Team Page" />
       <div className="bodywrapper">
-        <p>
+        <p className="smallwhitedetail">
           Make sure to fill out your name or the name of the team and avatar you
           are playing on before we start.
         </p>
