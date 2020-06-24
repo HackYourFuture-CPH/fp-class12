@@ -9,7 +9,7 @@ const allUsersController = require('../controllers/getAllUsers.controller');
  * @swagger
  * /allUsers:
  *  get:
- *    summary: Select all usres
+ *    summary: Select all users
  *    description:
  *      Retrieves all the users that played a games (game_instance).
  *    produces: application/json
