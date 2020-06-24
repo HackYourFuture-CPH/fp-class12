@@ -9,7 +9,11 @@ const possibleanswerRouter = require('./GameQuestionAnswerOptions.router');
 const createUserProfilesRouter = require('./create-user-profiles.routes');
 const createUserRolesRouter = require('./create-user-roles.routes');
 const questionsRouter = require('./questions.router');
+<<<<<<< HEAD
 const allUsresRouter = require('./allUsers.router');
+=======
+const qrRouter = require('./qr.router');
+>>>>>>> develop
 
 const gameInstancesRouter = require('./gameInstances.router');
 
@@ -44,6 +48,7 @@ router.use('/users', createUserProfilesRouter);
 router.use('/user_roles', createUserRolesRouter);
 router.use('/questions', questionsRouter);
 router.use('/allUsers', allUsresRouter);
+router.use('/qr', qrRouter);
 
 router.use('/game-instances', gameInstancesRouter);
 
