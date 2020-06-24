@@ -1,17 +1,24 @@
 .qr-reader-background {
-  width: 26.0625em;
-  height: 23.75em;
-  background-color: pink;
+  /* width: 26.0625em; */
+  /* height: 23.75em; */
+  /* min-height: 300px; */
+  /* background-color: pink; */
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 5px;
+  padding: 5%;
   background: #ffffff;
 }
 
 .qr-reader-frame {
-  width: 21.0625em;
-  height: 19.75em;
+  /* width: 21.0625em; */
+  /* height: 19.75em; */
+  width: 100%;
+  height: 100%;
+  padding: 5%;
+  /* min-height: 280px; */
+  min-height: 18em;
   background: #ffffff;
   border-radius: 5px;
   display: flex;
@@ -19,8 +26,7 @@
   justify-content: center;
   align-items: center;
 
-  background:
-    linear-gradient(to right, black 7px, transparent 7px) 0 0,
+  background: linear-gradient(to right, black 7px, transparent 7px) 0 0,
     linear-gradient(to right, black 7px, transparent 4px) 0 100%,
     linear-gradient(to left, black 7px, transparent 7px) 100% 0,
     linear-gradient(to left, black 7px, transparent 7px) 100% 100%,
@@ -30,12 +36,12 @@
     linear-gradient(to top, black 7px, transparent 7px) 100% 100%;
 
   background-repeat: no-repeat;
-  background-color:white;
+  background-color: white;
   background-size: 25% 25%;
 }
 
 .qr-reader {
-  width: 70%;
+  width: 98%;
 }
 
 p {
