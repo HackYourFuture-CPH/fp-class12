@@ -6,8 +6,8 @@ const router = express.Router();
 const modulesRouter = require('./modules.router');
 const possibleanswerRouter = require('./GameQuestionAnswerOptions.router');
 
-const createUserProfilesRouter = require('./create-user-profiles.routes');
-const createUserRolesRouter = require('./create-user-roles.routes');
+const createUserProfilesRouter = require('./create-user-profiles.router');
+const createUserRolesRouter = require('./create-user-roles.router');
 const questionsRouter = require('./questions.router');
 const qrRouter = require('./qr.router');
 
