@@ -1,0 +1,15 @@
+.avatar-choosing-text {
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 4rem;
+  color: #ffffff;
+}
+
+.silder-container {
+  display: flex;
+  justify-content: center;
+  background-color: #ffffff;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
