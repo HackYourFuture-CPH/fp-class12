@@ -4,16 +4,14 @@ const router = express.Router();
 
 // Router imports
 const modulesRouter = require('./modules.router');
-const coordinatesRouter = require('./coordinates.router');
+const mapcoordinatesRouter = require('./mapcoordinates.router');
 const possibleanswerRouter = require('./GameQuestionAnswerOptions.router');
 
 const createUserProfilesRouter = require('./create-user-profiles.routes');
 const createUserRolesRouter = require('./create-user-roles.routes');
 const questionsRouter = require('./questions.router');
 
-
 const gameInstancesRouter = require('./gameInstances.router');
-
 
 const swaggerJsDoc = require('swagger-jsdoc');
 const swaggerUi = require('swagger-ui-express');
@@ -40,7 +38,7 @@ router.use('/documentation', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 // Application routes
 router.use('/modules', modulesRouter);
-router.use('/coordinates', coordinatesRouter);
+router.use('/mapcoordinates', mapcoordinatesRouter);
 router.use('/answer_choices', possibleanswerRouter);
 
 router.use('/users', createUserProfilesRouter);

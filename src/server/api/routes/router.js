@@ -3,10 +3,10 @@ const express = require('express');
 const router = express.Router();
 
 const modulesRouter = require('./modules.router');
-const coordinatesRouter = require('./coordinates.router');
+const mapcoordinatesRouter = require('./mapcoordinates.router');
 
 router.use('/modules', modulesRouter);
-router.use('/coordinates', coordinatesRouter);
+router.use('/mapcoordinates', mapcoordinatesRouter);
 const possibleanswerRouter = require('./GameQuestionAnswerOptions.router');
 
 const gameInstancesRouter = require('./gameInstances.router');
