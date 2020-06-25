@@ -8,7 +8,7 @@ const MapBase = ({ zoom, center, children }) => {
   const dimensions = useContext(DimensionsContext);
   return (
     <Map center={center} zoom={zoom || 13} style={dimensions}>
-      <TileLayer url="https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.jpg" />
+      <TileLayer url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png" />
 
       {children}
     </Map>
