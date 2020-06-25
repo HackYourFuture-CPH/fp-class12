@@ -53,30 +53,28 @@ cp .env.example .env
 - Open the `.env` file and update any parameters according to the environment
   you are running.
 
-#### Database setup
+### Database setup
 
-Working with sql we use a tool called knex which helps with writing queries and
-with changing the database structure. Check these out:
-https://www.quora.com/What-is-Knex-js
-https://knexjs.org/#Builder-identifier-syntax
+First install a MySQL database. You have two options:
 
-- Install knex cli globally with: `npm i -g knex`
-- Update the connection details to the database in the `.env` file
-- after the server runs and you see a `connection to <db_name> db successful!`
-  message you are ready to migrate tables
-- To make a new migration make sure your terminal is where the `knexfile.js` is.
-  Otherwise `cd` into that folder! run `knex migrate:make MIGRATION_NAME`. Fx if
-  i want to make a new users table i would run `knex migrate:make users`. This
-  would set up the migration file (under the `migrations` folder) for me to
-  write the users table.
-- To make a new seed i would run `knex seed:make 01_SEED_NAME`. Fx
-  `knex seed:make 01_USERS`. This would create a new seed file in the folder
-  `seeds`.
-- To then actually apply the migrations and the seeds, run `npm run db:setup`
-- If it was successful you should now have the tables and seeds in the database
-  🎉
+1. Install with Docker
+2. Install a database locally
 
-## 🎈 Usage <a name="usage"></a>
+#### Docker
+
+If you choose to use Docker, you need to have [Docker installed](https://www.docker.com/get-started) for you respective operating system. Once Docker is installed, you can simply run:
+
+    docker-compose up -d
+
+The `-d` flag is optional and is short for "deamon" and just means that Docker will run in the background and you can now use your terminal for other things. If you don't use the `-d` flag you will have to open a new terminal window to do other things such as run npm commands.
+
+Running docker compose will automatically create a docker container with a mysql database set up according to the information you provided in the `.env` file.
+
+You can now test your database by connecting to it with a DB admin tool such as Mysql Workbench via IP `127.0.0.1` and the port and credentials given in the `.env`.
+
+#### Local database
+
+This is not needed if you did the steps above to run Docker. If you choose to set up a local database, you can do so by creating the database from a tool like Mysql Workbench or similar. Make sure to use the port settings and credentials that you provided in `.env`.
 
 ### 📦 NPM scripts and commands
 
