@@ -21,4 +21,8 @@ router.use('/createUserRoles', createUserRolesRouter);
 router.use('/questions', questionsRouter);
 router.use('/qr', qrRouter);
 
+const getQuestionByIdRouter = require('./getQuestionById.router');
+
+router.use('/getQuestionById', getQuestionByIdRouter);
+
 module.exports = router;

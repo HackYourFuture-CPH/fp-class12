@@ -13,6 +13,8 @@ const qrRouter = require('./qr.router');
 
 const gameInstancesRouter = require('./gameInstances.router');
 
+const getQuestionByIdRouter = require('./getQuestionById.router');
+
 const swaggerJsDoc = require('swagger-jsdoc');
 const swaggerUi = require('swagger-ui-express');
 
@@ -46,5 +48,6 @@ router.use('/questions', questionsRouter);
 router.use('/qr', qrRouter);
 
 router.use('/game-instances', gameInstancesRouter);
+router.use('/getQuestionById', getQuestionByIdRouter);
 
 module.exports = router;
