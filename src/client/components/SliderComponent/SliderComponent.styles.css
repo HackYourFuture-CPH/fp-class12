@@ -3,10 +3,15 @@
 }
 .arrow_component {
   position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
   top: 33%;
 }
 
 .avatarImages_component {
+  display: flex;
+  justify-content: center;
   padding-left: 3%;
   padding-right: 3%;
 }
