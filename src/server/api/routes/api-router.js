@@ -48,6 +48,6 @@ router.use('/questions', questionsRouter);
 router.use('/qr', qrRouter);
 
 router.use('/game-instances', gameInstancesRouter);
-router.use('/getQuestionById', getQuestionByIdRouter);
+router.use('/game_factories', getQuestionByIdRouter);
 
 module.exports = router;

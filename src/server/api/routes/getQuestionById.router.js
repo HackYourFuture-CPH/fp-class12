@@ -7,9 +7,9 @@ const getQuestionByIdController = require('../controllers/getQuestionById.contro
 
 /**
  * @swagger
- * /getQuestionById/{ID}:
+ * /game_factories/{ID}/questions/{QUESTIONID}:
  *  get:
- *    summary: Get question by ID
+ *    summary: Get question by question ID and game_factory ID
  *    description:
  *      Will return first question with a matching ID.
  *    produces: application/json
@@ -19,7 +19,13 @@ const getQuestionByIdController = require('../controllers/getQuestionById.contro
  *       schema:
  *         type: integer
  *         required: true
- *         description: The ID of the module to get
+ *         description: The ID of the game_factory to get
+ *     - in: path
+ *       name: QUESTIONID
+ *       schema:
+ *         type: integer
+ *         required: true
+ *         description: The ID of the question to get
  *
  *    responses:
  *      200:
@@ -27,9 +33,9 @@ const getQuestionByIdController = require('../controllers/getQuestionById.contro
  *      5XX:
  *        description: Unexpected error.
  */
-router.get('/:id', (req, res, next) => {
+router.get('/:id/questions/:questionid', (req, res, next) => {
   getQuestionByIdController
-    .getQuestionById(req.params.id)
+    .getQuestionById(req.params.id, req.params.questionid)
     .then((result) => res.json(result))
     .catch(next);
 });
