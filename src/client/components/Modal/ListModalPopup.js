@@ -2,7 +2,7 @@ import React from 'react';
 import './Modal.styles.css';
 import PropTypes from 'prop-types';
 import ModalHeading from './ModalHeading';
-import ModalContent from './ModalContent';
+import ModalContent from './ListModalContent';
 
 const onCloseModal = () => {
   document.getElementById('modalbox').className = 'modalbox';

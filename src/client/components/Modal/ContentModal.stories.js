@@ -1,11 +1,11 @@
 import React from 'react';
-import Modal from './SimpleModal';
+import Modal from './ContentModal';
 import { withKnobs, text } from '@storybook/addon-knobs';
-import SimplePopup from './SimpleModalPopup';
+import ContentPopup from './ContentModalPopup';
 
 export default { title: 'Modal', decorators: [withKnobs] };
 
-export const SimpleModal = () => {
+export const ContentModal = () => {
   const modalTitle = text('Title', 'Chooses the game mode');
   const buttonTitle = text('buttonTitle', 'Start Playing');
   const popupcontent = text('popupcontent', 'Start writing');
@@ -16,7 +16,7 @@ export const SimpleModal = () => {
       buttonTitle={buttonTitle}
       popupcontent={popupcontent}
     >
-      <SimplePopup />
+      <ContentPopup />
     </Modal>
   );
 };

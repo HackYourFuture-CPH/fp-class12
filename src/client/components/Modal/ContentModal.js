@@ -1,7 +1,7 @@
 import React from 'react';
 import './Modal.styles.css';
 import PropTypes from 'prop-types';
-import SimplePopup from './SimpleModalPopup';
+import SimplePopup from './ContentModalPopup';
 
 const toggleModal = () => {
   document.querySelector('.modalbox').classList.toggle('showmodal');
