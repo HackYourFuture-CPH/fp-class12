@@ -6,24 +6,28 @@ const modulesRouter = require('./modules.router');
 const mapcoordinatesRouter = require('./mapcoordinates.router');
 
 router.use('/modules', modulesRouter);
+
 router.use('/mapcoordinates', mapcoordinatesRouter);
+
+const questionsRouter = require('./questions.router');
+const allUsersRouter = require('./allUsers.router');
+const qrRouter = require('./qr.router');
+
 const possibleanswerRouter = require('./GameQuestionAnswerOptions.router');
 
 const gameInstancesRouter = require('./gameInstances.router');
 
-router.use('/modules', modulesRouter);
 router.use('/gameInstances', gameInstancesRouter);
-router.use('/answer_choices', possibleanswerRouter);
 
 const createUserProfilesRouter = require('./create-user-profiles.routes');
 const createUserRolesRouter = require('./create-user-roles.routes');
 
 router.use('/modules', modulesRouter);
+router.use('/answer_choices', possibleanswerRouter);
 router.use('/createUserProfiles', createUserProfilesRouter);
 router.use('/createUserRoles', createUserRolesRouter);
-
-const questionsRouter = require('./questions.router');
-
 router.use('/questions', questionsRouter);
+router.use('/allUsers', allUsersRouter);
+router.use('/qr', qrRouter);
 
 module.exports = router;
