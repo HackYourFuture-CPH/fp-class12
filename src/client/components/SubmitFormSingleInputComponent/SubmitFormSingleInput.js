@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ButtonComponent from '../SubmitButton/SubmitButton';
-import './SingleInputFormComponent.style.css';
-import Popup from '../Modal/SimpleModalPopup';
+import './SubmitFormSingleInput.style.css';
+import Popup from '../Modal/ContentModal.js';
 
 const toggleModal = () => {
   document.querySelector('.modalbox').classList.toggle('showmodal');

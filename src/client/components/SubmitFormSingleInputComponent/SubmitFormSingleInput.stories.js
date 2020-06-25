@@ -1,10 +1,10 @@
 import React from 'react';
-import SingleInputFormComponent from './SingleInputFormComponent';
+import SingleInputFormComponent from './SubmitFormSingleInput';
 import { withKnobs, text } from '@storybook/addon-knobs';
 
-export default { title: 'Form Component', decorators: [withKnobs] };
+export default { title: 'Submit Forms', decorators: [withKnobs] };
 
-export const Component = () => (
+export const SubmitFormSingleInput = () => (
   <SingleInputFormComponent
     inputLabel={text('Title', 'Team name')}
     value={text('Value', 'Enter name')}

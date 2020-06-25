@@ -2,7 +2,7 @@ import React from 'react';
 import QrReader from '../../components/QRReaderComponent/QRReaderComponent';
 import Footer from '../../components/FooterComponent/FooterComponent';
 import Header from '../../components/Title/Title';
-import SubmitForm from '../../components/SingleInputFormComponent/SingleInputFormComponent';
+import SubmitForm from '../../components/SubmitFormSingleInputComponent/SubmitFormSingleInput';
 
 export const JoinGamePage = () => (
   <section className="home bodycontainer">
