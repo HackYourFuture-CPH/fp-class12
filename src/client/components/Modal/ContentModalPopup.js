@@ -2,13 +2,14 @@ import React from 'react';
 import './Modal.styles.css';
 import PropTypes from 'prop-types';
 import ModalHeading from './ModalHeading';
+import SubmitButton from '../SubmitButton/SubmitButton';
 
 const onCloseModal = () => {
   document.getElementById('modalbox').className = 'modalbox';
 };
 
 export default function Popup(props) {
-  const { modalTitle, buttonTitle, popupcontent } = props;
+  const { modalTitle, ButtonTitle, popupcontent } = props;
   return (
     <div className="modalbox" id="modalbox">
       <div className="modal">
@@ -16,13 +17,7 @@ export default function Popup(props) {
           <ModalHeading modalTitle={modalTitle} />
           <p>{popupcontent}</p>
         </div>
-        <button
-          type="button"
-          onClick={onCloseModal}
-          className="button-component"
-        >
-          {buttonTitle}
-        </button>
+        <SubmitButton onClick={onCloseModal} ButtonTitle={ButtonTitle} />
       </div>
     </div>
   );
@@ -31,5 +26,5 @@ export default function Popup(props) {
 Popup.propTypes = {
   modalTitle: PropTypes.string.isRequired,
   popupcontent: PropTypes.string.isRequired,
-  buttonTitle: PropTypes.string.isRequired,
+  ButtonTitle: PropTypes.string.isRequired,
 };

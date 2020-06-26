@@ -3,6 +3,7 @@ import './Modal.styles.css';
 import PropTypes from 'prop-types';
 import ModalHeading from './ModalHeading';
 import ModalContent from './ListModalContent';
+import SubmitButton from '../SubmitButton/SubmitButton';
 
 const onCloseModal = () => {
   document.getElementById('modalbox').className = 'modalbox';
@@ -11,7 +12,7 @@ const onCloseModal = () => {
 export default function Popup(props) {
   const {
     modalTitle,
-    buttonTitle,
+    ButtonTitle,
     optionA,
     optionB,
     radiobox,
@@ -33,13 +34,7 @@ export default function Popup(props) {
             onchangeradiobox2={onchangeradiobox2}
           />
         </div>
-        <button
-          type="button"
-          onClick={onCloseModal}
-          className="button-component"
-        >
-          {buttonTitle}
-        </button>
+        <SubmitButton onClick={onCloseModal} ButtonTitle={ButtonTitle} />
       </div>
     </div>
   );
@@ -49,7 +44,7 @@ Popup.propTypes = {
   modalTitle: PropTypes.string.isRequired,
   optionA: PropTypes.string.isRequired,
   optionB: PropTypes.string.isRequired,
-  buttonTitle: PropTypes.string.isRequired,
+  ButtonTitle: PropTypes.string.isRequired,
   radiobox: PropTypes.string.isRequired,
   onchangeradiobox: PropTypes.string.isRequired,
   radiobox2: PropTypes.string.isRequired,

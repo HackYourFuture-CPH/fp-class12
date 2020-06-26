@@ -2,6 +2,7 @@ import React from 'react';
 import './Modal.styles.css';
 import PropTypes from 'prop-types';
 import SimplePopup from './ContentModalPopup';
+import SubmitButton from '../SubmitButton/SubmitButton';
 
 const toggleModal = () => {
   document.querySelector('.modalbox').classList.toggle('showmodal');
@@ -9,17 +10,15 @@ const toggleModal = () => {
 
 export default function ModalResponsive({
   modalTitle,
-  buttonTitle,
+  ButtonTitle,
   popupcontent,
 }) {
   return (
     <div className="modalcontainer">
-      <button type="button" onClick={toggleModal}>
-        Open modal
-      </button>
+      <SubmitButton onClick={toggleModal} ButtonTitle="Open modal" />
       <SimplePopup
         modalTitle={modalTitle}
-        buttonTitle={buttonTitle}
+        ButtonTitle={ButtonTitle}
         popupcontent={popupcontent}
       />
     </div>
@@ -28,6 +27,6 @@ export default function ModalResponsive({
 
 ModalResponsive.propTypes = {
   modalTitle: PropTypes.string.isRequired,
-  buttonTitle: PropTypes.string.isRequired,
+  ButtonTitle: PropTypes.string.isRequired,
   popupcontent: PropTypes.string.isRequired,
 };
