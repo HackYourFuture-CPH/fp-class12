@@ -48,6 +48,7 @@ router.get('/', (req, res, next) => {
  *      5XX:
  *        description: Unexpected error.
  */
+
 router.get('/game_factory/:id', (req, res, next) => {
   questionsController
     .getQuestionById(req.params.id)
