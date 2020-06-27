@@ -4,11 +4,16 @@ const router = express.Router();
 
 // Router imports
 const modulesRouter = require('./modules.router');
+const mapcoordinatesRouter = require('./mapcoordinates.router');
 const possibleanswerRouter = require('./GameQuestionAnswerOptions.router');
 
-const createUserProfilesRouter = require('./create-user-profiles.routes');
-const createUserRolesRouter = require('./create-user-roles.routes');
+const createUserProfilesRouter = require('./create-user-profiles.router');
+const createUserRolesRouter = require('./create-user-roles.router');
 const questionsRouter = require('./questions.router');
+const allUsersRouter = require('./allUsers.router');
+const qrRouter = require('./qr.router');
+
+const gameInstancesRouter = require('./gameInstances.router');
 
 const swaggerJsDoc = require('swagger-jsdoc');
 const swaggerUi = require('swagger-ui-express');
@@ -35,10 +40,15 @@ router.use('/documentation', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 // Application routes
 router.use('/modules', modulesRouter);
+router.use('/mapcoordinates', mapcoordinatesRouter);
 router.use('/answer_choices', possibleanswerRouter);
 
 router.use('/users', createUserProfilesRouter);
 router.use('/user_roles', createUserRolesRouter);
 router.use('/questions', questionsRouter);
+router.use('/allUsers', allUsersRouter);
+router.use('/qr', qrRouter);
+
+router.use('/game-instances', gameInstancesRouter);
 
 module.exports = router;
