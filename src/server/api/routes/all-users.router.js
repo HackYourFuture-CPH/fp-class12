@@ -3,7 +3,7 @@ const express = require('express');
 const router = express.Router({ mergeParams: true });
 
 // controller
-const allUsersController = require('../controllers/getAllUsers.controller');
+const allUsersController = require('../controllers/get-all-users.controller');
 
 /**
  * @swagger
