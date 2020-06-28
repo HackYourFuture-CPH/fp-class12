@@ -3,7 +3,7 @@ const express = require('express');
 const router = express.Router({ mergeParams: true });
 
 // controllers
-const gameInstancesController = require('../controllers/gameInstances.controller');
+const gameInstancesController = require('../controllers/game-instances.controller');
 
 /**
  * @swagger
