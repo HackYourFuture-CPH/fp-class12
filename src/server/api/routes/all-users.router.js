@@ -2,16 +2,16 @@ const express = require('express');
 
 const router = express.Router({ mergeParams: true });
 
-// controllers
-const mapcoordinatesController = require('../controllers/mapcoordinates.controller');
+// controller
+const allUsersController = require('../controllers/get-all-users.controller');
 
 /**
  * @swagger
- * /mapcoordinates:
+ * /allUsers:
  *  get:
- *    summary: Get all mapcoordinates
+ *    summary: Select all users
  *    description:
- *      Will return all mapcoordinates.
+ *      Retrieves all the users that played a games (game_instance).
  *    produces: application/json
  *    responses:
  *      200:
@@ -20,8 +20,8 @@ const mapcoordinatesController = require('../controllers/mapcoordinates.controll
  *        description: Unexpected error.
  */
 router.get('/', (req, res, next) => {
-  mapcoordinatesController
-    .getMapCoordinates()
+  allUsersController
+    .getAllUsers(req.params.id)
     .then((result) => res.json(result))
     .catch(next);
 });

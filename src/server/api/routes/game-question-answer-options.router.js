@@ -3,7 +3,7 @@ const express = require('express');
 const router = express.Router({ mergeParams: true });
 
 // controllers
-const possibleanswerController = require('../controllers/GameQuestionAnswerOptions.controller');
+const possibleanswerController = require('../controllers/game-question-answer-options.controller');
 
 /**
  * @swagger
