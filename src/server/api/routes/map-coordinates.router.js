@@ -3,15 +3,15 @@ const express = require('express');
 const router = express.Router({ mergeParams: true });
 
 // controllers
-const gameInstancesController = require('../controllers/gameInstances.controller');
+const mapCoordinatesController = require('../controllers/map-coordinates.controller');
 
 /**
  * @swagger
- * /game-instances:
+ * /mapcoordinates:
  *  get:
- *    summary: Get all the game instances.
+ *    summary: Get all mapcoordinates
  *    description:
- *      Will return all game instances.
+ *      Will return all mapcoordinates.
  *    produces: application/json
  *    responses:
  *      200:
@@ -20,8 +20,8 @@ const gameInstancesController = require('../controllers/gameInstances.controller
  *        description: Unexpected error.
  */
 router.get('/', (req, res, next) => {
-  gameInstancesController
-    .getGameInstances()
+  mapCoordinatesController
+    .getMapCoordinates()
     .then((result) => res.json(result))
     .catch(next);
 });
