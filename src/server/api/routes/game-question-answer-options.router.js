@@ -3,7 +3,7 @@ const express = require('express');
 const router = express.Router({ mergeParams: true });
 
 // controllers
-const possibleanswerController = require('../controllers/GameQuestionAnswerOptions.controller');
+const possibleAnswerController = require('../controllers/game-question-answer-options.controller');
 
 /**
  * @swagger
@@ -28,7 +28,7 @@ const possibleanswerController = require('../controllers/GameQuestionAnswerOptio
  *        description: Unexpected error.
  */
 router.get('/:id', (req, res, next) => {
-  possibleanswerController
+  possibleAnswerController
     .getPossibleanswerById(req.params.id)
     .then((result) => res.json(result))
     .catch(next);
