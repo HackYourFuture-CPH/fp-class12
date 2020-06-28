@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import ModalHeading from './ModalHeading';
 import SubmitButton from '../SubmitButton/SubmitButton';
 
+// TODO: This is not the "React way", but will do for now.
 const onCloseModal = () => {
   document.getElementById('modalbox').className = 'modalbox';
 };

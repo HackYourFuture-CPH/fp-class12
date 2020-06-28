@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import SimplePopup from './ContentModalPopup';
 import SubmitButton from '../SubmitButton/SubmitButton';
 
+// TODO: This is not the "React way", but will do for now.
 const toggleModal = () => {
   document.querySelector('.modalbox').classList.toggle('showmodal');
 };
