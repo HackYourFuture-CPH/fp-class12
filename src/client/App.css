@@ -93,12 +93,6 @@ img {
   position: relative;
   z-index: 1;
 }
-.footer-component {
-  z-index: 10;
-  position: relative;
-  position: fixed;
-  bottom: 0;
-}
 .PickGamePage {
   margin: 80px auto;
 }
