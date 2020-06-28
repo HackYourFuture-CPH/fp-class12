@@ -37,10 +37,9 @@ router.get('/', (req, res, next) => {
  *    parameters:
  *     - in: path
  *       name: ID
- *       schema:
- *         type: integer
- *         required: true
- *         description: The ID of the module to get
+ *       type: integer
+ *       required: true
+ *       description: The ID of the module to get
  *
  *    responses:
  *      200:
