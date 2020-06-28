@@ -137,6 +137,21 @@ img {
   margin-bottom: 10%;
 }
 
+/* Join game page css */
+
+.smallwhitedetail {
+  color: #ffffff;
+  font-family: roboto;
+  font-size: 16px;
+  text-align: center;
+  display: block;
+  width: 100%;
+  margin: 5% 0% 13% 0%;
+}
+.qr-reader-background {
+  margin-bottom: 10%;
+}
+
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
   .bodycontainer {

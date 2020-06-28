@@ -1,11 +1,11 @@
 exports.up = function (knex) {
   return knex.schema.table('game_instances', function (table) {
-    table.boolean('finished');
+    table.string('code');
   });
 };
 
 exports.down = function (knex) {
   return knex.schema.table('game_instances', function (table) {
-    table.dropColumn('finished');
+    table.dropColumn('code');
   });
 };
