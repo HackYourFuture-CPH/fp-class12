@@ -14,7 +14,7 @@ const questionsRouter = require('./questions.router');
 const allUsersRouter = require('./all-users.router');
 const qrRouter = require('./qr.router');
 
-const newGameRouter = require('./new-game.router');
+const createNewGameRouter = require('./create-new-game.router');
 const gameInstancesRouter = require('./game-instances.router');
 
 const swaggerJsDoc = require('swagger-jsdoc');
@@ -53,6 +53,6 @@ router.use('/allUsers', allUsersRouter);
 router.use('/qr', qrRouter);
 
 router.use('/game-instances', gameInstancesRouter);
-router.use('/new-game', newGameRouter);
+router.use('/new-game', createNewGameRouter);
 
 module.exports = router;
