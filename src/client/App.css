@@ -69,6 +69,7 @@ img {
 .bodywrapper {
   position: absolute;
 }
+
 .homelogocontainer {
   width: 100%;
   padding: 39% 10% 26% 10%;
@@ -88,6 +89,10 @@ img {
   margin-bottom: 7%;
 }
 
+.header-heading {
+  position: relative;
+  z-index: 1;
+}
 .footer-component {
   z-index: 10;
   position: relative;
@@ -103,6 +108,21 @@ img {
   height: 100vh;
   z-index: 1;
 }
+/* Join game page css */
+
+.smallwhitedetail {
+  color: #ffffff;
+  font-family: roboto;
+  font-size: 16px;
+  text-align: center;
+  display: block;
+  width: 100%;
+  margin: 5% 0% 13% 0%;
+}
+.qr-reader-background {
+  margin-bottom: 10%;
+}
+
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
   .bodycontainer {
