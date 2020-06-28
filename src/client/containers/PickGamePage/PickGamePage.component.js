@@ -2,7 +2,7 @@ import React from 'react';
 import HeaderTitle from '../../components/Title/Title';
 import GameDescription from '../../components/GameDescription/GameDescriptionComponent';
 import Footer from '../../components/FooterComponent/FooterComponent';
-import Modal from '../../components/Modal/Modal';
+import Modal from '../../components/Modal/ListModal';
 
 const toggleModal = () => {
   document.querySelector('.modalbox').classList.toggle('showmodal');
