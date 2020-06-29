@@ -7,9 +7,10 @@ export default function SingleInputFormComponent({
   inputLabel,
   value,
   ButtonTitle,
+  onSubmit
 }) {
   return (
-    <form className="form">
+    <form className="form" onSubmit={onSubmit}>
       <label className="form-label">{inputLabel}</label>
       <input
         className="form-input m-top m-bot"

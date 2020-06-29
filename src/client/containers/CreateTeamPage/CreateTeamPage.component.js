@@ -2,8 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import HeaderTitle from '../../components/Title/Title';
 import Footer from '../../components/FooterComponent/FooterComponent';
-import SingleInputFormComponent from '../../components/SingleInputFormComponent/SingleInputFormComponent';
-import AddAvatarComponent from '../../components/AddAvatarComponent/AddAvatarComponent'
+//import AddAvatarComponent from '../../components/AddAvatarComponent/AddAvatarComponent';
+import FormContainer from '../../containers/FormContainer/FormContainer.component.js';
 
 export const CreateTeamPage = () => (
   <div id="root">
@@ -15,9 +15,9 @@ export const CreateTeamPage = () => (
           are playing on before we start.
         </p>
         <Link to="/pick-avatar-page">
-          <AddAvatarComponent />
+          
         </Link>
-        <SingleInputFormComponent
+        <FormContainer
           inputLabel="Team name"
           value="Enter name"
           ButtonTitle="Create Team"
