@@ -1,0 +1,25 @@
+.container{
+    width: 7.100em;
+    height: 7.100em;
+    background-color: transparent;
+    display: flex;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.avatar-icon{
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.add-icon{
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    top: 70%;
+    left: 75%;
+    width: 30%;
+    height: 30%;
+}
