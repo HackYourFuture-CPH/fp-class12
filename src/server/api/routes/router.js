@@ -3,19 +3,19 @@ const express = require('express');
 const router = express.Router();
 
 const modulesRouter = require('./modules.router');
-const mapcoordinatesRouter = require('./mapcoordinates.router');
+const mapcoordinatesRouter = require('./map-coordinates.router');
 
 router.use('/modules', modulesRouter);
 
 router.use('/mapcoordinates', mapcoordinatesRouter);
 
 const questionsRouter = require('./questions.router');
-const allUsersRouter = require('./allUsers.router');
+const allUsersRouter = require('./all-users.router');
 const qrRouter = require('./qr.router');
 
-const possibleanswerRouter = require('./GameQuestionAnswerOptions.router');
+const possibleanswerRouter = require('./game-question-answer-options.router');
 
-const gameInstancesRouter = require('./gameInstances.router');
+const gameInstancesRouter = require('./game-instances.router');
 
 router.use('/gameInstances', gameInstancesRouter);
 
@@ -29,5 +29,13 @@ router.use('/createUserRoles', createUserRolesRouter);
 router.use('/questions', questionsRouter);
 router.use('/allUsers', allUsersRouter);
 router.use('/qr', qrRouter);
+const newGameRouter = require('./create-new-game.router');
+
+router.use('/modules', modulesRouter);
+router.use('/new-game', newGameRouter);
+
+const getQuestionByIdRouter = require('./getQuestionById.router');
+
+router.use('/getQuestionById', getQuestionByIdRouter);
 
 module.exports = router;
