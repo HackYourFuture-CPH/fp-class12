@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import ArrowsComponent from '../ArrowsComponent/ArrowsComponent';
 import SlideshowImageComponent from '../SlideshowImageComponent/SlideshowImageComponent';
 import SliderDotsComponent from '../SliderDotsComponent/SliderDotsComponent';
 import avatarImages from '../../assets/data/ArrayOfImages';
+import PropTypes from 'prop-types';
 import './SliderComponent.styles.css';
 
-function Slider() {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+function Slider({ currentImageIndex, setCurrentImageIndex }) {
   const totalImages = avatarImages.length;
 
   function slideImage(direction) {
@@ -46,5 +46,10 @@ function Slider() {
     </div>
   );
 }
+
+Slider.propTypes = {
+  currentImageIndex: PropTypes.number.isRequired,
+  setCurrentImageIndex: PropTypes.func.isRequired,
+};
 
 export default Slider;
