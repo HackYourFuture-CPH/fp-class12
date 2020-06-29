@@ -1,0 +1,1 @@
+web: npm run db:clean && npm run db:setup && npm run dev
