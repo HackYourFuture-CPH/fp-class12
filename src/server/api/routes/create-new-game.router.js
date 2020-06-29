@@ -3,11 +3,11 @@ const express = require('express');
 const router = express.Router({ mergeParams: true });
 
 // controllers
-const newGameInstanceController = require('../controllers/newGameInstance.controller');
+const createNewGameInstanceController = require('../controllers/create-new-game-instance.controller');
 
 /**
  * @swagger
- * /new_game:
+ * /new-game:
  *   post:
  *    summary: Create a new game Instance
  *    description:
@@ -43,7 +43,7 @@ const newGameInstanceController = require('../controllers/newGameInstance.contro
  *        description: Unexpected error.
  */
 router.post('/', (req, res, next) => {
-  newGameInstanceController
+  createNewGameInstanceController
     .createNewGameInstance(req.body)
     .then((result) => res.json(result))
     .catch(next);
