@@ -21,7 +21,7 @@ export const ErrorPage = () => {
         </div>
         <ButtonComponent
           ButtonTitle="Try again"
-          onClick={() => history.go(-1)}
+          onClick={() => window.history.go(-1)}
         />
       </div>
       <FooterComponent />
