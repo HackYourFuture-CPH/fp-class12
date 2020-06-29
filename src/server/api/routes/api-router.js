@@ -10,6 +10,7 @@ const createUserRolesRouter = require('./create-user-roles.router');
 const questionsRouter = require('./questions.router');
 const allUsersRouter = require('./all-users.router');
 const qrRouter = require('./qr.router');
+const createNewGameRouter = require('./create-new-game.router');
 const gameInstancesRouter = require('./game-instances.router');
 const getQuestionByIdRouter = require('./getQuestionById.router');
 
@@ -20,7 +21,7 @@ const swaggerOptions = {
   swaggerDefinition: {
     info: {
       version: '1.0',
-      title: 'Final project',
+      title: 'Final Project',
       description: 'API documentation for the final project',
       contact: {},
     },
@@ -45,6 +46,7 @@ router.use('/questions', questionsRouter);
 router.use('/allUsers', allUsersRouter);
 router.use('/qr', qrRouter);
 router.use('/game-instances', gameInstancesRouter);
+router.use('/new-game', createNewGameRouter);
 router.use('/game_factories', getQuestionByIdRouter);
 
 module.exports = router;
