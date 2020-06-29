@@ -5,12 +5,16 @@ export const FormContainer = (props) => {
     const [userInput, setUserInput] = useState('');
     const { inputLabel, value, ButtonTitle } = props;
 
-    onSubmit = (e) => {
-        setUserInput(e.target.value);
+    const onSubmit = (e) => {
         e.preventDefault();
+        console.log({userInput});
+    }
+
+    const onChange = (e) => {
+        setUserInput(e.target.value);
     }
 
     return( 
-        <SingleInputFormComponent inputLabel={inputLabel} value={value} ButtonTitle={ButtonTitle} onSubmit={this.onSubmit}/>
+        <SingleInputFormComponent inputLabel={inputLabel} value={value} ButtonTitle={ButtonTitle} onSubmit={onSubmit} onChange={onChange}/>
     )
 } 

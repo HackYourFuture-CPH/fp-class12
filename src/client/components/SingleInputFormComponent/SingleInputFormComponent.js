@@ -7,14 +7,16 @@ export default function SingleInputFormComponent({
   inputLabel,
   value,
   ButtonTitle,
-  onSubmit
+  onSubmit,
+  onChange
 }) {
   return (
-    <form className="form" onSubmit={onSubmit}>
+    <form className="form" onSubmit={(e) => onSubmit(e)}>
       <label className="form-label">{inputLabel}</label>
       <input
         className="form-input m-top m-bot"
-        type="textbox"
+        type="text"
+        onChange={(e) => onChange(e)}
         placeholder={value}
       />
       <ButtonComponent ButtonTitle={ButtonTitle} />
