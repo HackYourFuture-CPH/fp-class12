@@ -29,5 +29,13 @@ router.use('/createUserRoles', createUserRolesRouter);
 router.use('/questions', questionsRouter);
 router.use('/allUsers', allUsersRouter);
 router.use('/qr', qrRouter);
+const newGameRouter = require('./create-new-game.router');
+
+router.use('/modules', modulesRouter);
+router.use('/new-game', newGameRouter);
+
+const getQuestionByIdRouter = require('./getQuestionById.router');
+
+router.use('/getQuestionById', getQuestionByIdRouter);
 
 module.exports = router;
