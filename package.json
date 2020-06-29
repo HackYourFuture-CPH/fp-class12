@@ -8,6 +8,7 @@
     "node": "12.9.1"
   },
   "scripts": {
+    "build-storybook": "build-storybook",
     "build": "webpack --mode production",
     "start": "npm run build && node ./src/server/bin/server",
     "client": "webpack-dev-server --mode development --devtool inline-source-map --hot",
