@@ -19,7 +19,7 @@ router.use('/create-user-profiles', createUserProfilesRouter);
 router.use('/create-user-roles', createUserRolesRouter);
 router.use('/questions', questionsRouter);
 router.use('/all-users', allUsersRouter);
-router.use('/QR', qrRouter);
+router.use('/qr', qrRouter);
 router.use('/get-question-by-id', getQuestionByIdRouter);
 router.use('/new-game', newGameRouter);
 
