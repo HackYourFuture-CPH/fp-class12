@@ -2,16 +2,16 @@ const express = require('express');
 
 const router = express.Router({ mergeParams: true });
 
-// controllers
+// controller
 const possibleAnswerController = require('../controllers/game-question-answer-options.controller');
 
 /**
  * @swagger
- * /answer_choices/{ID}:
+ * /answer-choices/{ID}:
  *  get:
  *    summary: Get answer choices for given question by ID
  *    description:
- *      Will return single answer_text with a matching ID.
+ *      Will return single answer-text with a matching ID.
  *    produces: application/json
  *    parameters:
  *     - in: path
@@ -19,7 +19,7 @@ const possibleAnswerController = require('../controllers/game-question-answer-op
  *       schema:
  *         type: integer
  *         required: true
- *         description: The ID of the answer_choices to get
+ *         description: The ID of the answer-choices to get
  *
  *    responses:
  *      200:
@@ -29,7 +29,7 @@ const possibleAnswerController = require('../controllers/game-question-answer-op
  */
 router.get('/:id', (req, res, next) => {
   possibleAnswerController
-    .getPossibleanswerById(req.params.id)
+    .getPossibleAnswerById(req.params.id)
     .then((result) => res.json(result))
     .catch(next);
 });

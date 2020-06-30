@@ -7,11 +7,11 @@ const mapCoordinatesController = require('../controllers/map-coordinates.control
 
 /**
  * @swagger
- * /mapcoordinates:
+ * /map-coordinates:
  *  get:
- *    summary: Get all mapcoordinates
+ *    summary: Get all map coordinates
  *    description:
- *      Will return all mapcoordinates.
+ *      Will return all map coordinates.
  *    produces: application/json
  *    responses:
  *      200:
