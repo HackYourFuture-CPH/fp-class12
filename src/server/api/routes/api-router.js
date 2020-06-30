@@ -3,18 +3,18 @@ const express = require('express');
 const router = express.Router();
 
 // Router imports
-const modulesRouter = require('./modules.router');
 const mapcoordinatesRouter = require('./map-coordinates.router');
 const possibleanswerRouter = require('./game-question-answer-options.router');
-
 const createUserProfilesRouter = require('./create-user-profiles.router');
 const createUserRolesRouter = require('./create-user-roles.router');
 const questionsRouter = require('./questions.router');
 const allUsersRouter = require('./all-users.router');
 const qrRouter = require('./qr.router');
-const nextQuestion = require('./next-questions.router');
+const nextQuestionRouter = require('./next-questions.router');
 
+const createNewGameRouter = require('./create-new-game.router');
 const gameInstancesRouter = require('./game-instances.router');
+const getQuestionByIdRouter = require('./getQuestionById.router');
 
 const swaggerJsDoc = require('swagger-jsdoc');
 const swaggerUi = require('swagger-ui-express');
@@ -23,7 +23,7 @@ const swaggerOptions = {
   swaggerDefinition: {
     info: {
       version: '1.0',
-      title: 'Final project',
+      title: 'Final Project',
       description: 'API documentation for the final project',
       contact: {},
     },
@@ -40,16 +40,16 @@ const swaggerDocument = swaggerJsDoc(swaggerOptions);
 router.use('/documentation', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 // Application routes
-router.use('/modules', modulesRouter);
 router.use('/mapcoordinates', mapcoordinatesRouter);
 router.use('/answer_choices', possibleanswerRouter);
-router.use('/next_question', nextQuestion);
+router.use('/next_question', nextQuestionRouter);
 router.use('/users', createUserProfilesRouter);
 router.use('/user_roles', createUserRolesRouter);
 router.use('/questions', questionsRouter);
 router.use('/allUsers', allUsersRouter);
 router.use('/qr', qrRouter);
-
 router.use('/game-instances', gameInstancesRouter);
+router.use('/new-game', createNewGameRouter);
+router.use('/game_factories', getQuestionByIdRouter);
 
 module.exports = router;

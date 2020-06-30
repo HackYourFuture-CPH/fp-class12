@@ -1,34 +1,28 @@
 const express = require('express');
 
 const router = express.Router();
-
-const modulesRouter = require('./modules.router');
-const mapCoordinatesRouter = require('./map-coordinates.router');
-
-router.use('/modules', modulesRouter);
-
-router.use('/mapcoordinates', mapCoordinatesRouter);
-
+const mapcoordinatesRouter = require('./map-coordinates.router');
 const questionsRouter = require('./questions.router');
 const allUsersRouter = require('./all-users.router');
 const qrRouter = require('./qr.router');
-
-const nextQuestion = require('./next-questions.router');
-const possibleAnswerRouter = require('./game-question-answer-options.router');
-
+const possibleanswerRouter = require('./game-question-answer-options.router');
 const gameInstancesRouter = require('./game-instances.router');
-
-router.use('/gameInstances', gameInstancesRouter);
-
 const createUserProfilesRouter = require('./create-user-profiles.router');
 const createUserRolesRouter = require('./create-user-roles.router');
+const getQuestionByIdRouter = require('./getQuestionById.router');
+const newGameRouter = require('./create-new-game.router');
+const nextQuestionRouter = require('./next-questions.router');
 
-router.use('/answer_choices', possibleAnswerRouter);
+router.use('/mapcoordinates', mapcoordinatesRouter);
+router.use('/gameInstances', gameInstancesRouter);
+router.use('/answer_choices', possibleanswerRouter);
 router.use('/createUserProfiles', createUserProfilesRouter);
 router.use('/createUserRoles', createUserRolesRouter);
-router.use('/next_question', nextQuestion);
+router.use('/next_question', nextQuestionRouter);
 router.use('/questions', questionsRouter);
 router.use('/allUsers', allUsersRouter);
 router.use('/qr', qrRouter);
+router.use('/getQuestionById', getQuestionByIdRouter);
+router.use('/new-game', newGameRouter);
 
 module.exports = router;
