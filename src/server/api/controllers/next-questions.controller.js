@@ -15,13 +15,13 @@ const getNextQuestions = async (id) => {
         '=',
         'actual_answers.fk_answer_id',
       )
-      .select('questions.question')
+      .select('questions.question', 'questions.id')
       .where('answer_choices.answer_correct', '=', '1')
       .where('actual_answers.id', '=', id)
       .limit(1);
 
     if (nextQuestion.length === 0) {
-      throw new Error(`incorrect entry with the id of ${id} `, 404);
+      throw new Error(`wrong answer ${id} `, 404);
     }
     return nextQuestion;
   } catch (error) {

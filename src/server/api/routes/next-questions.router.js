@@ -3,15 +3,15 @@ const express = require('express');
 const router = express.Router({ mergeParams: true });
 
 // controllers
-const possibleanswerController = require('../controllers/GameQuestionAnswerOptions.controller');
+const nextQuestionsController = require('../controllers/next-questions.controller');
 
 /**
  * @swagger
- * /answer_choices/{ID}:
+ * /next_question/{ID}:
  *  get:
- *    summary: Get answer choices for given question by ID
+ *    summary: Get next question
  *    description:
- *      Will return single answer_text with a matching ID.
+ *      Will return next question  if answered correct with parameter for the actual answer ID
  *    produces: application/json
  *    parameters:
  *     - in: path
@@ -19,7 +19,7 @@ const possibleanswerController = require('../controllers/GameQuestionAnswerOptio
  *       schema:
  *         type: integer
  *         required: true
- *         description: The ID of the answer_choices to get
+ *         description: The ID of the question to get the next one.
  *
  *    responses:
  *      200:
@@ -28,8 +28,8 @@ const possibleanswerController = require('../controllers/GameQuestionAnswerOptio
  *        description: Unexpected error.
  */
 router.get('/:id', (req, res, next) => {
-  possibleanswerController
-    .getPossibleanswerById(req.params.id)
+  nextQuestionsController
+    .getNextQuestions(req.params.id)
     .then((result) => res.json(result))
     .catch(next);
 });

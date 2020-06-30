@@ -3,7 +3,7 @@ const express = require('express');
 const router = express.Router({ mergeParams: true });
 
 // controllers
-const mapcoordinatesController = require('../controllers/mapcoordinates.controller');
+const mapCoordinatesController = require('../controllers/map-coordinates.controller');
 
 /**
  * @swagger
@@ -20,7 +20,7 @@ const mapcoordinatesController = require('../controllers/mapcoordinates.controll
  *        description: Unexpected error.
  */
 router.get('/', (req, res, next) => {
-  mapcoordinatesController
+  mapCoordinatesController
     .getMapCoordinates()
     .then((result) => res.json(result))
     .catch(next);
