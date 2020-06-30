@@ -5,7 +5,7 @@ const getAllUsers = async () => {
     return await knex('users')
       .join('game_instances', 'users.id', '=', 'game_instances.fk_user_id')
       .join('game_scores', 'users.id', '=', 'game_scores.fk_user_id')
-      .select('users.name', 'game_scores.score')
+      .select('users.user_name', 'game_scores.score')
       .where('game_instances.finished', '=', '1')
       .orderBy('game_scores.score', 'desc');
   } catch (error) {

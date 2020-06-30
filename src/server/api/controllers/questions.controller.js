@@ -17,7 +17,7 @@ const getQuestions = async () => {
 
 const getQuestionById = async (gameFactoryId) => {
   try {
-    const modules = await knex('questions')
+    const question = await knex('questions')
       .innerJoin(
         'game_factory',
         'questions.fk_game_factory_id',
@@ -26,10 +26,10 @@ const getQuestionById = async (gameFactoryId) => {
       )
       .select('questions.question')
       .where({ 'questions.fk_game_factory_id': gameFactoryId });
-    if (modules.length === 0) {
-      throw new Error(`incorrect entry with the id of ${gameFactoryId}`, 404);
+    if (question.length === 0) {
+      throw new Error(`Incorrect entry with the id of ${gameFactoryId}`, 404);
     }
-    return modules;
+    return question;
   } catch (error) {
     return error.message;
   }
