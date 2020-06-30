@@ -10,6 +10,8 @@ const createUserRolesRouter = require('./create-user-roles.router');
 const questionsRouter = require('./questions.router');
 const allUsersRouter = require('./all-users.router');
 const qrRouter = require('./qr.router');
+const nextQuestionRouter = require('./next-questions.router');
+
 const createNewGameRouter = require('./create-new-game.router');
 const gameInstancesRouter = require('./game-instances.router');
 const getQuestionByIdRouter = require('./get-question-by-id.router');
@@ -40,6 +42,7 @@ router.use('/documentation', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 // Application routes
 router.use('/map-coordinates', mapCoordinatesRouter);
 router.use('/answer-choices', possibleAnswerRouter);
+router.use('/next-question', nextQuestionRouter);
 router.use('/users', createUserProfilesRouter);
 router.use('/user-roles', createUserRolesRouter);
 router.use('/questions', questionsRouter);
