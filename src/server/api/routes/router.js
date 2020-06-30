@@ -18,7 +18,7 @@ router.use('/gameInstances', gameInstancesRouter);
 router.use('/answer_choices', possibleanswerRouter);
 router.use('/createUserProfiles', createUserProfilesRouter);
 router.use('/createUserRoles', createUserRolesRouter);
-router.use('/next_question', nextQuestionRouter);
+router.use('/next-question', nextQuestionRouter);
 router.use('/questions', questionsRouter);
 router.use('/allUsers', allUsersRouter);
 router.use('/qr', qrRouter);

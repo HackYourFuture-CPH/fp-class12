@@ -7,7 +7,7 @@ const nextQuestionsController = require('../controllers/next-questions.controlle
 
 /**
  * @swagger
- * /next_question/{ID}:
+ * /next-question/{actual_answer.ID}:
  *  get:
  *    summary: Get next question
  *    description:
@@ -15,7 +15,7 @@ const nextQuestionsController = require('../controllers/next-questions.controlle
  *    produces: application/json
  *    parameters:
  *     - in: path
- *       name: ID
+ *       name: actual_answer.ID
  *       schema:
  *         type: integer
  *         required: true

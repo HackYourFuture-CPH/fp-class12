@@ -42,7 +42,7 @@ router.use('/documentation', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 // Application routes
 router.use('/mapcoordinates', mapcoordinatesRouter);
 router.use('/answer_choices', possibleanswerRouter);
-router.use('/next_question', nextQuestionRouter);
+router.use('/next-question', nextQuestionRouter);
 router.use('/users', createUserProfilesRouter);
 router.use('/user_roles', createUserRolesRouter);
 router.use('/questions', questionsRouter);
