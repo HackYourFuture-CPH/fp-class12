@@ -2,15 +2,15 @@ const express = require('express');
 
 const router = express.Router({ mergeParams: true });
 
-const QRController = require('../controllers/qr.controller');
+const qrController = require('../controllers/qr.controller');
 
 /**
  * @swagger
- * /QR/{GAME}:
+ * /qr/{GAME}:
  *  get:
- *    summary: Get the QR code associated with game instance.
+ *    summary: Get the qr code associated with game instance.
  *    description:
- *      Will return the QR code for game instance.
+ *      Will return the qr code for game instance.
  *    produces: application/json
  *    parameters:
  *
@@ -28,14 +28,15 @@ const QRController = require('../controllers/qr.controller');
  *        schema:
  *          type: object
  *          properties:
- *            QR:
+ *            qr:
  *              type: string
  *              description: The Generated QR code.
  *      5XX:
  *        description: Unexpected error.
  */
 router.get('/:id', (req, res, next) => {
-  QRController.getQRCode(req.params.id)
+  qrController
+    .getQRCode(req.params.id)
     .then((result) => res.json(result))
     .catch(next);
 });

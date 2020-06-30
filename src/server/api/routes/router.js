@@ -4,7 +4,7 @@ const router = express.Router();
 const mapCoordinatesRouter = require('./map-coordinates.router');
 const questionsRouter = require('./questions.router');
 const allUsersRouter = require('./all-users.router');
-const QRRouter = require('./qr.router');
+const qrRouter = require('./qr.router');
 const possibleAnswerRouter = require('./game-question-answer-options.router');
 const gameInstancesRouter = require('./game-instances.router');
 const createUserProfilesRouter = require('./create-user-profiles.router');
@@ -19,7 +19,7 @@ router.use('/create-user-profiles', createUserProfilesRouter);
 router.use('/create-user-roles', createUserRolesRouter);
 router.use('/questions', questionsRouter);
 router.use('/all-users', allUsersRouter);
-router.use('/QR', QRRouter);
+router.use('/QR', qrRouter);
 router.use('/get-question-by-id', getQuestionByIdRouter);
 router.use('/new-game', newGameRouter);
 
