@@ -11,12 +11,14 @@ const createUserProfilesRouter = require('./create-user-profiles.router');
 const createUserRolesRouter = require('./create-user-roles.router');
 const getQuestionByIdRouter = require('./getQuestionById.router');
 const newGameRouter = require('./create-new-game.router');
+const nextQuestionRouter = require('./next-questions.router');
 
 router.use('/mapcoordinates', mapcoordinatesRouter);
 router.use('/gameInstances', gameInstancesRouter);
 router.use('/answer_choices', possibleanswerRouter);
 router.use('/createUserProfiles', createUserProfilesRouter);
 router.use('/createUserRoles', createUserRolesRouter);
+router.use('/next-question', nextQuestionRouter);
 router.use('/questions', questionsRouter);
 router.use('/allUsers', allUsersRouter);
 router.use('/qr', qrRouter);
