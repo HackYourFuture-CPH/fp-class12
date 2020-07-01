@@ -1,26 +1,34 @@
 import React, { useState } from 'react';
 import { CreateTeamPageLayout } from '../../components/CreateTeamPageLayout/CreateTeamPageLayout.component';
+import { AppContext } from '../../AppContext';
 
-export const CreateTeamPage = () => {
+export const CreateTeamPageContainer = () => {
   const [userInput, setUserInput] = useState('');
-  //   const { inputLabel, value, ButtonTitle } = props;
-
-  const onSubmit = (e) => {
-    e.preventDefault();
-    console.log({ userInput });
-  };
-
-  const onChange = (e) => {
-    setUserInput(e.target.value);
-  };
+  //   AppContext.
 
   return (
-    <CreateTeamPageLayout
-      createTeamFormProps={{
-        value: 'the value',
-        onChange: onSubmit(),
-        onSubmit: onChange(),
-      }}
-    />
+    <AppContext.Consumer>
+      {({ appState, setAppState }) => (
+        <CreateTeamPageLayout
+          createTeamFormProps={{
+            value: userInput,
+            onChange: (event) => {
+              setUserInput(event.target.value);
+            },
+            onSubmit: (event) => {
+              event.preventDefault();
+              if (!userInput) {
+                return;
+              }
+              setAppState({
+                ...appState,
+                teamName: userInput,
+                // TODO: Navigate to next page, or show user feedback
+              });
+            },
+          }}
+        />
+      )}
+    </AppContext.Consumer>
   );
 };

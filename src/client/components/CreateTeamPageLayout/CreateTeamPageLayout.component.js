@@ -22,6 +22,7 @@ export const CreateTeamPageLayout = ({ createTeamFormProps }) => {
         </Link>
         <SingleInputFormComponent
           inputLabel="Team name"
+          placeholder="Enter name"
           value={value}
           ButtonTitle="Create team"
           onSubmit={onSubmit}
