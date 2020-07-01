@@ -26,7 +26,7 @@ export const GamePage = () => (
     </div>
     <section className="home bodycontainer">
       <div className="bodywrapper">
-        <Map center={[55.847636, 22.02300283]} />
+        <Map />
       </div>
       <Footer />
     </section>
