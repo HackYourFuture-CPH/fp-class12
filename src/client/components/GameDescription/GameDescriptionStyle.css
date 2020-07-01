@@ -1,38 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rammetto+One&display=swap');
-
 .cardcontainer {
   width: 90%;
   border-radius: 15px;
-  margin: auto;
+  margin: 10px auto;
   background-color: rgb(255, 255, 255);
-  padding: 15px;
+  box-shadow: 0 0 20px 0.5px rgba(0, 0, 0, 0.2);
 }
 
 .titleLocation {
   display: flex;
+  align-items: flex-start;
   justify-content: space-between;
+  line-height: 20px;
+  padding: 20px 20px 0 20px;
 }
-.titleLocationwrapper {
-  padding-left: 2%;
-}
-
-.titleLocationwrapper p {
-  margin: 0px 0px 5px 0px;
-}
-.card {
-  padding: 20px 0;
-  width: 70%;
-  margin: auto;
-  background-color: rgb(251, 168, 92);
-  background-image: url('../../assets/images/background/background-treasure-map.png');
-}
-.choosebox {
-  margin-top: 15px;
-}
-
-@media only screen and (max-width: 660px) {
-  .titleLocation {
-    display: block;
-  }
+.map {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px 15px 0 0;
 }
