@@ -24,7 +24,7 @@ export const CreateTeamPageLayout = ({ createTeamFormProps }) => {
           inputLabel="Team name"
           placeholder="Enter name"
           value={value}
-          ButtonTitle="Create team"
+          buttonTitle="Create team"
           onSubmit={onSubmit}
           onChange={onChange}
         />
@@ -38,7 +38,7 @@ CreateTeamPageLayout.propTypes = {
   createTeamFormProps: PropTypes.shape({
     inputLabel: PropTypes.string.isRequired,
     value: PropTypes.string.isRequired,
-    ButtonTitle: PropTypes.string.isRequired,
+    buttonTitle: PropTypes.string.isRequired,
     onChange: PropTypes.func.isRequired,
     onSubmit: PropTypes.func.isRequired,
   }).isRequired,

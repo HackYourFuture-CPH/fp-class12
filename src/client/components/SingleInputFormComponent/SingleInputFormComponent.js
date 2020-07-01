@@ -6,7 +6,7 @@ import './SingleInputFormComponent.style.css';
 export default function SingleInputFormComponent({
   inputLabel,
   value,
-  ButtonTitle,
+  buttonTitle,
   placeholder,
   onSubmit,
   onChange,
@@ -21,7 +21,7 @@ export default function SingleInputFormComponent({
         placeholder={placeholder}
         value={value}
       />
-      <ButtonComponent ButtonTitle={ButtonTitle} disabled={!value} />
+      <ButtonComponent buttonTitle={buttonTitle} disabled={!value} />
     </form>
   );
 }
@@ -29,7 +29,7 @@ export default function SingleInputFormComponent({
 SingleInputFormComponent.propTypes = {
   inputLabel: PropTypes.string.isRequired,
   value: PropTypes.string.isRequired,
-  ButtonTitle: PropTypes.string.isRequired,
+  buttonTitle: PropTypes.string.isRequired,
   placeholder: PropTypes.string,
   onChange: PropTypes.func.isRequired,
   onSubmit: PropTypes.func.isRequired,
