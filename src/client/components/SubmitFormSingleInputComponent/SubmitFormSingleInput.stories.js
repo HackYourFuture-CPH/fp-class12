@@ -8,6 +8,6 @@ export const SubmitFormSingleInput = () => (
   <SingleInputFormComponent
     inputLabel={text('Title', 'Team name')}
     value={text('Value', 'Enter name')}
-    ButtonTitle={text('Button Label', 'Trial button')}
+    buttonTitle={text('Button Label', 'Trial button')}
   />
 );

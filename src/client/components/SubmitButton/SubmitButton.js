@@ -2,14 +2,17 @@ import React from 'react';
 import './SubmitButton.css';
 import PropTypes from 'prop-types';
 
-export default function ButtonComponent({ ButtonTitle, onClick }) {
+export default function ButtonComponent({ buttonTitle, disabled }) {
   return (
-    <button className="button-component" type="button" onClick={onClick}>
-      {ButtonTitle}
+    <button className="button-component" type="submit" disabled={disabled}>
+      {buttonTitle}
     </button>
   );
 }
 ButtonComponent.propTypes = {
-  ButtonTitle: PropTypes.string.isRequired,
-  onClick: PropTypes.func.isRequired,
+  buttonTitle: PropTypes.string.isRequired,
+  disabled: PropTypes.bool,
+};
+ButtonComponent.defaultProps = {
+  disabled: false,
 };
