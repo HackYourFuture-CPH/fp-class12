@@ -14,13 +14,13 @@ export const Home = () => (
         <h1>Treasure Hunt</h1>
       </div>
       <SubmitButton
-        ButtonTitle="Join Game"
+        buttonTitle="Join Game"
         onClick={() => {
           location.href = '../share-game-page';
         }}
       />
       <SubmitButton
-        ButtonTitle="Start Game"
+        buttonTitle="Start Game"
         onClick={() => {
           location.href = '../create-team-page';
         }}
