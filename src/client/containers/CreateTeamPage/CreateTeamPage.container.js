@@ -4,7 +4,6 @@ import { AppContext } from '../../AppContext';
 
 export const CreateTeamPageContainer = () => {
   const [userInput, setUserInput] = useState('');
-  //   AppContext.
 
   return (
     <AppContext.Consumer>
