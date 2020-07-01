@@ -11,15 +11,15 @@ const toggleModal = () => {
 
 export default function ModalResponsive({
   modalTitle,
-  ButtonTitle,
+  buttonTitle,
   popupcontent,
 }) {
   return (
     <div className="modalcontainer">
-      <SubmitButton onClick={toggleModal} ButtonTitle="Open modal" />
+      <SubmitButton onClick={toggleModal} buttonTitle="Open modal" />
       <SimplePopup
         modalTitle={modalTitle}
-        ButtonTitle={ButtonTitle}
+        buttonTitle={buttonTitle}
         popupcontent={popupcontent}
       />
     </div>
@@ -28,6 +28,6 @@ export default function ModalResponsive({
 
 ModalResponsive.propTypes = {
   modalTitle: PropTypes.string.isRequired,
-  ButtonTitle: PropTypes.string.isRequired,
+  buttonTitle: PropTypes.string.isRequired,
   popupcontent: PropTypes.string.isRequired,
 };

@@ -25,7 +25,7 @@ export const PickAvatarPage = ({ onAvatarChosen }) => {
           />
         </div>
         <ButtonComponent
-          ButtonTitle="Choose"
+          buttonTitle="Choose"
           onClick={() => onAvatarChosen(currentImageIndex)}
         />
       </div>
