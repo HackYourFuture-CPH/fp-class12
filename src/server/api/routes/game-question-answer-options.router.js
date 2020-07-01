@@ -7,19 +7,19 @@ const possibleAnswerController = require('../controllers/game-question-answer-op
 
 /**
  * @swagger
- * /answer-choices/{ID}:
+ * /answer-choices/{id}:
  *  get:
- *    summary: Get answer choices for given question by ID
+ *    summary: Get answer choices for given question by id
  *    description:
- *      Will return single answer-text with a matching ID.
+ *      Will return single answer-text with a matching id.
  *    produces: application/json
  *    parameters:
  *     - in: path
- *       name: ID
+ *       name: id
  *       schema:
  *         type: integer
  *         required: true
- *         description: The ID of the answer-choices to get
+ *         description: The id of the answer-choices to get
  *
  *    responses:
  *      200:

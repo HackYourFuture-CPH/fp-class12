@@ -7,25 +7,25 @@ const getQuestionByIdController = require('../controllers/get-question-by-id.con
 
 /**
  * @swagger
- * /game-factories/{ID}/questions/{QUESTIONID}:
+ * /game-factories/{id}/questions/{questionId}:
  *  get:
- *    summary: Get question by game-factory ID by question ID
+ *    summary: Get question by game-factory id by question id
  *    description:
- *      Will return first question with a matching ID.
+ *      Will return first question with a matching id.
  *    produces: application/json
  *    parameters:
  *     - in: path
- *       name: ID
+ *       name: id
  *       schema:
  *         type: integer
  *         required: true
- *         description: The ID of the game-factory
+ *         description: The id of the game-factory
  *     - in: path
- *       name: QUESTIONID
+ *       name: questionId
  *       schema:
  *         type: integer
  *         required: true
- *         description: The ID of the question
+ *         description: The id of the question
  *
  *    responses:
  *      200:
