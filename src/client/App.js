@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Home } from './containers/Home/Home';
 import { ErrorPage } from './containers/404Page/404Page.component';
-import { CreateTeamPage } from './containers/CreateTeamPage/CreateTeamPage.component';
+import { CreateTeamPage } from './containers/CreateTeamPage/CreateTeamPage.container';
 import { GamePage } from './containers/GamePage/GamePage.component';
 import { JoinGamePage } from './containers/JoinGamePage/JoinGamePage.component';
 import { LeaderboardPage } from './containers/LeaderboardPage/LeaderboardPage.component';
