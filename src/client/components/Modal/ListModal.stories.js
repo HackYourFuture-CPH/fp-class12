@@ -1,12 +1,12 @@
 import React from 'react';
-import Modal from './Modal';
+import ListModal from './ListModal';
 import { withKnobs, text } from '@storybook/addon-knobs';
 import { boolean, changeBoolean } from '@storybook/addon-knobs/react';
-import Popup from './ModalPopup';
+import Popup from './ListModalPopup';
 
 export default { title: 'Modal', decorators: [withKnobs] };
 
-export const ResponsiveModal = () => {
+export const ListModalItems = () => {
   const modalTitle = text('Title', 'Chooses the game mode');
   const optionA = text('Option A', 'with Timer');
   const optionB = text('Option B', 'without Timer');
@@ -18,7 +18,7 @@ export const ResponsiveModal = () => {
   const onchangeradiobox2 = (isChecked) => changeBoolean('radio', isChecked);
 
   return (
-    <Modal
+    <ListModal
       modalTitle={modalTitle}
       optionA={optionA}
       optionB={optionB}
@@ -29,6 +29,6 @@ export const ResponsiveModal = () => {
       onchangeradiobox2={onchangeradiobox2}
     >
       <Popup />
-    </Modal>
+    </ListModal>
   );
 };

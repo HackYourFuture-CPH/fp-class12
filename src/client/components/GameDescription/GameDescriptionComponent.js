@@ -16,7 +16,7 @@ const GameDescription = () => {
             <LocationComponent />
           </div>
           <div className="choosebox">
-            <Button ButtonTitle="choose" />
+            <Button buttonTitle="choose" />
           </div>
         </div>
       </div>

@@ -1,13 +1,14 @@
 import React from 'react';
 import './Modal.styles.css';
 import PropTypes from 'prop-types';
-import Popup from './ModalPopup';
+import Popup from './ListModalPopup';
+import SubmitButton from '../SubmitButton/SubmitButton';
 
 const toggleModal = () => {
   document.querySelector('.modalbox').classList.toggle('showmodal');
 };
 
-export default function ModalResponsive({
+export default function ListModal({
   modalTitle,
   buttonTitle,
   optionA,
@@ -19,10 +20,7 @@ export default function ModalResponsive({
 }) {
   return (
     <div className="modalcontainer">
-      <button type="button" onClick={toggleModal}>
-        Open modal
-      </button>
-
+      <SubmitButton onClick={toggleModal} buttonTitle="Open modal" />
       <Popup
         modalTitle={modalTitle}
         optionA={optionA}
@@ -37,7 +35,7 @@ export default function ModalResponsive({
   );
 }
 
-ModalResponsive.propTypes = {
+ListModal.propTypes = {
   modalTitle: PropTypes.string.isRequired,
   optionA: PropTypes.string.isRequired,
   optionB: PropTypes.string.isRequired,

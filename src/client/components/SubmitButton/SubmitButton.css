@@ -14,3 +14,7 @@
 .button-component:focus {
   background-color: rgb(251, 168, 92);
 }
+
+.button-component:disabled {
+  background-color: hsl(20.8, 40.5%, 51.4%);
+}

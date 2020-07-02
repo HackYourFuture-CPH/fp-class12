@@ -2,16 +2,16 @@ const express = require('express');
 
 const router = express.Router({ mergeParams: true });
 
-// controller
-const allUsersController = require('../controllers/getAllUsers.controller');
+// controllers
+const gameInstancesController = require('../controllers/game-instances.controller');
 
 /**
  * @swagger
- * /allUsers:
+ * /game-instances:
  *  get:
- *    summary: Select all users
+ *    summary: Get all the game instances.
  *    description:
- *      Retrieves all the users that played a games (game_instance).
+ *      Will return all game instances.
  *    produces: application/json
  *    responses:
  *      200:
@@ -20,8 +20,8 @@ const allUsersController = require('../controllers/getAllUsers.controller');
  *        description: Unexpected error.
  */
 router.get('/', (req, res, next) => {
-  allUsersController
-    .getAllUsers(req.params.id)
+  gameInstancesController
+    .getGameInstances()
     .then((result) => res.json(result))
     .catch(next);
 });

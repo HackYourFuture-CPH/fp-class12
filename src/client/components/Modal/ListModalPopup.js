@@ -2,8 +2,8 @@ import React from 'react';
 import './Modal.styles.css';
 import PropTypes from 'prop-types';
 import ModalHeading from './ModalHeading';
-import ModalContent from './ModalContent';
-// import Button from '../ButtonComponent/Button';
+import ModalContent from './ListModalContent';
+import SubmitButton from '../SubmitButton/SubmitButton';
 
 const onCloseModal = () => {
   document.getElementById('modalbox').className = 'modalbox';
@@ -34,14 +34,7 @@ export default function Popup(props) {
             onchangeradiobox2={onchangeradiobox2}
           />
         </div>
-        <button
-          type="button"
-          onClick={onCloseModal}
-          className="button-component"
-        >
-          {buttonTitle}
-        </button>
-        {/* <Button /> */}
+        <SubmitButton onClick={onCloseModal} buttonTitle={buttonTitle} />
       </div>
     </div>
   );
