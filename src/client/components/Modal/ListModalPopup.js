@@ -12,7 +12,7 @@ const onCloseModal = () => {
 export default function Popup(props) {
   const {
     modalTitle,
-    ButtonTitle,
+    buttonTitle,
     optionA,
     optionB,
     radiobox,
@@ -34,7 +34,7 @@ export default function Popup(props) {
             onchangeradiobox2={onchangeradiobox2}
           />
         </div>
-        <SubmitButton onClick={onCloseModal} ButtonTitle={ButtonTitle} />
+        <SubmitButton onClick={onCloseModal} buttonTitle={buttonTitle} />
       </div>
     </div>
   );
@@ -44,7 +44,7 @@ Popup.propTypes = {
   modalTitle: PropTypes.string.isRequired,
   optionA: PropTypes.string.isRequired,
   optionB: PropTypes.string.isRequired,
-  ButtonTitle: PropTypes.string.isRequired,
+  buttonTitle: PropTypes.string.isRequired,
   radiobox: PropTypes.string.isRequired,
   onchangeradiobox: PropTypes.string.isRequired,
   radiobox2: PropTypes.string.isRequired,
