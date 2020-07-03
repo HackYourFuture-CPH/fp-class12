@@ -20,7 +20,7 @@ export const ErrorPage = () => {
           </p>
         </div>
         <ButtonComponent
-          ButtonTitle="Try again"
+          buttonTitle="Try again"
           onClick={() => window.history.go(-1)}
         />
       </div>
