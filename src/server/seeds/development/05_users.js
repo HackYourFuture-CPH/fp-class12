@@ -6,7 +6,7 @@ exports.seed = function (knex) {
         {
           fk_avatar_id: 1,
           uid: 'nothing_for_now',
-          name: 'Test',
+          user_name: 'Test',
           email: 'test@test.com',
         },
       ]);

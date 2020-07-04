@@ -6,7 +6,7 @@ const qrController = require('../controllers/qr.controller');
 
 /**
  * @swagger
- * /qr/{GAME}:
+ * /qr/{game}:
  *  get:
  *    summary: Get the qr code associated with game instance.
  *    description:
@@ -16,11 +16,11 @@ const qrController = require('../controllers/qr.controller');
  *
  *
  *     - in: path
- *       name: GAME
+ *       name: game
  *       schema:
  *         type: integer
  *         required: true
- *         description: The ID of the GAME to select a game instance for
+ *         description: The id of the game to select a game instance for
  *
  *    responses:
  *      200:
@@ -36,7 +36,7 @@ const qrController = require('../controllers/qr.controller');
  */
 router.get('/:id', (req, res, next) => {
   qrController
-    .get(req.params.id)
+    .getQRCode(req.params.id)
     .then((result) => res.json(result))
     .catch(next);
 });

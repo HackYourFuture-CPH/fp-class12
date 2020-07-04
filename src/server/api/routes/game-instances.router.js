@@ -2,7 +2,7 @@ const express = require('express');
 
 const router = express.Router({ mergeParams: true });
 
-// controllers
+// controller
 const gameInstancesController = require('../controllers/game-instances.controller');
 
 /**

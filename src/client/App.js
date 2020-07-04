@@ -1,5 +1,10 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Redirect,
+} from 'react-router-dom';
 import { Home } from './containers/Home/Home';
 import { ErrorPage } from './containers/404Page/404Page.component';
 import { CreateTeamPageContainer } from './containers/CreateTeamPage/CreateTeamPage.container';
@@ -49,6 +54,7 @@ function App() {
           <Route exact path="/404-page">
             <ErrorPage />
           </Route>
+          <Redirect to="/404-page" />
         </Switch>
       </Router>
     </AppContext.Provider>

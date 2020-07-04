@@ -3,29 +3,29 @@ const express = require('express');
 const router = express.Router({ mergeParams: true });
 
 // controllers
-const getQuestionByIdController = require('../controllers/getQuestionById.controller');
+const getQuestionByIdController = require('../controllers/get-question-by-id.controller');
 
 /**
  * @swagger
- * /game_factories/{ID}/questions/{QUESTIONID}:
+ * /game-factories/{id}/questions/{questionId}:
  *  get:
- *    summary: Get question by question ID and game_factory ID
+ *    summary: Get question by game-factory id by question id
  *    description:
- *      Will return first question with a matching ID.
+ *      Will return first question with a matching id.
  *    produces: application/json
  *    parameters:
  *     - in: path
- *       name: ID
+ *       name: id
  *       schema:
  *         type: integer
  *         required: true
- *         description: The ID of the game_factory to get
+ *         description: The id of the game-factory
  *     - in: path
- *       name: QUESTIONID
+ *       name: questionId
  *       schema:
  *         type: integer
  *         required: true
- *         description: The ID of the question to get
+ *         description: The id of the question
  *
  *    responses:
  *      200:

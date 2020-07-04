@@ -7,19 +7,19 @@ const nextQuestionsController = require('../controllers/next-questions.controlle
 
 /**
  * @swagger
- * /next-question/{actual_answer.ID}:
+ * /next-question/{answer-given.id}:
  *  get:
  *    summary: Get next question
  *    description:
- *      Will return next question  if answered correct with parameter for the actual answer ID
+ *      Will return next question  if answered correct with parameter for the actual answer id
  *    produces: application/json
  *    parameters:
  *     - in: path
- *       name: actual_answer.ID
+ *       name: answer-given.id
  *       schema:
  *         type: integer
  *         required: true
- *         description: The ID of the question to get the next one.
+ *         description: The id of the question to get the next one.
  *
  *    responses:
  *      200:
