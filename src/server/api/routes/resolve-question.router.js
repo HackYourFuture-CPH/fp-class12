@@ -3,23 +3,23 @@ const express = require('express');
 const router = express.Router({ mergeParams: true });
 
 // controllers
-const resolveQuestionsController = require('../controllers/resolve-question.controller');
+const resolveQuestionController = require('../controllers/resolve-question.controller');
 
 /**
  * @swagger
- * /resolve-question/{actual_answer.ID}:
+ * /resolve-question/{answer-given.id}:
  *  get:
  *    summary: Get next question
  *    description:
- *      Will return next question  if answered correct with parameter for the actual answer ID
+ *      Will return next question with parameter for the answer given id
  *    produces: application/json
  *    parameters:
  *     - in: path
- *       name: actual_answer.ID
+ *       name: answer-given.id
  *       schema:
  *         type: integer
  *         required: true
- *         description: The ID of the question to get the next one.
+ *         description: The id of the question to get the next one.
  *
  *    responses:
  *      200:
@@ -28,7 +28,7 @@ const resolveQuestionsController = require('../controllers/resolve-question.cont
  *        description: Unexpected error.
  */
 router.get('/:id', (req, res, next) => {
-  resolveQuestionsController
+  resolveQuestionController
     .resolveQuestion(req.params.id)
     .then((result) => res.json(result))
     .catch(next);

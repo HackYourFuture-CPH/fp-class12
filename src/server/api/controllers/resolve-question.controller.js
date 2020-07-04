@@ -28,8 +28,8 @@ const resolveQuestion = async (id) => {
       throw new Error(`Incorrect entry with the id of ${id}`, 404);
     }
     return [
-      { nextQuestion: nextQuestion[0] },
       { answerResult: answerResult[0] },
+      { nextQuestion: nextQuestion[0] },
     ];
   } catch (error) {
     return error.message;
