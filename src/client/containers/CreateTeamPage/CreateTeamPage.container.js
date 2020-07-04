@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useHistory } from  'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import { CreateTeamPageLayout } from '../../components/CreateTeamPageLayout/CreateTeamPageLayout.component';
 import { AppContext } from '../../AppContext';
 
@@ -21,12 +21,14 @@ export const CreateTeamPageContainer = () => {
               event.preventDefault();
               if (!userInput) {
                 return;
-              } 
+              }
               setAppState({
-              ...appState,
-              teamName: userInput,
-              })
-              history.push("/Game/0xodiehfr8474533hcehche37837920bjsc8273jcjh7/")
+                ...appState,
+                teamName: userInput,
+              });
+              history.push(
+                '/Game/0xodiehfr8474533hcehche37837920bjsc8273jcjh7/',
+              );
             },
           }}
         />

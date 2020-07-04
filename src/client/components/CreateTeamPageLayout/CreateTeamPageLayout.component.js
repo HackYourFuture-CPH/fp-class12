@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import HeaderTitle from '../Title/Title';
 import Footer from '../FooterComponent/FooterComponent';
 import AddAvatarComponent from '../AddAvatarComponent/AddAvatarComponent';
-import SingleInputFormComponent from '../SingleInputFormComponent/SingleInputFormComponent';
+import SingleInputFormComponent from '../SubmitFormSingleInputComponent/SubmitFormSingleInput';
 
 export const CreateTeamPageLayout = ({ createTeamFormProps }) => {
   const { value, onChange, onSubmit } = createTeamFormProps;

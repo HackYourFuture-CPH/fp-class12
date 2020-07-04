@@ -2,11 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ButtonComponent from '../SubmitButton/SubmitButton';
 import './SubmitFormSingleInput.style.css';
-import Popup from '../Modal/ContentModal.js';
-
-const toggleModal = () => {
-  document.querySelector('.modalbox').classList.toggle('showmodal');
-};
 
 export default function SingleInputFormComponent({
   inputLabel,
@@ -15,6 +10,7 @@ export default function SingleInputFormComponent({
   placeholder,
   onSubmit,
   onChange,
+  onClick,
 }) {
   return (
     <form className="form" onSubmit={(e) => onSubmit(e)}>
@@ -26,7 +22,11 @@ export default function SingleInputFormComponent({
         placeholder={placeholder}
         value={value}
       />
-      <ButtonComponent buttonTitle={buttonTitle} disabled={!value} />
+      <ButtonComponent
+        buttonTitle={buttonTitle}
+        disabled={!value}
+        onClick={onClick}
+      />
     </form>
   );
 }
@@ -38,6 +38,7 @@ SingleInputFormComponent.propTypes = {
   placeholder: PropTypes.string,
   onChange: PropTypes.func.isRequired,
   onSubmit: PropTypes.func.isRequired,
+  onClick: PropTypes.func.isRequired,
 };
 
 SingleInputFormComponent.defaultProps = {
