@@ -14,7 +14,7 @@ const getQuestionById = async (gameFactoryId, questionId) => {
       .where('questions.id', questionId);
     if (questions.length === 0) {
       throw new Error(
-        `incorrect entry with the id of ${gameFactoryId} and ${questionId}`,
+        `Incorrect entry with the id of ${gameFactoryId} and ${questionId}`,
         404,
       );
     }

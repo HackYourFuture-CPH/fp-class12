@@ -6,7 +6,7 @@ const createUserRolesController = require('../controllers/create-user-roles.cont
 
 /**
  * @swagger
- * /user_roles:
+ * /user-roles:
  *  post:
  *    summary: Create a user role
  *    description:

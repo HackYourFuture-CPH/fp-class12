@@ -2,21 +2,21 @@ const express = require('express');
 
 const router = express.Router({ mergeParams: true });
 
-// controllers
+// controller
 const createNewGameInstanceController = require('../controllers/create-new-game-instance.controller');
 
 /**
  * @swagger
  * /new-game:
  *   post:
- *    summary: Create a new game Instance
+ *    summary: Create a new game instance
  *    description:
- *      Will create a new game Instance.
+ *      Will create a new game instance.
  *    produces: application/json
  *    parameters:
  *      - in: body
- *        name: A new game Instance
- *        description: The new game Instance to create.
+ *        name: A new game instance
+ *        description: Create a new game instance.
  *        schema:
  *          type: object
  *          required:
@@ -38,7 +38,7 @@ const createNewGameInstanceController = require('../controllers/create-new-game-
  *           
  *    responses:
  *      201:
- *        description: A new Game instance created
+ *        description: A new Game instance was created
  *      5XX:
  *        description: Unexpected error.
  */
