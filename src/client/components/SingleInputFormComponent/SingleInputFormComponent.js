@@ -6,17 +6,22 @@ import './SingleInputFormComponent.style.css';
 export default function SingleInputFormComponent({
   inputLabel,
   value,
-  ButtonTitle,
+  buttonTitle,
+  placeholder,
+  onSubmit,
+  onChange,
 }) {
   return (
-    <form className="form">
+    <form className="form" onSubmit={(e) => onSubmit(e)}>
       <label className="form-label">{inputLabel}</label>
       <input
         className="form-input m-top m-bot"
-        type="textbox"
-        placeholder={value}
+        type="text"
+        onChange={(e) => onChange(e)}
+        placeholder={placeholder}
+        value={value}
       />
-      <ButtonComponent ButtonTitle={ButtonTitle} />
+      <ButtonComponent buttonTitle={buttonTitle} disabled={!value} />
     </form>
   );
 }
@@ -24,5 +29,12 @@ export default function SingleInputFormComponent({
 SingleInputFormComponent.propTypes = {
   inputLabel: PropTypes.string.isRequired,
   value: PropTypes.string.isRequired,
-  ButtonTitle: PropTypes.string.isRequired,
+  buttonTitle: PropTypes.string.isRequired,
+  placeholder: PropTypes.string,
+  onChange: PropTypes.func.isRequired,
+  onSubmit: PropTypes.func.isRequired,
+};
+
+SingleInputFormComponent.defaultProps = {
+  placeholder: '',
 };

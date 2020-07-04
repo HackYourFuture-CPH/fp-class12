@@ -1,0 +1,16 @@
+.error-page-container {
+  background-image: url('../../assets/images/logo/logo-treasure-hunt-withe.svg');
+}
+.error-logo-container {
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  background-color: white;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.09);
+  border-radius: 5px;
+  margin-bottom: 1em;
+}
+.error-logo-container h3 {
+  padding: 20px 0 20px 0;
+  font-size: 26px;
+}

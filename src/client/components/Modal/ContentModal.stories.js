@@ -7,13 +7,13 @@ export default { title: 'Modal', decorators: [withKnobs] };
 
 export const ContentModal = () => {
   const modalTitle = text('Title', 'Chooses the game mode');
-  const ButtonTitle = text('ButtonTitle', 'Start Playing');
+  const buttonTitle = text('buttonTitle', 'Start Playing');
   const popupcontent = text('popupcontent', 'Start writing');
 
   return (
     <Modal
       modalTitle={modalTitle}
-      ButtonTitle={ButtonTitle}
+      buttonTitle={buttonTitle}
       popupcontent={popupcontent}
     >
       <ContentPopup />
