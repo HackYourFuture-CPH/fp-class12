@@ -10,7 +10,7 @@ export const ListModalItems = () => {
   const modalTitle = text('Title', 'Chooses the game mode');
   const optionA = text('Option A', 'with Timer');
   const optionB = text('Option B', 'without Timer');
-  const ButtonTitle = text('ButtonTitle', 'Start Playing');
+  const buttonTitle = text('buttonTitle', 'Start Playing');
 
   const radiobox = boolean('With Timer', true);
   const radiobox2 = boolean('Without Timer', false);
@@ -22,7 +22,7 @@ export const ListModalItems = () => {
       modalTitle={modalTitle}
       optionA={optionA}
       optionB={optionB}
-      ButtonTitle={ButtonTitle}
+      buttonTitle={buttonTitle}
       onchangeradiobox={onchangeradiobox}
       radiobox={radiobox}
       radiobox2={radiobox2}

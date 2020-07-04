@@ -9,6 +9,6 @@ function clicked() {
 export default { title: 'Submit Button Component', decorators: [withKnobs] };
 
 export const Submitbutton = () => {
-  const ButtonTitle = text('title', 'Trial button');
-  return <SubmitButton ButtonTitle={ButtonTitle} onClick={clicked} />;
+  const buttonTitle = text('title', 'Trial button');
+  return <SubmitButton buttonTitle={buttonTitle} onClick={clicked} />;
 };
