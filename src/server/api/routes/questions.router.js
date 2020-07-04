@@ -28,18 +28,18 @@ router.get('/', (req, res, next) => {
 
 /**
  * @swagger
- * /questions/game_factory/{ID}:
+ * /questions/game-factory/{id}:
  *  get:
- *    summary: Get question by ID
+ *    summary: Get question by id
  *    description:
- *      Will return single question with a matching ID.
+ *      Will return single question with a matching id.
  *    produces: application/json
  *    parameters:
  *     - in: path
- *       name: ID
+ *       name: id
  *       type: integer
  *       required: true
- *       description: The ID of the module to get
+ *       description: The id of the module to get
  *
  *    responses:
  *      200:
@@ -48,7 +48,7 @@ router.get('/', (req, res, next) => {
  *        description: Unexpected error.
  */
 
-router.get('/game_factory/:id', (req, res, next) => {
+router.get('/game-factory/:id', (req, res, next) => {
   questionsController
     .getQuestionById(req.params.id)
     .then((result) => res.json(result))

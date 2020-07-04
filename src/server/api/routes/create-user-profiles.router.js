@@ -15,20 +15,20 @@ const createUserProfilesController = require('../controllers/create-user-profile
  *    parameters:
  *      - in: body
  *        name: user
- *        description: The user to create.
+ *        description: Create a user.
  *        schema:
  *          type: object
  *          required:
  *            - fk_avatar_id
  *            - uid
- *            - name
+ *            - user_name
  *            - email
  *          properties:
  *            fk_avatar_id:
  *              type: integer
  *            uid:
  *              type: string
- *            name:
+ *            user_name:
  *              type: string
  *            email:
  *              type: string
