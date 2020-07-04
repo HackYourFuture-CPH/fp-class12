@@ -86,7 +86,7 @@ _Add here information about the Business Glossary_
 
 Check the DB Model Diagram here https://dbdiagram.io/d/5efa7daf0425da461f0407c9
 
- <img width=500px height=318px src="/dbdiagram_v6.png" alt="DB Diagram model"></a>
+ <img width=500px height=318px src="/dbdiagram_v7.png" alt="DB Diagram model"></a>
 
 
 - [How to make changes on the diagram](/diagram.md)

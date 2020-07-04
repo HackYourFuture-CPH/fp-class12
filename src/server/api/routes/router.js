@@ -1,29 +1,29 @@
 const express = require('express');
 
 const router = express.Router();
-const mapcoordinatesRouter = require('./map-coordinates.router');
+const mapCoordinatesRouter = require('./map-coordinates.router');
 const questionsRouter = require('./questions.router');
 const allUsersRouter = require('./all-users.router');
 const qrRouter = require('./qr.router');
-const possibleanswerRouter = require('./game-question-answer-options.router');
+const possibleAnswerRouter = require('./game-question-answer-options.router');
 const gameInstancesRouter = require('./game-instances.router');
 const createUserProfilesRouter = require('./create-user-profiles.router');
 const createUserRolesRouter = require('./create-user-roles.router');
-const getQuestionByIdRouter = require('./getQuestionById.router');
+const getQuestionByIdRouter = require('./get-question-by-id.router');
 const newGameRouter = require('./create-new-game.router');
 const nextQuestionRouter = require('./next-questions.router');
 const gameMapCoordinatesRouter = require('./game-map-coordinates.router');
 
-router.use('/mapcoordinates', mapcoordinatesRouter);
-router.use('/gameInstances', gameInstancesRouter);
-router.use('/answer_choices', possibleanswerRouter);
-router.use('/createUserProfiles', createUserProfilesRouter);
-router.use('/createUserRoles', createUserRolesRouter);
+router.use('/map-coordinates', mapCoordinatesRouter);
+router.use('/game-instances', gameInstancesRouter);
+router.use('/answer-choices', possibleAnswerRouter);
+router.use('/create-user-profiles', createUserProfilesRouter);
+router.use('/create-user-roles', createUserRolesRouter);
 router.use('/next-question', nextQuestionRouter);
 router.use('/questions', questionsRouter);
-router.use('/allUsers', allUsersRouter);
+router.use('/all-users', allUsersRouter);
 router.use('/qr', qrRouter);
-router.use('/getQuestionById', getQuestionByIdRouter);
+router.use('/get-question-by-id', getQuestionByIdRouter);
 router.use('/new-game', newGameRouter);
 router.use('/map-coords', gameMapCoordinatesRouter);
 

@@ -10,7 +10,7 @@ const toggleModal = () => {
 
 export default function ListModal({
   modalTitle,
-  ButtonTitle,
+  buttonTitle,
   optionA,
   optionB,
   radiobox,
@@ -20,12 +20,12 @@ export default function ListModal({
 }) {
   return (
     <div className="modalcontainer">
-      <SubmitButton onClick={toggleModal} ButtonTitle="Open modal" />
+      <SubmitButton onClick={toggleModal} buttonTitle="Open modal" />
       <Popup
         modalTitle={modalTitle}
         optionA={optionA}
         optionB={optionB}
-        ButtonTitle={ButtonTitle}
+        buttonTitle={buttonTitle}
         onchangeradiobox={onchangeradiobox}
         radiobox={radiobox}
         radiobox2={radiobox2}
@@ -39,7 +39,7 @@ ListModal.propTypes = {
   modalTitle: PropTypes.string.isRequired,
   optionA: PropTypes.string.isRequired,
   optionB: PropTypes.string.isRequired,
-  ButtonTitle: PropTypes.string.isRequired,
+  buttonTitle: PropTypes.string.isRequired,
   radiobox: PropTypes.string.isRequired,
   onchangeradiobox: PropTypes.string.isRequired,
   radiobox2: PropTypes.string.isRequired,
