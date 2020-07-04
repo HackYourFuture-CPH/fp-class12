@@ -9,18 +9,18 @@ import { Link } from 'react-router-dom';
 
 const level = 'L';
 
-function QrCode() {
-  const [qrCode, SetQrCode] = useState('');
+function GameCode() {
+  const [gameQrCode, setGameQrCode] = useState('');
 
   fetch(`/api/qr/2`)
     .then((response) => response.json())
     .then((result) => {
-      const gameCode = result.qr;
+      const resultGameCode = result.QR;
 
-      SetQrCode(gameCode);
+      setGameQrCode(resultGameCode);
     });
 
-  return <p className="qrcode">{qrCode}</p>;
+  return <p className="qrcode">{gameQrCode}</p>;
 }
 
 export const ShareGamePage = () => (
@@ -42,7 +42,7 @@ export const ShareGamePage = () => (
             includeMargin={false}
           />
         </div>
-        <QrCode />
+        <GameCode />
       </div>
       <Link to="/">
         <SubmitButton buttonTitle="Back to game" />
