@@ -11,10 +11,10 @@ const level = 'L';
 
 function QrCode() {
   const [qrCode, SetQrCode] = useState('');
-  fetch(`/api/qr/`)
+
+  fetch(`/api/qr/2`)
     .then((response) => response.json())
     .then((result) => {
-      console.log(result.qr);
       const gameCode = result.qr;
 
       SetQrCode(gameCode);
@@ -28,11 +28,12 @@ export const ShareGamePage = () => (
     <HeaderTitle title="Scan QR-Code" />
     <div className="bodywrapper">
       <p className="sharegametext">
-        share this code to the players to share this code
+        share this code to the players to join the game
       </p>
       <div className="homelogocontainer">
         <div className="QRcode">
           <QRcode
+            className="qrcodebar"
             value="random code"
             fgColor="black"
             bgColor="white"
@@ -44,9 +45,9 @@ export const ShareGamePage = () => (
         <QrCode />
       </div>
       <Link to="/">
-        <SubmitButton ButtonTitle="Back to Game" />
+        <SubmitButton buttonTitle="Back to game" />
       </Link>
     </div>
-    <Footer title="Test title" />
+    <Footer />
   </section>
 );
