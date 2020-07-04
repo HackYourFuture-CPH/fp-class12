@@ -5,11 +5,11 @@ const createUser = async (body) => {
   await knex('users').insert({
     fk_avatar_id: body.fk_avatar_id,
     uid: body.uid,
-    name: body.name,
+    user_name: body.user_name,
     email: body.email,
   });
   return {
-    successfull: true,
+    successful: true,
   };
 };
 

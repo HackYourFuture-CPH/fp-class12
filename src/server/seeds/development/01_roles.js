@@ -4,16 +4,16 @@ exports.seed = function (knex) {
     .then(function () {
       return knex('roles').insert([
         {
-          name: 'CREATOR dummy',
+          rol_name: 'CREATOR dummy',
         },
         {
-          name: 'HOST dummy',
+          rol_name: 'HOST dummy',
         },
         {
-          name: 'PLAYER dummy',
+          rol_name: 'PLAYER dummy',
         },
         {
-          name: 'DEV dummy',
+          rol_name: 'DEV dummy',
         },
       ]);
     });
