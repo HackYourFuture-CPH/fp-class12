@@ -10,27 +10,11 @@ const resolveQuestion = async (id) => {
         'answers_given.fk_question_id',
       )
       .where('answers_given.id', '=', id)
-      .select('questions.question');
+      .select('questions.question', 'questions.id');
     if (nextQuestion.length === 0) {
       throw new Error(`Incorrect entry with the id of ${id}`, 404);
     }
-    const answerResult = await knex('answer_choices')
-      .join(
-        'answers_given',
-        'answer_choices.id',
-        '=',
-        'answers_given.fk_answer_id',
-      )
-      .select('answer_choices.answer_correct')
-      .where('answers_given.id', '=', id)
-      .where('answer_choices.answer_correct', '=', true);
-    if (answerResult.length === 0) {
-      throw new Error(`Incorrect entry with the id of ${id}`, 404);
-    }
-    return [
-      { answerResult: answerResult[0] },
-      { nextQuestion: nextQuestion[0] },
-    ];
+    return nextQuestion[0];
   } catch (error) {
     return error.message;
   }

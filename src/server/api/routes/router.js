@@ -13,6 +13,7 @@ const getQuestionByIdRouter = require('./getQuestionById.router');
 const newGameRouter = require('./create-new-game.router');
 const nextQuestionRouter = require('./next-questions.router');
 const resolveQuestionRouter = require('./resolve-question.router');
+const answerResultRouter = require('./answer-result.router');
 
 router.use('/mapcoordinates', mapcoordinatesRouter);
 router.use('/gameInstances', gameInstancesRouter);
@@ -26,5 +27,6 @@ router.use('/qr', qrRouter);
 router.use('/getQuestionById', getQuestionByIdRouter);
 router.use('/new-game', newGameRouter);
 router.use('/resolve-question', resolveQuestionRouter);
+router.use('/answer-result', answerResultRouter);
 
 module.exports = router;
