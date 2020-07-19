@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import './Title.styles.css';
 
@@ -9,11 +10,15 @@ export default function HeaderTitle({ title }) {
   const content = (
     <h2>
       <span>
-        <img src={icon} alt="App Icon" />
+        <Link to="/">
+          <img src={icon} alt="App Icon" />
+        </Link>
       </span>
       <span>{title}</span>
       <span>
-        <img src={shareicon} alt="Share Icon" />
+        <Link to="share-game-page">
+          <img src={shareicon} alt="Share Icon" />
+        </Link>
       </span>
     </h2>
   );

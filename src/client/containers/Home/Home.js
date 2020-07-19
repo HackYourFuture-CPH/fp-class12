@@ -16,7 +16,7 @@ export const Home = () => (
       <SubmitButton
         buttonTitle="Join Game"
         onClick={() => {
-          location.href = '../share-game-page';
+          location.href = '../Join-game-page';
         }}
       />
       <SubmitButton
