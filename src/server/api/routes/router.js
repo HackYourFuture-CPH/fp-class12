@@ -12,6 +12,7 @@ const createUserRolesRouter = require('./create-user-roles.router');
 const getQuestionByIdRouter = require('./get-question-by-id.router');
 const newGameRouter = require('./create-new-game.router');
 const nextQuestionRouter = require('./next-questions.router');
+const gameMapCoordinatesRouter = require('./game-map-coordinates.router');
 
 router.use('/map-coordinates', mapCoordinatesRouter);
 router.use('/game-instances', gameInstancesRouter);
@@ -24,5 +25,6 @@ router.use('/all-users', allUsersRouter);
 router.use('/qr', qrRouter);
 router.use('/get-question-by-id', getQuestionByIdRouter);
 router.use('/new-game', newGameRouter);
+router.use('/map-coords', gameMapCoordinatesRouter);
 
 module.exports = router;
