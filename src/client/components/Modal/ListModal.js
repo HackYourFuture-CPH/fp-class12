@@ -1,8 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Modal.styles.css';
 import PropTypes from 'prop-types';
-import ListModalPopup from './ListModalPopup';
-// import SubmitButton from '../SubmitButton/SubmitButton';
+import Popup from './ListModalPopup';
+import SubmitButton from '../SubmitButton/SubmitButton';
+
+const toggleModal = () => {
+  document.querySelector('.modalbox').classList.toggle('showmodal');
+};
 
 export default function ListModal({
   modalTitle,
@@ -14,15 +18,10 @@ export default function ListModal({
   radiobox2,
   onchangeradiobox2,
 }) {
-  const [modalShown, toggleModalShown] = useState(false);
   return (
     <div className="modalcontainer">
-      {/* <SubmitButton
-        onClick={() => toggleModalShown(!modalShown)}
-        buttonTitle="Open modal"
-      /> */}
-      {/* To use this modal just follow the code in SubmitButton. It is commented because at the time of importing it will come along a submit button which is not required. */}
-      <ListModalPopup
+      <SubmitButton onClick={toggleModal} buttonTitle="Open modal" />
+      <Popup
         modalTitle={modalTitle}
         optionA={optionA}
         optionB={optionB}
@@ -31,8 +30,6 @@ export default function ListModal({
         radiobox={radiobox}
         radiobox2={radiobox2}
         onchangeradiobox2={onchangeradiobox2}
-        onClick={() => toggleModalShown(!modalShown)}
-        className={`modalbox ${modalShown ? 'showmodal' : 'hidemodal'}`}
       />
     </div>
   );

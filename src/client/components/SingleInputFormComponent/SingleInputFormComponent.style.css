@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Rammetto+One&family=Roboto&display=swap');
+
+.m-top {
+  margin-top: 1%;
+}
+.m-bot {
+  margin-bottom: 1%;
+}
+
+.form-input {
+  background: #ffffff;
+  width: 100%;
+  /* height: 100%; */
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #c4c4c4;
+  border: 0px;
+  padding: 20px;
+}
+
+.form-label {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+  color: #ffffff; /* color in label changed to light grey to contrast background */
+}

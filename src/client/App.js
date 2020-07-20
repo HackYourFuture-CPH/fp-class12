@@ -18,7 +18,7 @@ import { StartPage } from './containers/StartPage/StartPage.component';
 import { AppContext } from './AppContext';
 
 function App() {
-  const [appState, setAppState] = useState({ gameCode: '', teamName: '' });
+  const [appState, setAppState] = useState({ gameCode: '20', teamName: '' });
 
   return (
     <AppContext.Provider value={{ appState, setAppState }}>

@@ -1,28 +1,26 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Modal.styles.css';
 import PropTypes from 'prop-types';
-import ContentModal from './ContentModalPopup';
-// import SubmitButton from '../SubmitButton/SubmitButton';
+import SimplePopup from './ContentModalPopup';
+import SubmitButton from '../SubmitButton/SubmitButton';
+
+// TODO: This is not the "React way", but will do for now.
+const toggleModal = () => {
+  document.querySelector('.modalbox').classList.toggle('showmodal');
+};
 
 export default function ModalResponsive({
   modalTitle,
   buttonTitle,
   popupcontent,
 }) {
-  const [isModalOpen, toggleModal] = useState(false);
   return (
     <div className="modalcontainer">
-      {/* <SubmitButton
-        onClick={() => toggleModal(!isModalOpen)}
-        buttonTitle="Open modal"
-      /> */}
-      {/* To use this modal just follow the code in SubmitButton. It is commented because at the time of importing it will come along a submit button which is not required. */}
-      <ContentModal
+      <SubmitButton onClick={toggleModal} buttonTitle="Open modal" />
+      <SimplePopup
         modalTitle={modalTitle}
         buttonTitle={buttonTitle}
         popupcontent={popupcontent}
-        onClick={() => toggleModal(!isModalOpen)}
-        className={`modalbox ${isModalOpen ? 'showmodal' : 'hidemodal'}`}
       />
     </div>
   );
