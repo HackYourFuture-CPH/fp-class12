@@ -11,10 +11,12 @@ const questionsRouter = require('./questions.router');
 const allUsersRouter = require('./all-users.router');
 const qrRouter = require('./qr.router');
 const nextQuestionRouter = require('./next-questions.router');
-const gameMapCoordinatesRouter = require('./game-map-coordinates.router');
+const resolveQuestionRouter = require('./resolve-question.router');
 const createNewGameRouter = require('./create-new-game.router');
 const gameInstancesRouter = require('./game-instances.router');
-const getQuestionByIdRouter = require('./get-question-by-id.router');
+const getQuestionByIdRouter = require('./getQuestionById.router');
+const answerResultRouter = require('./answer-result.router');
+const gameMapCoordinatesRouter = require('./game-map-coordinates.router');
 
 const swaggerJsDoc = require('swagger-jsdoc');
 const swaggerUi = require('swagger-ui-express');
@@ -51,6 +53,8 @@ router.use('/qr', qrRouter);
 router.use('/game-instances', gameInstancesRouter);
 router.use('/new-game', createNewGameRouter);
 router.use('/game_factories', getQuestionByIdRouter);
+router.use('/resolve-question', resolveQuestionRouter);
+router.use('/answer-result', answerResultRouter);
 router.use('/map-coords', gameMapCoordinatesRouter);
 
 module.exports = router;
