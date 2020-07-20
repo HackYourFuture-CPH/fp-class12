@@ -3,8 +3,8 @@ const express = require('express');
 const router = express.Router();
 
 // Router imports
-const mapcoordinatesRouter = require('./map-coordinates.router');
-const possibleanswerRouter = require('./game-question-answer-options.router');
+const mapCoordinatesRouter = require('./map-coordinates.router');
+const possibleAnswerRouter = require('./game-question-answer-options.router');
 const createUserProfilesRouter = require('./create-user-profiles.router');
 const createUserRolesRouter = require('./create-user-roles.router');
 const questionsRouter = require('./questions.router');
@@ -16,6 +16,7 @@ const createNewGameRouter = require('./create-new-game.router');
 const gameInstancesRouter = require('./game-instances.router');
 const getQuestionByIdRouter = require('./getQuestionById.router');
 const answerResultRouter = require('./answer-result.router');
+const gameMapCoordinatesRouter = require('./game-map-coordinates.router');
 
 const swaggerJsDoc = require('swagger-jsdoc');
 const swaggerUi = require('swagger-ui-express');
@@ -41,18 +42,19 @@ const swaggerDocument = swaggerJsDoc(swaggerOptions);
 router.use('/documentation', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 // Application routes
-router.use('/mapcoordinates', mapcoordinatesRouter);
-router.use('/answer_choices', possibleanswerRouter);
+router.use('/map-coordinates', mapCoordinatesRouter);
+router.use('/answer-choices', possibleAnswerRouter);
 router.use('/next-question', nextQuestionRouter);
 router.use('/users', createUserProfilesRouter);
-router.use('/user_roles', createUserRolesRouter);
+router.use('/user-roles', createUserRolesRouter);
 router.use('/questions', questionsRouter);
-router.use('/allUsers', allUsersRouter);
+router.use('/all-users', allUsersRouter);
 router.use('/qr', qrRouter);
 router.use('/game-instances', gameInstancesRouter);
 router.use('/new-game', createNewGameRouter);
 router.use('/game_factories', getQuestionByIdRouter);
 router.use('/resolve-question', resolveQuestionRouter);
 router.use('/answer-result', answerResultRouter);
+router.use('/map-coords', gameMapCoordinatesRouter);
 
 module.exports = router;
