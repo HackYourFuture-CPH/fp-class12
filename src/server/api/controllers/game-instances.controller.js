@@ -6,8 +6,8 @@ const getGameInstances = async () => {
       .join('users', 'users.id', 'game_instances.fk_user_id')
       .select(
         'game_instances.id',
-        'users.name',
-        'game_instances.code',
+        'users.user_name',
+        'game_instances.game_code',
         'game_instances.created_at',
         'game_instances.updated_at',
       )
