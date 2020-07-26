@@ -13,17 +13,18 @@ const MarkerCurrentLocation = () => {
   useEffect(() => {
     const geoOptions = {
       enableHighAccuracy: true,
-      timeOut: 2000,
+      timeOut: 20000,
     };
     setIsLoading(true);
     navigator.geolocation.watchPosition(geoSuccess, geoFailure, geoOptions);
+  }, []);
 
+  useEffect(() => {
     axios
-      .get('/api/mapcoordinates')
+      .get('api/map-coordinates')
       .then((res) => {
-        console.log(res.data[0]);
-        setCoords(res.data[0]);
-        console.log(res.data[0].long_top_left);
+        setCoords(res.data);
+        console.log(res.data);
       })
       .catch(() => {
         alert('error ...');
@@ -32,7 +33,7 @@ const MarkerCurrentLocation = () => {
 
   const geoSuccess = (position) => {
     setIsLoading(false);
-    setCenter([position.coords.latitude, position.coords.longitude]);
+    setCenter([position.center.latitude, position.center.longitude]);
   };
 
   const geoFailure = (err) => {
@@ -42,49 +43,28 @@ const MarkerCurrentLocation = () => {
   };
 
   return (
-    <MapBase zoom={14} center={[55.68232688892504, 12.570762634277344]}>
+    <MapBase zoom={14} center={center}>
       <Marker position={center} icon={markerIcon}>
         <Popup>Marker current location</Popup>
       </Marker>
 
-      {coords.map((data, index) => (
-        <Polygon
-          key={`${index+1}`}
-          color="purple"
-          fillOpacity={0.2}
-          positions={[
-            [data.lat_top_left, data.long_top_left],
-            [data.lat_top_right, data.long_top_right],
-            [data.lat_bottom_left, data.long_bottom_left],
-            [data.lat_bottom_left, data.long_bottom_left],
-            [data.clat_bottom_right, data.long_bottom_right],
-          ]}
-        />
-      ))}
+      {coords.map((data, index) => {
+        const coordinates = [
+          [data.long_top_left, data.lat_top_left],
+          [data.long_top_right, data.lat_top_right],
+          [data.long_bottom_left, data.lat_bottom_left],
+        ];
 
-      {/* <Polygon
-        color="blue"
-        fillOpacity={0.1}
-        weight={0}
-        positions={[
-          [55.70486998788966, 12.545356750488281],
-          [55.70486998788966, 12.594623565673828],
-          [55.66374083067071, 12.594623565673828],
-          [55.663934480953436, 12.545356750488281],
-        ]}
-      /> */}
-      {/* <GeoJSON
-        color="red"
-        fillOpacity={0.8}
-        weight={10}
-        type="Point"
-        coordinates= {[
-          [55.70486998788966, 12.545356750488281],
-          [55.70486998788966, 12.594623565673828],
-          [55.66374083067071, 12.594623565673828],
-          [55.663934480953436, 12.545356750488281],
-        ]}
-      /> */}
+        return (
+          <Polygon
+            key={`${index + 4}`}
+            color="purple"
+            fillOpacity={0.1}
+            weight={0}
+            positions={coordinates}
+          />
+        );
+      })}
 
       {!isLoading && !error && (
         <CircleMarker
