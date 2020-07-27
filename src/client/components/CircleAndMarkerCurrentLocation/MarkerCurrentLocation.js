@@ -21,7 +21,7 @@ const MarkerCurrentLocation = () => {
 
   useEffect(() => {
     axios
-      .get('api/map-coordinates')
+      .get('http://localhost:3000/api/map-coords/1')
       .then((res) => {
         setCoords(res.data);
         console.log(res.data);
@@ -53,11 +53,12 @@ const MarkerCurrentLocation = () => {
           [data.long_top_left, data.lat_top_left],
           [data.long_top_right, data.lat_top_right],
           [data.long_bottom_left, data.lat_bottom_left],
+          [data.long_bottom_right, data.lat_bottom_right],
         ];
 
         return (
           <Polygon
-            key={`${index + 4}`}
+            key={`${index + 1}`}
             color="purple"
             fillOpacity={0.1}
             weight={0}
