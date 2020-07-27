@@ -1,16 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './AchieveComponent.styles.css';
+import Scores from './Scores';
 
-const AchievementBox = ({ achieveTask, image, altImage }) => {
+const AchievementBox = ({ achieveTask, image }) => {
   return (
     <div className="AchieveBox">
-      <div className="AchieveCircle">
-        <img src={image} alt={altImage} />
-      </div>
-      <div>
-        <p className="wireframes">{achieveTask}</p>
-      </div>
+      <Scores achieveTask={achieveTask} image={image} />
     </div>
   );
 };
@@ -18,7 +14,6 @@ const AchievementBox = ({ achieveTask, image, altImage }) => {
 AchievementBox.propTypes = {
   achieveTask: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
-  altImage: PropTypes.string.isRequired,
 };
 
 export default AchievementBox;

@@ -67,8 +67,7 @@ img {
   z-index: 0;
 }
 .bodywrapper {
-  position: relative;
-  padding: 5%;
+  position: absolute;
 }
 
 .homelogocontainer {
@@ -97,6 +96,45 @@ img {
 .footer-component {
   z-index: 1;
   position: relative;
+  z-index: 1;
+}
+.PickGamePage {
+  margin: 80px auto;
+}
+
+.leaflet-container {
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+}
+/* Join game page css */
+
+.smallwhitedetail {
+  color: #ffffff;
+  font-family: roboto;
+  font-size: 16px;
+  text-align: center;
+  display: block;
+  width: 100%;
+  margin: 5% 0% 13% 0%;
+}
+.qr-reader-background {
+  margin-bottom: 10%;
+}
+
+/* Join game page css */
+
+.smallwhitedetail {
+  color: #ffffff;
+  font-family: roboto;
+  font-size: 16px;
+  text-align: center;
+  display: block;
+  width: 100%;
+  margin: 5% 0% 13% 0%;
+}
+.qr-reader-background {
+  margin-bottom: 10%;
 }
 
 /* Join game page css */

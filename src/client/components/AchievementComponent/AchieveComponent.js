@@ -23,9 +23,6 @@ export default function Achievement({ achieveTask, Ranking, timeSpent }) {
           image={timerImage}
           altImage="timerImage"
         />
-      </div>
-
-      <div className="achieveRow">
         <AchievementBox
           achieveTask={5 - achieveTask}
           image={xImage}
