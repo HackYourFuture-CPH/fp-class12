@@ -61,7 +61,7 @@
     "mssql": "^6.2.0",
     "mysql": "^2.18.1",
     "mysql2": "^2.1.0",
-    "node-sass": "^4.12.0",
+    "node-sass": "^7.0.0",
     "pg": "^7.18.2",
     "prop-types": "^15.7.2",
     "qrcode.react": "^1.0.0",
